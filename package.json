@@ -1,0 +1,25 @@
+{
+  "name": "major_project",
+  "version": "1.0.0",
+  "description": "POM Framework for Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ci": "npx playwright test --grep-invert @local",
+    "allure:generate": "allure generate allure-results",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.6.0",
+    "allure-playwright": "^3.6.0"
+  }
+}

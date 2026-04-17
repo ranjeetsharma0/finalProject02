@@ -1,0 +1,13 @@
+Card 1 title: Introduction to HTML, CSS, & JavaScript
+Card 1 rating: 4.4
+Card 1 level/duration: Beginner · Course · 1 - 4 Weeks
+-----
+Card 2 title: Meta Full Stack Developer: Front-End & Back-End from Scratch
+Card 2 rating: 4.7
+Card 2 level/duration: Beginner · Specialization · 3 - 6 Months
+-----
+==========================================
+✅ Total Courses in English Language : 10,142
+✅ Total Courses at Beginner Level   : 5,093
+==========================================
+✅ Navigated to Enterprise: https://www.coursera.org/business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise

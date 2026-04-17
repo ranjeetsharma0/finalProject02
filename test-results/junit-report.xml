@@ -1,0 +1,614 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="205.510899">
+<testsuite name="coursera.spec.ts" timestamp="2026-04-17T11:41:12.573Z" hostname="chromium" tests="1" failures="0" skipped="0" time="39.08" errors="0">
+<testcase name="[chromium] Coursera Project" classname="coursera.spec.ts" time="39.08">
+<system-out>
+<![CDATA[Card 1 title: Introduction to HTML, CSS, & JavaScript
+Card 1 rating: 4.4
+Card 1 level/duration: Beginner · Course · 1 - 4 Weeks
+-----
+Card 2 title: Meta Full Stack Developer: Front-End & Back-End from Scratch
+Card 2 rating: 4.7
+Card 2 level/duration: Beginner · Specialization · 3 - 6 Months
+-----
+==========================================
+✅ Total Courses in English Language : 10,142
+✅ Total Courses at Beginner Level   : 5,093
+==========================================
+✅ Navigated to Enterprise: https://www.coursera.org/business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise
+✅ Navigated to Campus: https://www.coursera.org/campus?utm_campaign=website&utm_content=corp-to-home-footer-for-campus&utm_medium=coursera&utm_source=enterprise
+Institution Type Array: [
+  { value: [32m''[39m, text: [32m'Select...'[39m },
+  {
+    value: [32m'University/4 Year College'[39m,
+    text: [32m'University/4 Year College'[39m
+  },
+  { value: [32m'2 Year College'[39m, text: [32m'2 Year College'[39m },
+  {
+    value: [32m'Graduate or Professional School'[39m,
+    text: [32m'Graduate or Professional School'[39m
+  },
+  { value: [32m'Ministry of Education'[39m, text: [32m'Ministry of Education'[39m },
+  { value: [32m'Other'[39m, text: [32m'Other'[39m }
+]
+Title Array: [
+  { value: [32m''[39m, text: [32m'Select...'[39m },
+  { value: [32m'President/Provost'[39m, text: [32m'President/Provost'[39m },
+  { value: [32m'Chancellor/Rector'[39m, text: [32m'Chancellor/Rector'[39m },
+  {
+    value: [32m'Vice-Chancellor/Vice-Rector'[39m,
+    text: [32m'Vice-Chancellor/Vice-Rector'[39m
+  },
+  {
+    value: [32m'Vice-President/Vice-Provost'[39m,
+    text: [32m'Vice-President/Vice-Provost'[39m
+  },
+  { value: [32m'Registrar'[39m, text: [32m'Registrar'[39m },
+  { value: [32m'CEO'[39m, text: [32m'CEO'[39m },
+  { value: [32m'COO/CIO'[39m, text: [32m'COO/CIO'[39m },
+  { value: [32m'Dean'[39m, text: [32m'Dean'[39m },
+  { value: [32m'Department Head'[39m, text: [32m'Department Head'[39m },
+  { value: [32m'Director'[39m, text: [32m'Director'[39m },
+  { value: [32m'Professor'[39m, text: [32m'Professor'[39m },
+  { value: [32m'Student'[39m, text: [32m'Student'[39m }
+]
+Department Array: [
+  { value: [32m''[39m, text: [32m'Select...'[39m },
+  { value: [32m'Academic Affairs'[39m, text: [32m'Academic Affairs'[39m },
+  { value: [32m'Career Services'[39m, text: [32m'Career Services'[39m },
+  { value: [32m'Continuing Education'[39m, text: [32m'Continuing Education'[39m },
+  { value: [32m'Enrollment Management'[39m, text: [32m'Enrollment Management'[39m },
+  { value: [32m'Executive Leadership'[39m, text: [32m'Executive Leadership'[39m },
+  { value: [32m'International'[39m, text: [32m'International'[39m },
+  { value: [32m'Strategic Planning'[39m, text: [32m'Strategic Planning'[39m },
+  { value: [32m'Student Affairs'[39m, text: [32m'Student Affairs'[39m },
+  {
+    value: [32m'Teaching/Faculty/Research'[39m,
+    text: [32m'Teaching/Faculty/Research'[39m
+  },
+  { value: [32m'Other'[39m, text: [32m'Other'[39m }
+]
+Country Array: [
+  { value: [32m''[39m, text: [32m'Country'[39m },
+  { value: [32m'United States'[39m, text: [32m'United States'[39m },
+  { value: [32m'Canada'[39m, text: [32m'Canada'[39m },
+  { value: [32m'Afghanistan'[39m, text: [32m'Afghanistan'[39m },
+  { value: [32m'Aland Islands'[39m, text: [32m'Åland Islands'[39m },
+  { value: [32m'Albania'[39m, text: [32m'Albania'[39m },
+  { value: [32m'Algeria'[39m, text: [32m'Algeria'[39m },
+  { value: [32m'American Samoa'[39m, text: [32m'American Samoa'[39m },
+  { value: [32m'Andorra'[39m, text: [32m'Andorra'[39m },
+  { value: [32m'Angola'[39m, text: [32m'Angola'[39m },
+  { value: [32m'Anguilla'[39m, text: [32m'Anguilla'[39m },
+  { value: [32m'Antarctica'[39m, text: [32m'Antarctica'[39m },
+  { value: [32m'Antigua and Barbuda'[39m, text: [32m'Antigua and Barbuda'[39m },
+  { value: [32m'Argentina'[39m, text: [32m'Argentina'[39m },
+  { value: [32m'Armenia'[39m, text: [32m'Armenia'[39m },
+  { value: [32m'Aruba'[39m, text: [32m'Aruba'[39m },
+  { value: [32m'Australia'[39m, text: [32m'Australia'[39m },
+  { value: [32m'Austria'[39m, text: [32m'Austria'[39m },
+  { value: [32m'Azerbaijan'[39m, text: [32m'Azerbaijan'[39m },
+  { value: [32m'Bahamas'[39m, text: [32m'Bahamas'[39m },
+  { value: [32m'Bahrain'[39m, text: [32m'Bahrain'[39m },
+  { value: [32m'Bangladesh'[39m, text: [32m'Bangladesh'[39m },
+  { value: [32m'Barbados'[39m, text: [32m'Barbados'[39m },
+  { value: [32m'Belarus'[39m, text: [32m'Belarus'[39m },
+  { value: [32m'Belgium'[39m, text: [32m'Belgium'[39m },
+  { value: [32m'Belize'[39m, text: [32m'Belize'[39m },
+  { value: [32m'Benin'[39m, text: [32m'Benin'[39m },
+  { value: [32m'Bermuda'[39m, text: [32m'Bermuda'[39m },
+  { value: [32m'Bhutan'[39m, text: [32m'Bhutan'[39m },
+  {
+    value: [32m'Bolivia, Plurinational State of'[39m,
+    text: [32m'Bolivia, Plurinational State of'[39m
+  },
+  {
+    value: [32m'Bonaire, Sint Eustatius and Saba'[39m,
+    text: [32m'Bonaire, Sint Eustatius and Saba'[39m
+  },
+  { value: [32m'Bosnia and Herzegovina'[39m, text: [32m'Bosnia and Herzegovina'[39m },
+  { value: [32m'Botswana'[39m, text: [32m'Botswana'[39m },
+  { value: [32m'Bouvet Island'[39m, text: [32m'Bouvet Island'[39m },
+  { value: [32m'Brazil'[39m, text: [32m'Brazil'[39m },
+  {
+    value: [32m'British Indian Ocean Territory'[39m,
+    text: [32m'British Indian Ocean Territory'[39m
+  },
+  { value: [32m'Brunei Darussalam'[39m, text: [32m'Brunei Darussalam'[39m },
+  { value: [32m'Bulgaria'[39m, text: [32m'Bulgaria'[39m },
+  { value: [32m'Burkina Faso'[39m, text: [32m'Burkina Faso'[39m },
+  { value: [32m'Burundi'[39m, text: [32m'Burundi'[39m },
+  { value: [32m'Cambodia'[39m, text: [32m'Cambodia'[39m },
+  { value: [32m'Cameroon'[39m, text: [32m'Cameroon'[39m },
+  { value: [32m'Canada'[39m, text: [32m'Canada'[39m },
+  { value: [32m'Cape Verde'[39m, text: [32m'Cape Verde'[39m },
+  { value: [32m'Cayman Islands'[39m, text: [32m'Cayman Islands'[39m },
+  {
+    value: [32m'Central African Republic'[39m,
+    text: [32m'Central African Republic'[39m
+  },
+  { value: [32m'Chad'[39m, text: [32m'Chad'[39m },
+  { value: [32m'Chile'[39m, text: [32m'Chile'[39m },
+  { value: [32m'China'[39m, text: [32m'China'[39m },
+  { value: [32m'Christmas Island'[39m, text: [32m'Christmas Island'[39m },
+  { value: [32m'Cocos (Keeling) Islands'[39m, text: [32m'Cocos (Keeling) Islands'[39m },
+  { value: [32m'Colombia'[39m, text: [32m'Colombia'[39m },
+  { value: [32m'COM'[39m, text: [32m'Comoros'[39m },
+  {
+    value: [32m'Congo, the Democratic Republic of the'[39m,
+    text: [32m'Congo, the Democratic Republic of the'[39m
+  },
+  { value: [32m'Congo'[39m, text: [32m'Congo'[39m },
+  { value: [32m'Cook Islands'[39m, text: [32m'Cook Islands'[39m },
+  { value: [32m'Costa Rica'[39m, text: [32m'Costa Rica'[39m },
+  { value: [32m"Cote d'Ivoire"[39m, text: [32m"Côte d'Ivoire"[39m },
+  { value: [32m'Croatia'[39m, text: [32m'Croatia'[39m },
+  { value: [32m'Cuba'[39m, text: [32m'Cuba'[39m },
+  { value: [32m'Curacao'[39m, text: [32m'Curaçao'[39m },
+  { value: [32m'Cyprus'[39m, text: [32m'Cyprus'[39m },
+  { value: [32m'Czech Republic'[39m, text: [32m'Czech Republic'[39m },
+  { value: [32m'Denmark'[39m, text: [32m'Denmark'[39m },
+  { value: [32m'Djibouti'[39m, text: [32m'Djibouti'[39m },
+  { value: [32m'Dominica'[39m, text: [32m'Dominica'[39m },
+  { value: [32m'Dominican Republic'[39m, text: [32m'Dominican Republic'[39m },
+  { value: [32m'Ecuador'[39m, text: [32m'Ecuador'[39m },
+  { value: [32m'Egypt'[39m, text: [32m'Egypt'[39m },
+  { value: [32m'El Salvador'[39m, text: [32m'El Salvador'[39m },
+  { value: [32m'Equatorial Guinea'[39m, text: [32m'Equatorial Guinea'[39m },
+  { value: [32m'Eritrea'[39m, text: [32m'Eritrea'[39m },
+  { value: [32m'Estonia'[39m, text: [32m'Estonia'[39m },
+  { value: [32m'Ethiopia'[39m, text: [32m'Ethiopia'[39m },
+  {
+    value: [32m'Falkland Islands (Malvinas)'[39m,
+    text: [32m'Falkland Islands (Malvinas)'[39m
+  },
+  { value: [32m'Faroe Islands'[39m, text: [32m'Faroe Islands'[39m },
+  { value: [32m'Fiji'[39m, text: [32m'Fiji'[39m },
+  { value: [32m'Finland'[39m, text: [32m'Finland'[39m },
+  { value: [32m'France'[39m, text: [32m'France'[39m },
+  { value: [32m'French Guiana'[39m, text: [32m'French Guiana'[39m },
+  { value: [32m'French Polynesia'[39m, text: [32m'French Polynesia'[39m },
+  {
+    value: [32m'French Southern Territories'[39m,
+    text: [32m'French Southern Territories'[39m
+  },
+  { value: [32m'Gabon'[39m, text: [32m'Gabon'[39m },
+  { value: [32m'Gambia'[39m, text: [32m'Gambia'[39m },
+  { value: [32m'Georgia'[39m, text: [32m'Georgia'[39m },
+  { value: [32m'Germany'[39m, text: [32m'Germany'[39m },
+  { value: [32m'Ghana'[39m, text: [32m'Ghana'[39m },
+  { value: [32m'Gibraltar'[39m, text: [32m'Gibraltar'[39m },
+  { value: [32m'Greece'[39m, text: [32m'Greece'[39m },
+  { value: [32m'Greenland'[39m, text: [32m'Greenland'[39m },
+  { value: [32m'Grenada'[39m, text: [32m'Grenada'[39m },
+  { value: [32m'Guadeloupe'[39m, text: [32m'Guadeloupe'[39m },
+  { value: [32m'Guam'[39m, text: [32m'Guam'[39m },
+  { value: [32m'Guatemala'[39m, text: [32m'Guatemala'[39m },
+  { value: [32m'Guernsey'[39m, text: [32m'Guernsey'[39m },
+  { value: [32m'Guinea'[39m, text: [32m'Guinea'[39m },
+  { value: [32m'Guinea-Bissau'[39m, text: [32m'Guinea-Bissau'[39m },
+  { value: [32m'Guyana'[39m, text: [32m'Guyana'[39m },
+  { value: [32m'Haiti'[39m, text: [32m'Haiti'[39m },
+  {
+    value: [32m'Heard Island and McDonald Islands'[39m,
+    text: [32m'Heard Island and McDonald Islands'[39m
+  },
+  ... 152 more items
+]
+Please enter your work email address
+
+[[ATTACHMENT|coursera-Coursera-Project-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|coursera-Coursera-Project-chromium\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="coursera.spec.ts" timestamp="2026-04-17T11:41:12.573Z" hostname="webkit" tests="1" failures="0" skipped="0" time="74.462" errors="0">
+<testcase name="[webkit] Coursera Project" classname="coursera.spec.ts" time="74.462">
+<system-out>
+<![CDATA[Card 1 title: Introduction to HTML, CSS, & JavaScript
+Card 1 rating: 4.4
+Card 1 level/duration: Beginner · Course · 1 - 4 Weeks
+-----
+Card 2 title: Meta Full Stack Developer: Front-End & Back-End from Scratch
+Card 2 rating: 4.7
+Card 2 level/duration: Beginner · Specialization · 3 - 6 Months
+-----
+==========================================
+✅ Total Courses in English Language : 10,142
+✅ Total Courses at Beginner Level   : 5,093
+==========================================
+✅ Navigated to Enterprise: https://www.coursera.org/business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise
+✅ Navigated to Campus: https://www.coursera.org/campus?utm_campaign=website&utm_content=corp-to-home-footer-for-campus&utm_medium=coursera&utm_source=enterprise
+Institution Type Array: [
+  { value: [32m''[39m, text: [32m'Select...'[39m },
+  {
+    value: [32m'University/4 Year College'[39m,
+    text: [32m'University/4 Year College'[39m
+  },
+  { value: [32m'2 Year College'[39m, text: [32m'2 Year College'[39m },
+  {
+    value: [32m'Graduate or Professional School'[39m,
+    text: [32m'Graduate or Professional School'[39m
+  },
+  { value: [32m'Ministry of Education'[39m, text: [32m'Ministry of Education'[39m },
+  { value: [32m'Other'[39m, text: [32m'Other'[39m }
+]
+Title Array: [
+  { value: [32m''[39m, text: [32m'Select...'[39m },
+  { value: [32m'President/Provost'[39m, text: [32m'President/Provost'[39m },
+  { value: [32m'Chancellor/Rector'[39m, text: [32m'Chancellor/Rector'[39m },
+  {
+    value: [32m'Vice-Chancellor/Vice-Rector'[39m,
+    text: [32m'Vice-Chancellor/Vice-Rector'[39m
+  },
+  {
+    value: [32m'Vice-President/Vice-Provost'[39m,
+    text: [32m'Vice-President/Vice-Provost'[39m
+  },
+  { value: [32m'Registrar'[39m, text: [32m'Registrar'[39m },
+  { value: [32m'CEO'[39m, text: [32m'CEO'[39m },
+  { value: [32m'COO/CIO'[39m, text: [32m'COO/CIO'[39m },
+  { value: [32m'Dean'[39m, text: [32m'Dean'[39m },
+  { value: [32m'Department Head'[39m, text: [32m'Department Head'[39m },
+  { value: [32m'Director'[39m, text: [32m'Director'[39m },
+  { value: [32m'Professor'[39m, text: [32m'Professor'[39m },
+  { value: [32m'Student'[39m, text: [32m'Student'[39m }
+]
+Department Array: [
+  { value: [32m''[39m, text: [32m'Select...'[39m },
+  { value: [32m'Academic Affairs'[39m, text: [32m'Academic Affairs'[39m },
+  { value: [32m'Career Services'[39m, text: [32m'Career Services'[39m },
+  { value: [32m'Continuing Education'[39m, text: [32m'Continuing Education'[39m },
+  { value: [32m'Enrollment Management'[39m, text: [32m'Enrollment Management'[39m },
+  { value: [32m'Executive Leadership'[39m, text: [32m'Executive Leadership'[39m },
+  { value: [32m'International'[39m, text: [32m'International'[39m },
+  { value: [32m'Strategic Planning'[39m, text: [32m'Strategic Planning'[39m },
+  { value: [32m'Student Affairs'[39m, text: [32m'Student Affairs'[39m },
+  {
+    value: [32m'Teaching/Faculty/Research'[39m,
+    text: [32m'Teaching/Faculty/Research'[39m
+  },
+  { value: [32m'Other'[39m, text: [32m'Other'[39m }
+]
+Country Array: [
+  { value: [32m''[39m, text: [32m'Country'[39m },
+  { value: [32m'United States'[39m, text: [32m'United States'[39m },
+  { value: [32m'Canada'[39m, text: [32m'Canada'[39m },
+  { value: [32m'Afghanistan'[39m, text: [32m'Afghanistan'[39m },
+  { value: [32m'Aland Islands'[39m, text: [32m'Åland Islands'[39m },
+  { value: [32m'Albania'[39m, text: [32m'Albania'[39m },
+  { value: [32m'Algeria'[39m, text: [32m'Algeria'[39m },
+  { value: [32m'American Samoa'[39m, text: [32m'American Samoa'[39m },
+  { value: [32m'Andorra'[39m, text: [32m'Andorra'[39m },
+  { value: [32m'Angola'[39m, text: [32m'Angola'[39m },
+  { value: [32m'Anguilla'[39m, text: [32m'Anguilla'[39m },
+  { value: [32m'Antarctica'[39m, text: [32m'Antarctica'[39m },
+  { value: [32m'Antigua and Barbuda'[39m, text: [32m'Antigua and Barbuda'[39m },
+  { value: [32m'Argentina'[39m, text: [32m'Argentina'[39m },
+  { value: [32m'Armenia'[39m, text: [32m'Armenia'[39m },
+  { value: [32m'Aruba'[39m, text: [32m'Aruba'[39m },
+  { value: [32m'Australia'[39m, text: [32m'Australia'[39m },
+  { value: [32m'Austria'[39m, text: [32m'Austria'[39m },
+  { value: [32m'Azerbaijan'[39m, text: [32m'Azerbaijan'[39m },
+  { value: [32m'Bahamas'[39m, text: [32m'Bahamas'[39m },
+  { value: [32m'Bahrain'[39m, text: [32m'Bahrain'[39m },
+  { value: [32m'Bangladesh'[39m, text: [32m'Bangladesh'[39m },
+  { value: [32m'Barbados'[39m, text: [32m'Barbados'[39m },
+  { value: [32m'Belarus'[39m, text: [32m'Belarus'[39m },
+  { value: [32m'Belgium'[39m, text: [32m'Belgium'[39m },
+  { value: [32m'Belize'[39m, text: [32m'Belize'[39m },
+  { value: [32m'Benin'[39m, text: [32m'Benin'[39m },
+  { value: [32m'Bermuda'[39m, text: [32m'Bermuda'[39m },
+  { value: [32m'Bhutan'[39m, text: [32m'Bhutan'[39m },
+  {
+    value: [32m'Bolivia, Plurinational State of'[39m,
+    text: [32m'Bolivia, Plurinational State of'[39m
+  },
+  {
+    value: [32m'Bonaire, Sint Eustatius and Saba'[39m,
+    text: [32m'Bonaire, Sint Eustatius and Saba'[39m
+  },
+  { value: [32m'Bosnia and Herzegovina'[39m, text: [32m'Bosnia and Herzegovina'[39m },
+  { value: [32m'Botswana'[39m, text: [32m'Botswana'[39m },
+  { value: [32m'Bouvet Island'[39m, text: [32m'Bouvet Island'[39m },
+  { value: [32m'Brazil'[39m, text: [32m'Brazil'[39m },
+  {
+    value: [32m'British Indian Ocean Territory'[39m,
+    text: [32m'British Indian Ocean Territory'[39m
+  },
+  { value: [32m'Brunei Darussalam'[39m, text: [32m'Brunei Darussalam'[39m },
+  { value: [32m'Bulgaria'[39m, text: [32m'Bulgaria'[39m },
+  { value: [32m'Burkina Faso'[39m, text: [32m'Burkina Faso'[39m },
+  { value: [32m'Burundi'[39m, text: [32m'Burundi'[39m },
+  { value: [32m'Cambodia'[39m, text: [32m'Cambodia'[39m },
+  { value: [32m'Cameroon'[39m, text: [32m'Cameroon'[39m },
+  { value: [32m'Canada'[39m, text: [32m'Canada'[39m },
+  { value: [32m'Cape Verde'[39m, text: [32m'Cape Verde'[39m },
+  { value: [32m'Cayman Islands'[39m, text: [32m'Cayman Islands'[39m },
+  {
+    value: [32m'Central African Republic'[39m,
+    text: [32m'Central African Republic'[39m
+  },
+  { value: [32m'Chad'[39m, text: [32m'Chad'[39m },
+  { value: [32m'Chile'[39m, text: [32m'Chile'[39m },
+  { value: [32m'China'[39m, text: [32m'China'[39m },
+  { value: [32m'Christmas Island'[39m, text: [32m'Christmas Island'[39m },
+  { value: [32m'Cocos (Keeling) Islands'[39m, text: [32m'Cocos (Keeling) Islands'[39m },
+  { value: [32m'Colombia'[39m, text: [32m'Colombia'[39m },
+  { value: [32m'COM'[39m, text: [32m'Comoros'[39m },
+  {
+    value: [32m'Congo, the Democratic Republic of the'[39m,
+    text: [32m'Congo, the Democratic Republic of the'[39m
+  },
+  { value: [32m'Congo'[39m, text: [32m'Congo'[39m },
+  { value: [32m'Cook Islands'[39m, text: [32m'Cook Islands'[39m },
+  { value: [32m'Costa Rica'[39m, text: [32m'Costa Rica'[39m },
+  { value: [32m"Cote d'Ivoire"[39m, text: [32m"Côte d'Ivoire"[39m },
+  { value: [32m'Croatia'[39m, text: [32m'Croatia'[39m },
+  { value: [32m'Cuba'[39m, text: [32m'Cuba'[39m },
+  { value: [32m'Curacao'[39m, text: [32m'Curaçao'[39m },
+  { value: [32m'Cyprus'[39m, text: [32m'Cyprus'[39m },
+  { value: [32m'Czech Republic'[39m, text: [32m'Czech Republic'[39m },
+  { value: [32m'Denmark'[39m, text: [32m'Denmark'[39m },
+  { value: [32m'Djibouti'[39m, text: [32m'Djibouti'[39m },
+  { value: [32m'Dominica'[39m, text: [32m'Dominica'[39m },
+  { value: [32m'Dominican Republic'[39m, text: [32m'Dominican Republic'[39m },
+  { value: [32m'Ecuador'[39m, text: [32m'Ecuador'[39m },
+  { value: [32m'Egypt'[39m, text: [32m'Egypt'[39m },
+  { value: [32m'El Salvador'[39m, text: [32m'El Salvador'[39m },
+  { value: [32m'Equatorial Guinea'[39m, text: [32m'Equatorial Guinea'[39m },
+  { value: [32m'Eritrea'[39m, text: [32m'Eritrea'[39m },
+  { value: [32m'Estonia'[39m, text: [32m'Estonia'[39m },
+  { value: [32m'Ethiopia'[39m, text: [32m'Ethiopia'[39m },
+  {
+    value: [32m'Falkland Islands (Malvinas)'[39m,
+    text: [32m'Falkland Islands (Malvinas)'[39m
+  },
+  { value: [32m'Faroe Islands'[39m, text: [32m'Faroe Islands'[39m },
+  { value: [32m'Fiji'[39m, text: [32m'Fiji'[39m },
+  { value: [32m'Finland'[39m, text: [32m'Finland'[39m },
+  { value: [32m'France'[39m, text: [32m'France'[39m },
+  { value: [32m'French Guiana'[39m, text: [32m'French Guiana'[39m },
+  { value: [32m'French Polynesia'[39m, text: [32m'French Polynesia'[39m },
+  {
+    value: [32m'French Southern Territories'[39m,
+    text: [32m'French Southern Territories'[39m
+  },
+  { value: [32m'Gabon'[39m, text: [32m'Gabon'[39m },
+  { value: [32m'Gambia'[39m, text: [32m'Gambia'[39m },
+  { value: [32m'Georgia'[39m, text: [32m'Georgia'[39m },
+  { value: [32m'Germany'[39m, text: [32m'Germany'[39m },
+  { value: [32m'Ghana'[39m, text: [32m'Ghana'[39m },
+  { value: [32m'Gibraltar'[39m, text: [32m'Gibraltar'[39m },
+  { value: [32m'Greece'[39m, text: [32m'Greece'[39m },
+  { value: [32m'Greenland'[39m, text: [32m'Greenland'[39m },
+  { value: [32m'Grenada'[39m, text: [32m'Grenada'[39m },
+  { value: [32m'Guadeloupe'[39m, text: [32m'Guadeloupe'[39m },
+  { value: [32m'Guam'[39m, text: [32m'Guam'[39m },
+  { value: [32m'Guatemala'[39m, text: [32m'Guatemala'[39m },
+  { value: [32m'Guernsey'[39m, text: [32m'Guernsey'[39m },
+  { value: [32m'Guinea'[39m, text: [32m'Guinea'[39m },
+  { value: [32m'Guinea-Bissau'[39m, text: [32m'Guinea-Bissau'[39m },
+  { value: [32m'Guyana'[39m, text: [32m'Guyana'[39m },
+  { value: [32m'Haiti'[39m, text: [32m'Haiti'[39m },
+  {
+    value: [32m'Heard Island and McDonald Islands'[39m,
+    text: [32m'Heard Island and McDonald Islands'[39m
+  },
+  ... 152 more items
+]
+Please enter your work email address
+
+[[ATTACHMENT|coursera-Coursera-Project-webkit\test-finished-1.png]]
+
+[[ATTACHMENT|coursera-Coursera-Project-webkit\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="coursera.spec.ts" timestamp="2026-04-17T11:41:12.573Z" hostname="firefox" tests="1" failures="0" skipped="0" time="69.856" errors="0">
+<testcase name="[firefox] Coursera Project" classname="coursera.spec.ts" time="69.856">
+<system-out>
+<![CDATA[Card 1 title: Introduction to HTML, CSS, & JavaScript
+Card 1 rating: 4.4
+Card 1 level/duration: Beginner · Course · 1 - 4 Weeks
+-----
+Card 2 title: Meta Full Stack Developer: Front-End & Back-End from Scratch
+Card 2 rating: 4.7
+Card 2 level/duration: Beginner · Specialization · 3 - 6 Months
+-----
+==========================================
+✅ Total Courses in English Language : 10,142
+✅ Total Courses at Beginner Level   : 5,093
+==========================================
+✅ Navigated to Enterprise: https://www.coursera.org/business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise
+✅ Navigated to Campus: https://www.coursera.org/campus?utm_campaign=website&utm_content=corp-to-home-footer-for-campus&utm_medium=coursera&utm_source=enterprise
+Institution Type Array: [
+  { value: [32m''[39m, text: [32m'Select...'[39m },
+  {
+    value: [32m'University/4 Year College'[39m,
+    text: [32m'University/4 Year College'[39m
+  },
+  { value: [32m'2 Year College'[39m, text: [32m'2 Year College'[39m },
+  {
+    value: [32m'Graduate or Professional School'[39m,
+    text: [32m'Graduate or Professional School'[39m
+  },
+  { value: [32m'Ministry of Education'[39m, text: [32m'Ministry of Education'[39m },
+  { value: [32m'Other'[39m, text: [32m'Other'[39m }
+]
+Title Array: [
+  { value: [32m''[39m, text: [32m'Select...'[39m },
+  { value: [32m'President/Provost'[39m, text: [32m'President/Provost'[39m },
+  { value: [32m'Chancellor/Rector'[39m, text: [32m'Chancellor/Rector'[39m },
+  {
+    value: [32m'Vice-Chancellor/Vice-Rector'[39m,
+    text: [32m'Vice-Chancellor/Vice-Rector'[39m
+  },
+  {
+    value: [32m'Vice-President/Vice-Provost'[39m,
+    text: [32m'Vice-President/Vice-Provost'[39m
+  },
+  { value: [32m'Registrar'[39m, text: [32m'Registrar'[39m },
+  { value: [32m'CEO'[39m, text: [32m'CEO'[39m },
+  { value: [32m'COO/CIO'[39m, text: [32m'COO/CIO'[39m },
+  { value: [32m'Dean'[39m, text: [32m'Dean'[39m },
+  { value: [32m'Department Head'[39m, text: [32m'Department Head'[39m },
+  { value: [32m'Director'[39m, text: [32m'Director'[39m },
+  { value: [32m'Professor'[39m, text: [32m'Professor'[39m },
+  { value: [32m'Student'[39m, text: [32m'Student'[39m }
+]
+Department Array: [
+  { value: [32m''[39m, text: [32m'Select...'[39m },
+  { value: [32m'Academic Affairs'[39m, text: [32m'Academic Affairs'[39m },
+  { value: [32m'Career Services'[39m, text: [32m'Career Services'[39m },
+  { value: [32m'Continuing Education'[39m, text: [32m'Continuing Education'[39m },
+  { value: [32m'Enrollment Management'[39m, text: [32m'Enrollment Management'[39m },
+  { value: [32m'Executive Leadership'[39m, text: [32m'Executive Leadership'[39m },
+  { value: [32m'International'[39m, text: [32m'International'[39m },
+  { value: [32m'Strategic Planning'[39m, text: [32m'Strategic Planning'[39m },
+  { value: [32m'Student Affairs'[39m, text: [32m'Student Affairs'[39m },
+  {
+    value: [32m'Teaching/Faculty/Research'[39m,
+    text: [32m'Teaching/Faculty/Research'[39m
+  },
+  { value: [32m'Other'[39m, text: [32m'Other'[39m }
+]
+Country Array: [
+  { value: [32m''[39m, text: [32m'Country'[39m },
+  { value: [32m'United States'[39m, text: [32m'United States'[39m },
+  { value: [32m'Canada'[39m, text: [32m'Canada'[39m },
+  { value: [32m'Afghanistan'[39m, text: [32m'Afghanistan'[39m },
+  { value: [32m'Aland Islands'[39m, text: [32m'Åland Islands'[39m },
+  { value: [32m'Albania'[39m, text: [32m'Albania'[39m },
+  { value: [32m'Algeria'[39m, text: [32m'Algeria'[39m },
+  { value: [32m'American Samoa'[39m, text: [32m'American Samoa'[39m },
+  { value: [32m'Andorra'[39m, text: [32m'Andorra'[39m },
+  { value: [32m'Angola'[39m, text: [32m'Angola'[39m },
+  { value: [32m'Anguilla'[39m, text: [32m'Anguilla'[39m },
+  { value: [32m'Antarctica'[39m, text: [32m'Antarctica'[39m },
+  { value: [32m'Antigua and Barbuda'[39m, text: [32m'Antigua and Barbuda'[39m },
+  { value: [32m'Argentina'[39m, text: [32m'Argentina'[39m },
+  { value: [32m'Armenia'[39m, text: [32m'Armenia'[39m },
+  { value: [32m'Aruba'[39m, text: [32m'Aruba'[39m },
+  { value: [32m'Australia'[39m, text: [32m'Australia'[39m },
+  { value: [32m'Austria'[39m, text: [32m'Austria'[39m },
+  { value: [32m'Azerbaijan'[39m, text: [32m'Azerbaijan'[39m },
+  { value: [32m'Bahamas'[39m, text: [32m'Bahamas'[39m },
+  { value: [32m'Bahrain'[39m, text: [32m'Bahrain'[39m },
+  { value: [32m'Bangladesh'[39m, text: [32m'Bangladesh'[39m },
+  { value: [32m'Barbados'[39m, text: [32m'Barbados'[39m },
+  { value: [32m'Belarus'[39m, text: [32m'Belarus'[39m },
+  { value: [32m'Belgium'[39m, text: [32m'Belgium'[39m },
+  { value: [32m'Belize'[39m, text: [32m'Belize'[39m },
+  { value: [32m'Benin'[39m, text: [32m'Benin'[39m },
+  { value: [32m'Bermuda'[39m, text: [32m'Bermuda'[39m },
+  { value: [32m'Bhutan'[39m, text: [32m'Bhutan'[39m },
+  {
+    value: [32m'Bolivia, Plurinational State of'[39m,
+    text: [32m'Bolivia, Plurinational State of'[39m
+  },
+  {
+    value: [32m'Bonaire, Sint Eustatius and Saba'[39m,
+    text: [32m'Bonaire, Sint Eustatius and Saba'[39m
+  },
+  { value: [32m'Bosnia and Herzegovina'[39m, text: [32m'Bosnia and Herzegovina'[39m },
+  { value: [32m'Botswana'[39m, text: [32m'Botswana'[39m },
+  { value: [32m'Bouvet Island'[39m, text: [32m'Bouvet Island'[39m },
+  { value: [32m'Brazil'[39m, text: [32m'Brazil'[39m },
+  {
+    value: [32m'British Indian Ocean Territory'[39m,
+    text: [32m'British Indian Ocean Territory'[39m
+  },
+  { value: [32m'Brunei Darussalam'[39m, text: [32m'Brunei Darussalam'[39m },
+  { value: [32m'Bulgaria'[39m, text: [32m'Bulgaria'[39m },
+  { value: [32m'Burkina Faso'[39m, text: [32m'Burkina Faso'[39m },
+  { value: [32m'Burundi'[39m, text: [32m'Burundi'[39m },
+  { value: [32m'Cambodia'[39m, text: [32m'Cambodia'[39m },
+  { value: [32m'Cameroon'[39m, text: [32m'Cameroon'[39m },
+  { value: [32m'Canada'[39m, text: [32m'Canada'[39m },
+  { value: [32m'Cape Verde'[39m, text: [32m'Cape Verde'[39m },
+  { value: [32m'Cayman Islands'[39m, text: [32m'Cayman Islands'[39m },
+  {
+    value: [32m'Central African Republic'[39m,
+    text: [32m'Central African Republic'[39m
+  },
+  { value: [32m'Chad'[39m, text: [32m'Chad'[39m },
+  { value: [32m'Chile'[39m, text: [32m'Chile'[39m },
+  { value: [32m'China'[39m, text: [32m'China'[39m },
+  { value: [32m'Christmas Island'[39m, text: [32m'Christmas Island'[39m },
+  { value: [32m'Cocos (Keeling) Islands'[39m, text: [32m'Cocos (Keeling) Islands'[39m },
+  { value: [32m'Colombia'[39m, text: [32m'Colombia'[39m },
+  { value: [32m'COM'[39m, text: [32m'Comoros'[39m },
+  {
+    value: [32m'Congo, the Democratic Republic of the'[39m,
+    text: [32m'Congo, the Democratic Republic of the'[39m
+  },
+  { value: [32m'Congo'[39m, text: [32m'Congo'[39m },
+  { value: [32m'Cook Islands'[39m, text: [32m'Cook Islands'[39m },
+  { value: [32m'Costa Rica'[39m, text: [32m'Costa Rica'[39m },
+  { value: [32m"Cote d'Ivoire"[39m, text: [32m"Côte d'Ivoire"[39m },
+  { value: [32m'Croatia'[39m, text: [32m'Croatia'[39m },
+  { value: [32m'Cuba'[39m, text: [32m'Cuba'[39m },
+  { value: [32m'Curacao'[39m, text: [32m'Curaçao'[39m },
+  { value: [32m'Cyprus'[39m, text: [32m'Cyprus'[39m },
+  { value: [32m'Czech Republic'[39m, text: [32m'Czech Republic'[39m },
+  { value: [32m'Denmark'[39m, text: [32m'Denmark'[39m },
+  { value: [32m'Djibouti'[39m, text: [32m'Djibouti'[39m },
+  { value: [32m'Dominica'[39m, text: [32m'Dominica'[39m },
+  { value: [32m'Dominican Republic'[39m, text: [32m'Dominican Republic'[39m },
+  { value: [32m'Ecuador'[39m, text: [32m'Ecuador'[39m },
+  { value: [32m'Egypt'[39m, text: [32m'Egypt'[39m },
+  { value: [32m'El Salvador'[39m, text: [32m'El Salvador'[39m },
+  { value: [32m'Equatorial Guinea'[39m, text: [32m'Equatorial Guinea'[39m },
+  { value: [32m'Eritrea'[39m, text: [32m'Eritrea'[39m },
+  { value: [32m'Estonia'[39m, text: [32m'Estonia'[39m },
+  { value: [32m'Ethiopia'[39m, text: [32m'Ethiopia'[39m },
+  {
+    value: [32m'Falkland Islands (Malvinas)'[39m,
+    text: [32m'Falkland Islands (Malvinas)'[39m
+  },
+  { value: [32m'Faroe Islands'[39m, text: [32m'Faroe Islands'[39m },
+  { value: [32m'Fiji'[39m, text: [32m'Fiji'[39m },
+  { value: [32m'Finland'[39m, text: [32m'Finland'[39m },
+  { value: [32m'France'[39m, text: [32m'France'[39m },
+  { value: [32m'French Guiana'[39m, text: [32m'French Guiana'[39m },
+  { value: [32m'French Polynesia'[39m, text: [32m'French Polynesia'[39m },
+  {
+    value: [32m'French Southern Territories'[39m,
+    text: [32m'French Southern Territories'[39m
+  },
+  { value: [32m'Gabon'[39m, text: [32m'Gabon'[39m },
+  { value: [32m'Gambia'[39m, text: [32m'Gambia'[39m },
+  { value: [32m'Georgia'[39m, text: [32m'Georgia'[39m },
+  { value: [32m'Germany'[39m, text: [32m'Germany'[39m },
+  { value: [32m'Ghana'[39m, text: [32m'Ghana'[39m },
+  { value: [32m'Gibraltar'[39m, text: [32m'Gibraltar'[39m },
+  { value: [32m'Greece'[39m, text: [32m'Greece'[39m },
+  { value: [32m'Greenland'[39m, text: [32m'Greenland'[39m },
+  { value: [32m'Grenada'[39m, text: [32m'Grenada'[39m },
+  { value: [32m'Guadeloupe'[39m, text: [32m'Guadeloupe'[39m },
+  { value: [32m'Guam'[39m, text: [32m'Guam'[39m },
+  { value: [32m'Guatemala'[39m, text: [32m'Guatemala'[39m },
+  { value: [32m'Guernsey'[39m, text: [32m'Guernsey'[39m },
+  { value: [32m'Guinea'[39m, text: [32m'Guinea'[39m },
+  { value: [32m'Guinea-Bissau'[39m, text: [32m'Guinea-Bissau'[39m },
+  { value: [32m'Guyana'[39m, text: [32m'Guyana'[39m },
+  { value: [32m'Haiti'[39m, text: [32m'Haiti'[39m },
+  {
+    value: [32m'Heard Island and McDonald Islands'[39m,
+    text: [32m'Heard Island and McDonald Islands'[39m
+  },
+  ... 152 more items
+]
+Please enter your work email address
+
+[[ATTACHMENT|coursera-Coursera-Project-firefox\test-finished-1.png]]
+
+[[ATTACHMENT|coursera-Coursera-Project-firefox\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
