@@ -1,0 +1,858 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: coursera.spec.ts >> Coursera Platform Tests >> Verify basic search functionality @smoke
+- Location: tests\coursera.spec.ts:20:7
+
+# Error details
+
+```
+Error: expect(received).toBeGreaterThan(expected)
+
+Matcher error: received value must be a number or bigint
+
+Received has type:  string
+Received has value: "10,228"
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - generic [ref=e6]:
+    - link "Skip to main content" [ref=e7] [cursor=pointer]:
+      - /url: "#main"
+      - generic [ref=e8]: Skip to main content
+    - navigation [ref=e9]:
+      - navigation "Banner" [ref=e15]:
+        - list [ref=e16]:
+          - listitem [ref=e17]:
+            - link "For Individuals" [ref=e18] [cursor=pointer]:
+              - /url: https://www.coursera.org/
+              - generic [ref=e19]: For Individuals
+          - listitem [ref=e20]:
+            - link "For Businesses" [ref=e21] [cursor=pointer]:
+              - /url: https://www.coursera.org/business?utm_content=corp-to-home-for-enterprise&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out
+              - generic [ref=e22]: For Businesses
+          - listitem [ref=e23]:
+            - link "For Universities" [ref=e24] [cursor=pointer]:
+              - /url: https://www.coursera.org/campus?utm_content=corp-to-landing-for-campus&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out
+              - generic [ref=e25]: For Universities
+          - listitem [ref=e26]:
+            - link "For Governments" [ref=e27] [cursor=pointer]:
+              - /url: https://www.coursera.org/government?utm_content=corp-to-landing-for-government&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out
+              - generic [ref=e28]: For Governments
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - link "Coursera" [ref=e35] [cursor=pointer]:
+            - /url: /
+            - img "Coursera" [ref=e38]
+          - button "Explore our catalog" [ref=e43] [cursor=pointer]:
+            - generic [ref=e44]:
+              - text: Explore
+              - img [ref=e46]
+          - button "Degrees" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Degrees
+        - search [ref=e54]:
+          - generic [ref=e58]:
+            - combobox "Search catalog" [ref=e59]: Web Development
+            - button "Search" [ref=e62] [cursor=pointer]:
+              - img [ref=e63]
+            - group
+        - generic [ref=e65]:
+          - button "Log In" [ref=e67] [cursor=pointer]:
+            - generic [ref=e68]: Log In
+          - button "Join for Free" [ref=e70] [cursor=pointer]:
+            - generic [ref=e71]: Join for Free
+  - main [ref=e72]:
+    - region "Search Results Frame" [ref=e79]:
+      - generic [ref=e82]:
+        - complementary "AI Overview" [ref=e84]:
+          - status [ref=e86]: AI summary is now available. Navigate to the AI Overview section to read it.
+          - generic [ref=e87]:
+            - generic [ref=e90]:
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - img [ref=e95]
+                  - generic [ref=e98]: AI Overview
+                - button "Expand summary" [ref=e99] [cursor=pointer]:
+                  - generic [ref=e101]:
+                    - paragraph [ref=e102]:
+                      - strong [ref=e103]: Understanding web development fundamentals and paths
+                    - paragraph [ref=e104]:
+                      - text: To start with web development, focus on
+                      - strong [ref=e105]: learning core technologies like HTML, CSS, and JavaScript
+                      - text: which form the foundation of building websites. Decide if you want to specialize in front-end (user interface) or full-stack development (both front-end and back-end). Beginners should consider courses that cover responsive design and version control to build practical skills. For a comprehensive career path, explore specializations or professional certificates that include frameworks and testing tools. Prioritize hands-on projects to solidify your understanding and prepare for real-world development challenges.
+                - button "Show more" [ref=e106] [cursor=pointer]:
+                  - generic [ref=e107]: Show more
+                - generic [ref=e108]:
+                  - paragraph [ref=e109]: "Top courses to get started:"
+                  - generic [ref=e110]:
+                    - 'link "Introduction to HTML, CSS, & JavaScript IBM IBM Introduction to HTML, CSS, & JavaScript Best for: learners with 1-4 weeks availability, beginners new to web development, and those seeking foundational web design skills" [ref=e112] [cursor=pointer]':
+                      - /url: https://www.coursera.org/learn/introduction-html-css-javascript
+                      - img "Introduction to HTML, CSS, & JavaScript" [ref=e113]
+                      - generic [ref=e114]:
+                        - generic [ref=e115]:
+                          - img "IBM" [ref=e116]
+                          - generic [ref=e117]: IBM
+                        - paragraph [ref=e118]: Introduction to HTML, CSS, & JavaScript
+                        - paragraph [ref=e121]:
+                          - strong [ref=e122]: "Best for:"
+                          - text: learners with 1-4 weeks availability, beginners new to web development, and those seeking foundational web design skills
+                    - 'link "Meta Full Stack Developer: Front-End & Back-End from Scratch Meta Meta Meta Full Stack Developer: Front-End & Back-End from Scratch Best for: beginners ready for a 3-6 month commitment, learners interested in full-stack development, and those wanting a specialization credential from Meta" [ref=e124] [cursor=pointer]':
+                      - /url: https://www.coursera.org/specializations/meta-full-stack-developer
+                      - 'img "Meta Full Stack Developer: Front-End & Back-End from Scratch" [ref=e125]'
+                      - generic [ref=e126]:
+                        - generic [ref=e127]:
+                          - img "Meta" [ref=e128]
+                          - generic [ref=e129]: Meta
+                        - paragraph [ref=e130]: "Meta Full Stack Developer: Front-End & Back-End from Scratch"
+                        - paragraph [ref=e133]:
+                          - strong [ref=e134]: "Best for:"
+                          - text: beginners ready for a 3-6 month commitment, learners interested in full-stack development, and those wanting a specialization credential from Meta
+                    - 'link "Introduction to Front-End Development Meta Meta Introduction to Front-End Development Best for: learners with short-term availability, beginners focusing on front-end skills, and those aiming to master responsive design with Bootstrap" [ref=e136] [cursor=pointer]':
+                      - /url: https://www.coursera.org/learn/introduction-to-front-end-development
+                      - img "Introduction to Front-End Development" [ref=e137]
+                      - generic [ref=e138]:
+                        - generic [ref=e139]:
+                          - img "Meta" [ref=e140]
+                          - generic [ref=e141]: Meta
+                        - paragraph [ref=e142]: Introduction to Front-End Development
+                        - paragraph [ref=e145]:
+                          - strong [ref=e146]: "Best for:"
+                          - text: learners with short-term availability, beginners focusing on front-end skills, and those aiming to master responsive design with Bootstrap
+                    - 'link "Full Stack Web Development Amazon Amazon Full Stack Web Development Best for: beginners with 1-4 weeks to learn, those interested in full-stack web development, and learners wanting practical cloud deployment experience" [ref=e148] [cursor=pointer]':
+                      - /url: https://www.coursera.org/learn/fullstack-web-development
+                      - img "Full Stack Web Development" [ref=e149]
+                      - generic [ref=e150]:
+                        - generic [ref=e151]:
+                          - img "Amazon" [ref=e152]
+                          - generic [ref=e153]: Amazon
+                        - paragraph [ref=e154]: Full Stack Web Development
+                        - paragraph [ref=e157]:
+                          - strong [ref=e158]: "Best for:"
+                          - text: beginners with 1-4 weeks to learn, those interested in full-stack web development, and learners wanting practical cloud deployment experience
+              - generic [ref=e160]:
+                - paragraph [ref=e161]: You might follow up with...
+                - generic [ref=e163]:
+                  - button "web design and development" [ref=e165] [cursor=pointer]:
+                    - generic [ref=e166]: web design and development
+                  - button "javascript for web development" [ref=e168] [cursor=pointer]:
+                    - generic [ref=e169]: javascript for web development
+                  - button "website development" [ref=e171] [cursor=pointer]:
+                    - generic [ref=e172]: website development
+                  - button "complete web development" [ref=e174] [cursor=pointer]:
+                    - generic [ref=e175]: complete web development
+                  - button "web development full course" [ref=e177] [cursor=pointer]:
+                    - generic [ref=e178]: web development full course
+                  - button "web development tools" [ref=e180] [cursor=pointer]:
+                    - generic [ref=e181]: web development tools
+                  - button "full stack web development" [ref=e183] [cursor=pointer]:
+                    - generic [ref=e184]: full stack web development
+                  - button "html, css, and javascript for web developers" [ref=e186] [cursor=pointer]:
+                    - generic [ref=e187]: html, css, and javascript for web developers
+                  - button "front-end web development" [ref=e189] [cursor=pointer]:
+                    - generic [ref=e190]: front-end web development
+                  - button "python web development" [ref=e192] [cursor=pointer]:
+                    - generic [ref=e193]: python web development
+            - separator [ref=e194]
+        - generic [ref=e197]:
+          - heading "All Results" [level=2] [ref=e202]:
+            - generic [ref=e203]: All Results
+          - generic [ref=e208]:
+            - button "Filter & Sort (1)" [ref=e209] [cursor=pointer]:
+              - img [ref=e211]
+              - generic [ref=e213]: Filter & Sort
+              - generic [ref=e214]: (1)
+            - separator [ref=e215]
+            - generic [ref=e216]:
+              - button "Topic" [ref=e218] [cursor=pointer]:
+                - generic [ref=e219]: Topic
+                - img [ref=e221]
+              - button "Duration" [ref=e224] [cursor=pointer]:
+                - generic [ref=e225]: Duration
+                - img [ref=e227]
+              - button "Learning Product" [ref=e230] [cursor=pointer]:
+                - generic [ref=e231]: Learning Product
+                - img [ref=e233]
+              - button "English" [active] [ref=e236] [cursor=pointer]:
+                - generic [ref=e237]: English
+                - img [ref=e239]
+              - button "Level" [ref=e242] [cursor=pointer]:
+                - generic [ref=e243]: Level
+                - img [ref=e245]
+              - generic [ref=e247]:
+                - button "Core Web Development Skills" [ref=e248] [cursor=pointer]:
+                  - img [ref=e251]
+                  - generic [ref=e254]: Core Web Development Skills
+                  - img [ref=e256]
+                - button "Web Development Frameworks and Libraries" [ref=e258] [cursor=pointer]:
+                  - img [ref=e261]
+                  - generic [ref=e264]: Web Development Frameworks and Libraries
+                  - img [ref=e266]
+            - button "Clear all filters" [ref=e268] [cursor=pointer]:
+              - generic [ref=e269]: Clear all
+          - region "Search Results" [ref=e270]:
+            - generic [ref=e272]:
+              - list [ref=e273]:
+                - listitem [ref=e274]:
+                  - generic [ref=e279] [cursor=pointer]:
+                    - generic [ref=e285]:
+                      - generic [ref=e286]: "Status: Free Trial"
+                      - generic [ref=e287]: Free Trial
+                    - generic [ref=e288]:
+                      - generic [ref=e289]:
+                        - generic "IBM" [ref=e292]:
+                          - paragraph [ref=e295]: IBM
+                        - link "Introduction to HTML, CSS, & JavaScript, offered by IBM, COURSE" [ref=e297]:
+                          - /url: /learn/introduction-html-css-javascript
+                          - heading "Introduction to HTML, CSS, & JavaScript" [level=3] [ref=e298]
+                      - paragraph [ref=e301]:
+                        - strong [ref=e302]: "Skills you'll gain:"
+                        - text: Responsive Web Design, Cascading Style Sheets (CSS), Web Development, Javascript, Bootstrap (Front-End Framework), Scripting, Browser Compatibility, Application Programming Interface (API), Back-End Web Development
+                      - generic [ref=e303]:
+                        - generic [ref=e305]:
+                          - img "4.4 out of 5 stars" [ref=e306]:
+                            - img [ref=e307]
+                            - generic [ref=e309]: "4.4"
+                            - generic [ref=e310]: Rating, 4.4 out of 5 stars
+                          - generic [ref=e311]: ·
+                          - generic [ref=e312]: 830 reviews
+                        - paragraph [ref=e314]: Beginner · Course · 1 - 4 Weeks
+                - listitem [ref=e315]:
+                  - generic [ref=e320] [cursor=pointer]:
+                    - generic [ref=e324]:
+                      - generic [ref=e325]: "Status: Free Trial"
+                      - generic [ref=e326]: Free Trial
+                    - generic [ref=e327]:
+                      - generic [ref=e328]:
+                        - generic "Meta" [ref=e331]:
+                          - paragraph [ref=e334]: Meta
+                        - 'link "Meta Full Stack Developer: Front-End & Back-End from Scratch, offered by Meta, SPECIALIZATION" [ref=e336]':
+                          - /url: /specializations/meta-full-stack-developer
+                          - 'heading "Meta Full Stack Developer: Front-End & Back-End from Scratch" [level=3] [ref=e337]'
+                      - paragraph [ref=e340]:
+                        - strong [ref=e341]: "Skills you'll gain:"
+                        - text: Jest (JavaScript Testing Framework), Django (Web Framework), Version Control, Restful API, Responsive Web Design, Cascading Style Sheets (CSS), Unix Commands, HTML and CSS, Git (Version Control System), API Testing, GitHub, Relational Databases, Database Management Systems, Bootstrap (Front-End Framework), React.js, Mobile Development, SQL, Database Design, API Design, Python Programming
+                      - generic [ref=e342]:
+                        - generic [ref=e344]:
+                          - img "4.7 out of 5 stars" [ref=e345]:
+                            - img [ref=e346]
+                            - generic [ref=e348]: "4.7"
+                            - generic [ref=e349]: Rating, 4.7 out of 5 stars
+                          - generic [ref=e350]: ·
+                          - generic [ref=e351]: 25K reviews
+                        - paragraph [ref=e353]: Beginner · Specialization · 3 - 6 Months
+                - listitem [ref=e354]:
+                  - generic [ref=e359] [cursor=pointer]:
+                    - generic [ref=e363]:
+                      - generic [ref=e364]: "Status: Free Trial"
+                      - generic [ref=e365]: Free Trial
+                    - generic [ref=e366]:
+                      - generic [ref=e367]:
+                        - generic "Meta" [ref=e370]:
+                          - paragraph [ref=e373]: Meta
+                        - link "Introduction to Front-End Development, offered by Meta, COURSE" [ref=e375]:
+                          - /url: /learn/introduction-to-front-end-development
+                          - heading "Introduction to Front-End Development" [level=3] [ref=e376]
+                      - paragraph [ref=e379]:
+                        - strong [ref=e380]: "Skills you'll gain:"
+                        - text: HTML and CSS, Bootstrap (Front-End Framework), Responsive Web Design, Front-End Web Development, User Interface (UI), JavaScript Frameworks, Web Design and Development, Web Applications, Web Development Tools, React.js, General Networking
+                      - generic [ref=e381]:
+                        - generic [ref=e383]:
+                          - img "4.8 out of 5 stars" [ref=e384]:
+                            - img [ref=e385]
+                            - generic [ref=e387]: "4.8"
+                            - generic [ref=e388]: Rating, 4.8 out of 5 stars
+                          - generic [ref=e389]: ·
+                          - generic [ref=e390]: 14K reviews
+                        - paragraph [ref=e392]: Beginner · Course · 1 - 4 Weeks
+                - listitem [ref=e393]:
+                  - generic [ref=e398] [cursor=pointer]:
+                    - generic [ref=e402]:
+                      - generic [ref=e403]: "Status: Free Trial"
+                      - generic [ref=e404]: Free Trial
+                    - generic [ref=e405]:
+                      - generic [ref=e406]:
+                        - generic "Amazon" [ref=e409]:
+                          - paragraph [ref=e412]: Amazon
+                        - link "Full Stack Web Development, offered by Amazon, COURSE" [ref=e414]:
+                          - /url: /learn/fullstack-web-development
+                          - heading "Full Stack Web Development" [level=3] [ref=e415]
+                      - paragraph [ref=e418]:
+                        - strong [ref=e419]: "Skills you'll gain:"
+                        - text: Full-Stack Web Development, Restful API, Cloud Deployment, Front-End Web Development, HTML and CSS, Data Persistence, Application Programming Interface (API), Server Side, Java Platform Enterprise Edition (J2EE), Web Applications, Secure Coding, Amazon Elastic Compute Cloud, Back-End Web Development, Spring Boot, Model View Controller, Responsive Web Design, Javascript
+                      - generic [ref=e420]:
+                        - generic [ref=e422]:
+                          - img "4.1 out of 5 stars" [ref=e423]:
+                            - img [ref=e424]
+                            - generic [ref=e426]: "4.1"
+                            - generic [ref=e427]: Rating, 4.1 out of 5 stars
+                          - generic [ref=e428]: ·
+                          - generic [ref=e429]: 50 reviews
+                        - paragraph [ref=e431]: Beginner · Course · 1 - 4 Weeks
+                - listitem [ref=e432]:
+                  - generic [ref=e437] [cursor=pointer]:
+                    - generic [ref=e441]:
+                      - generic [ref=e442]: "Status: Free Trial"
+                      - generic [ref=e443]: Free Trial
+                    - generic [ref=e444]:
+                      - generic [ref=e445]:
+                        - generic "Meta" [ref=e448]:
+                          - paragraph [ref=e451]: Meta
+                        - link "Meta Front-End Developer, offered by Meta, PROFESSIONAL CERTIFICATE" [ref=e453]:
+                          - /url: /professional-certificates/meta-front-end-developer
+                          - heading "Meta Front-End Developer" [level=3] [ref=e454]
+                      - paragraph [ref=e457]:
+                        - strong [ref=e458]: "Skills you'll gain:"
+                        - text: User Research, Cascading Style Sheets (CSS), User Experience Design, User Experience, Design Research, Linux Commands, Usability, Debugging, User Interface (UI), Software Versioning, Software Visualization, Web Content Accessibility Guidelines, Pseudocode, JavaScript Frameworks, User Interface and User Experience (UI/UX) Design, Javascript, Web Applications, Event-Driven Programming, Unit Testing, Application Programming Interface (API)
+                      - generic [ref=e459]:
+                        - generic [ref=e460]:
+                          - img [ref=e461]
+                          - paragraph [ref=e465]: Build toward a degree
+                        - generic [ref=e467]:
+                          - img "4.7 out of 5 stars" [ref=e468]:
+                            - img [ref=e469]
+                            - generic [ref=e471]: "4.7"
+                            - generic [ref=e472]: Rating, 4.7 out of 5 stars
+                          - generic [ref=e473]: ·
+                          - generic [ref=e474]: 24K reviews
+                        - paragraph [ref=e476]: Beginner · Professional Certificate · 3 - 6 Months
+                - listitem [ref=e477]:
+                  - generic [ref=e482] [cursor=pointer]:
+                    - generic [ref=e486]:
+                      - generic [ref=e487]: "Status: Free Trial"
+                      - generic [ref=e488]: Free Trial
+                    - generic [ref=e489]:
+                      - generic [ref=e490]:
+                        - generic "IBM" [ref=e493]:
+                          - paragraph [ref=e496]: IBM
+                        - link "Python for Data Science, AI & Development, offered by IBM, COURSE" [ref=e498]:
+                          - /url: /learn/python-for-applied-data-science-ai
+                          - heading "Python for Data Science, AI & Development" [level=3] [ref=e499]
+                      - paragraph [ref=e502]:
+                        - strong [ref=e503]: "Skills you'll gain:"
+                        - text: Data Import/Export, Programming Principles, Web Scraping, File I/O, Python Programming, Jupyter, Data Structures, Pandas (Python Package), Data Manipulation, JSON, Computer Programming, Restful API, NumPy, Object Oriented Programming (OOP), Application Programming Interface (API), Automation, Data Analysis
+                      - generic [ref=e504]:
+                        - generic [ref=e506]:
+                          - img "4.6 out of 5 stars" [ref=e507]:
+                            - img [ref=e508]
+                            - generic [ref=e510]: "4.6"
+                            - generic [ref=e511]: Rating, 4.6 out of 5 stars
+                          - generic [ref=e512]: ·
+                          - generic [ref=e513]: 43K reviews
+                        - paragraph [ref=e515]: Beginner · Course · 1 - 3 Months
+              - generic [ref=e519]:
+                - heading "What brings you to Coursera today?" [level=2] [ref=e520]
+                - generic [ref=e521]:
+                  - generic [ref=e522]:
+                    - img [ref=e524]
+                    - button "Start my career" [ref=e526] [cursor=pointer]
+                    - paragraph [ref=e528]: Start my career
+                  - generic [ref=e529]:
+                    - img [ref=e531]
+                    - button "Change my career" [ref=e533] [cursor=pointer]
+                    - paragraph [ref=e535]: Change my career
+                  - generic [ref=e536]:
+                    - img [ref=e538]
+                    - button "Grow in my current role" [ref=e540] [cursor=pointer]
+                    - paragraph [ref=e542]: Grow in my current role
+                  - generic [ref=e543]:
+                    - img [ref=e545]
+                    - button "Explore topics outside of work" [ref=e547] [cursor=pointer]
+                    - paragraph [ref=e549]: Explore topics outside of work
+              - list [ref=e550]:
+                - listitem [ref=e551]:
+                  - generic [ref=e556] [cursor=pointer]:
+                    - generic [ref=e561]:
+                      - generic [ref=e562]:
+                        - generic [ref=e563]: "Status: Free Trial"
+                        - generic [ref=e564]: Free Trial
+                      - generic [ref=e565]:
+                        - img [ref=e566]
+                        - generic [ref=e568]: "Status: AI skills"
+                        - generic [ref=e569]: AI skills
+                    - generic [ref=e570]:
+                      - generic [ref=e571]:
+                        - generic "IBM" [ref=e574]:
+                          - paragraph [ref=e577]: IBM
+                        - link "IBM Full Stack Software Developer, offered by IBM, PROFESSIONAL CERTIFICATE" [ref=e579]:
+                          - /url: /professional-certificates/ibm-full-stack-cloud-developer
+                          - heading "IBM Full Stack Software Developer" [level=3] [ref=e580]
+                      - paragraph [ref=e583]:
+                        - strong [ref=e584]: "Skills you'll gain:"
+                        - text: Cloud Deployment, Software Development Life Cycle, CI/CD, Cloud-Native Computing, Istio, Software Architecture, Node.JS, React Redux, Cloud Computing Architecture, Application Deployment, Kubernetes, Restful API, Responsive Web Design, Django (Web Framework), HTML and CSS, Server Side, Cloud Computing, Data Ethics, Data Import/Export, Engineering Software
+                      - generic [ref=e585]:
+                        - generic [ref=e586]:
+                          - img [ref=e587]
+                          - paragraph [ref=e591]: Build toward a degree
+                        - generic [ref=e593]:
+                          - img "4.6 out of 5 stars" [ref=e594]:
+                            - img [ref=e595]
+                            - generic [ref=e597]: "4.6"
+                            - generic [ref=e598]: Rating, 4.6 out of 5 stars
+                          - generic [ref=e599]: ·
+                          - generic [ref=e600]: 60K reviews
+                        - paragraph [ref=e602]: Beginner · Professional Certificate · 3 - 6 Months
+                - listitem [ref=e603]:
+                  - generic [ref=e608] [cursor=pointer]:
+                    - generic [ref=e614]:
+                      - generic [ref=e615]: "Status: Free Trial"
+                      - generic [ref=e616]: Free Trial
+                    - generic [ref=e617]:
+                      - generic [ref=e618]:
+                        - generic "Microsoft" [ref=e621]:
+                          - paragraph [ref=e624]: Microsoft
+                        - link "Introduction to Web Development, offered by Microsoft, COURSE" [ref=e626]:
+                          - /url: /learn/introduction-to-web-development
+                          - heading "Introduction to Web Development" [level=3] [ref=e627]
+                      - paragraph [ref=e630]:
+                        - strong [ref=e631]: "Skills you'll gain:"
+                        - text: Cascading Style Sheets (CSS), GitHub, HTML and CSS, Git (Version Control System), Microsoft Copilot, Web Development, Web Content Accessibility Guidelines, Responsive Web Design, Hypertext Markup Language (HTML), Javascript, Web Design, Front-End Web Development, JSON, Semantic Web
+                      - generic [ref=e632]:
+                        - generic [ref=e634]:
+                          - img "4.1 out of 5 stars" [ref=e635]:
+                            - img [ref=e636]
+                            - generic [ref=e638]: "4.1"
+                            - generic [ref=e639]: Rating, 4.1 out of 5 stars
+                          - generic [ref=e640]: ·
+                          - generic [ref=e641]: 40 reviews
+                        - paragraph [ref=e643]: Beginner · Course · 1 - 3 Months
+                - listitem [ref=e644]:
+                  - generic [ref=e649] [cursor=pointer]:
+                    - generic [ref=e655]:
+                      - generic [ref=e656]: "Status: Free Trial"
+                      - generic [ref=e657]: Free Trial
+                    - generic [ref=e658]:
+                      - generic [ref=e659]:
+                        - generic "University of Michigan" [ref=e662]:
+                          - paragraph [ref=e665]: University of Michigan
+                        - 'link "Web Design for Everybody: Basics of Web Development & Coding, offered by University of Michigan, SPECIALIZATION" [ref=e667]':
+                          - /url: /specializations/web-design
+                          - 'heading "Web Design for Everybody: Basics of Web Development & Coding" [level=3] [ref=e668]'
+                      - paragraph [ref=e671]:
+                        - strong [ref=e672]: "Skills you'll gain:"
+                        - text: Wireframing, Responsive Web Design, HTML and CSS, Web Content Accessibility Guidelines, Cascading Style Sheets (CSS), Web Design, Browser Compatibility, Javascript, Bootstrap (Front-End Framework), Web Design and Development, Debugging, Front-End Web Development, User Interface (UI), Verification And Validation, Web Development, Interactive Design, Event-Driven Programming, Usability, User Interface (UI) Design, Mobile Development Tools
+                      - generic [ref=e673]:
+                        - generic [ref=e675]:
+                          - img "4.7 out of 5 stars" [ref=e676]:
+                            - img [ref=e677]
+                            - generic [ref=e679]: "4.7"
+                            - generic [ref=e680]: Rating, 4.7 out of 5 stars
+                          - generic [ref=e681]: ·
+                          - generic [ref=e682]: 35K reviews
+                        - paragraph [ref=e684]: Beginner · Specialization · 3 - 6 Months
+                - listitem [ref=e685]:
+                  - generic [ref=e690] [cursor=pointer]:
+                    - generic [ref=e695]:
+                      - generic [ref=e696]:
+                        - generic [ref=e697]: "Status: New"
+                        - generic [ref=e698]: New
+                      - generic [ref=e699]:
+                        - generic [ref=e700]: "Status: Free Trial"
+                        - generic [ref=e701]: Free Trial
+                    - generic [ref=e702]:
+                      - generic [ref=e703]:
+                        - generic "University of London" [ref=e706]:
+                          - paragraph [ref=e709]: University of London
+                        - link "Full-Stack Web Development, offered by University of London, SPECIALIZATION" [ref=e711]:
+                          - /url: /specializations/full-stack-web-development
+                          - heading "Full-Stack Web Development" [level=3] [ref=e712]
+                      - paragraph [ref=e715]:
+                        - strong [ref=e716]: "Skills you'll gain:"
+                        - text: Responsive Web Design, Cascading Style Sheets (CSS), JSON, HTML and CSS, Ajax, Web Content Accessibility Guidelines, Javascript, Web Design, Semantic Web, Usability, Web Applications, Web Development, Web Content, Usability Testing, Interactive Design, Data Structures, Application Frameworks, Network Protocols, Data Ethics, Animations
+                      - generic [ref=e717]:
+                        - generic [ref=e718]:
+                          - img [ref=e719]
+                          - paragraph [ref=e723]: Build toward a degree
+                        - paragraph [ref=e725]: Beginner · Specialization · 1 - 3 Months
+                - listitem [ref=e726]:
+                  - generic [ref=e731] [cursor=pointer]:
+                    - generic [ref=e737]:
+                      - generic [ref=e738]: "Status: Free Trial"
+                      - generic [ref=e739]: Free Trial
+                    - generic [ref=e740]:
+                      - generic [ref=e741]:
+                        - generic "Johns Hopkins University" [ref=e744]:
+                          - paragraph [ref=e747]: Johns Hopkins University
+                        - link "HTML, CSS, and Javascript for Web Developers, offered by Johns Hopkins University, SPECIALIZATION" [ref=e749]:
+                          - /url: /specializations/html-css-javascript-for-web-developers
+                          - heading "HTML, CSS, and Javascript for Web Developers" [level=3] [ref=e750]
+                      - paragraph [ref=e753]:
+                        - strong [ref=e754]: "Skills you'll gain:"
+                        - text: HTML and CSS, Cascading Style Sheets (CSS), Ajax, Javascript, Responsive Web Design, Front-End Web Development, Web Design, Bootstrap (Front-End Framework), Web Development, Development Environment, Web Development Tools, Web Design and Development, JSON, Web Applications, Web Content Accessibility Guidelines, Scripting, Browser Compatibility, Hypertext Markup Language (HTML), Object Oriented Programming (OOP), Event-Driven Programming
+                      - generic [ref=e755]:
+                        - generic [ref=e757]:
+                          - img "4.7 out of 5 stars" [ref=e758]:
+                            - img [ref=e759]
+                            - generic [ref=e761]: "4.7"
+                            - generic [ref=e762]: Rating, 4.7 out of 5 stars
+                          - generic [ref=e763]: ·
+                          - generic [ref=e764]: 17K reviews
+                        - paragraph [ref=e766]: Beginner · Specialization · 1 - 3 Months
+                - listitem [ref=e767]:
+                  - generic [ref=e772] [cursor=pointer]:
+                    - generic [ref=e778]:
+                      - generic [ref=e779]: "Status: Free Trial"
+                      - generic [ref=e780]: Free Trial
+                    - generic [ref=e781]:
+                      - generic [ref=e782]:
+                        - generic "Microsoft" [ref=e785]:
+                          - paragraph [ref=e788]: Microsoft
+                        - link "Microsoft Full-Stack Developer, offered by Microsoft, PROFESSIONAL CERTIFICATE" [ref=e790]:
+                          - /url: /professional-certificates/microsoft-full-stack-developer
+                          - heading "Microsoft Full-Stack Developer" [level=3] [ref=e791]
+                      - paragraph [ref=e794]:
+                        - strong [ref=e795]: "Skills you'll gain:"
+                        - text: Microsoft Copilot, CI/CD, Cascading Style Sheets (CSS), GitHub, C# (Programming Language), HTML and CSS, Azure DevOps, Load Balancing, Continuous Integration, Git (Version Control System), Role-Based Access Control (RBAC), Scalability, Object Oriented Programming (OOP), Authentications, ASP.NET, Full-Stack Web Development, Web Development, SQL, .NET Framework, Graph Theory
+                      - generic [ref=e796]:
+                        - generic [ref=e798]:
+                          - img "4.6 out of 5 stars" [ref=e799]:
+                            - img [ref=e800]
+                            - generic [ref=e802]: "4.6"
+                            - generic [ref=e803]: Rating, 4.6 out of 5 stars
+                          - generic [ref=e804]: ·
+                          - generic [ref=e805]: 440 reviews
+                        - paragraph [ref=e807]: Beginner · Professional Certificate · 3 - 6 Months
+  - contentinfo [ref=e808]:
+    - contentinfo [ref=e809]:
+      - paragraph [ref=e811]: Coursera Footer
+      - generic [ref=e814]:
+        - generic [ref=e815]:
+          - heading "Skills" [level=2] [ref=e816]
+          - list [ref=e817]:
+            - listitem [ref=e818]:
+              - link "Accounting" [ref=e819] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=accounting
+            - listitem [ref=e820]:
+              - link "Artificial Intelligence (AI)" [ref=e821] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=artificial%20intelligence
+            - listitem [ref=e822]:
+              - link "Cybersecurity" [ref=e823] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=cybersecurity
+            - listitem [ref=e824]:
+              - link "Data Analytics" [ref=e825] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=data%20analytics
+            - listitem [ref=e826]:
+              - link "Digital Marketing" [ref=e827] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=digital%20marketing
+            - listitem [ref=e828]:
+              - link "Human Resources (HR)" [ref=e829] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=hr
+            - listitem [ref=e830]:
+              - link "Microsoft Excel" [ref=e831] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=microsoft%20excel
+            - listitem [ref=e832]:
+              - link "Project Management" [ref=e833] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=project%20management
+            - listitem [ref=e834]:
+              - link "Python" [ref=e835] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=python
+            - listitem [ref=e836]:
+              - link "SQL" [ref=e837] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=sql
+        - generic [ref=e838]:
+          - heading "Professional Certificates" [level=2] [ref=e839]
+          - list [ref=e840]:
+            - listitem [ref=e841]:
+              - link "Google AI Certificate" [ref=e842] [cursor=pointer]:
+                - /url: https://www.coursera.org/professional-certificates/google-ai
+            - listitem [ref=e843]:
+              - link "Google Cybersecurity Certificate" [ref=e844] [cursor=pointer]:
+                - /url: https://www.coursera.org/professional-certificates/google-cybersecurity
+            - listitem [ref=e845]:
+              - link "Google Data Analytics Certificate" [ref=e846] [cursor=pointer]:
+                - /url: https://www.coursera.org/professional-certificates/google-data-analytics
+            - listitem [ref=e847]:
+              - link "Google IT Support Certificate" [ref=e848] [cursor=pointer]:
+                - /url: https://www.coursera.org/professional-certificates/google-it-support
+            - listitem [ref=e849]:
+              - link "Google Project Management Certificate" [ref=e850] [cursor=pointer]:
+                - /url: https://www.coursera.org/professional-certificates/google-project-management
+            - listitem [ref=e851]:
+              - link "Google UX Design Certificate" [ref=e852] [cursor=pointer]:
+                - /url: https://www.coursera.org/professional-certificates/google-ux-design
+            - listitem [ref=e853]:
+              - link "IBM AI Engineering Certificate" [ref=e854] [cursor=pointer]:
+                - /url: https://www.coursera.org/professional-certificates/ai-engineer
+            - listitem [ref=e855]:
+              - link "IBM AI Product Manager Certificate" [ref=e856] [cursor=pointer]:
+                - /url: https://www.coursera.org/professional-certificates/ibm-ai-product-manager
+            - listitem [ref=e857]:
+              - link "IBM Data Science Certificate" [ref=e858] [cursor=pointer]:
+                - /url: https://www.coursera.org/professional-certificates/ibm-data-science
+            - listitem [ref=e859]:
+              - link "Intuit Academy Bookkeeping Certificate" [ref=e860] [cursor=pointer]:
+                - /url: https://www.coursera.org/professional-certificates/intuit-bookkeeping
+        - generic [ref=e861]:
+          - heading "Courses & Specializations" [level=2] [ref=e862]
+          - list [ref=e863]:
+            - listitem [ref=e864]:
+              - link "AI Essentials Specialization" [ref=e865] [cursor=pointer]:
+                - /url: https://www.coursera.org/specializations/ai-essentials-google
+            - listitem [ref=e866]:
+              - link "AI For Business Specialization" [ref=e867] [cursor=pointer]:
+                - /url: https://www.coursera.org/specializations/ai-for-business-wharton
+            - listitem [ref=e868]:
+              - link "AI For Everyone Course" [ref=e869] [cursor=pointer]:
+                - /url: https://www.coursera.org/learn/ai-for-everyone
+            - listitem [ref=e870]:
+              - link "AI in Healthcare Specialization" [ref=e871] [cursor=pointer]:
+                - /url: https://www.coursera.org/specializations/ai-healthcare
+            - listitem [ref=e872]:
+              - link "Deep Learning Specialization" [ref=e873] [cursor=pointer]:
+                - /url: https://www.coursera.org/specializations/deep-learning
+            - listitem [ref=e874]:
+              - link "Excel Skills for Business Specialization" [ref=e875] [cursor=pointer]:
+                - /url: https://www.coursera.org/specializations/excel
+            - listitem [ref=e876]:
+              - link "Financial Markets Course" [ref=e877] [cursor=pointer]:
+                - /url: https://www.coursera.org/learn/financial-markets-global
+            - listitem [ref=e878]:
+              - link "Machine Learning Specialization" [ref=e879] [cursor=pointer]:
+                - /url: https://www.coursera.org/specializations/machine-learning-introduction
+            - listitem [ref=e880]:
+              - link "Prompt Engineering for ChatGPT Course" [ref=e881] [cursor=pointer]:
+                - /url: https://www.coursera.org/learn/prompt-engineering
+            - listitem [ref=e882]:
+              - link "Python for Everybody Specialization" [ref=e883] [cursor=pointer]:
+                - /url: https://www.coursera.org/specializations/python
+        - generic [ref=e884]:
+          - heading "Career Resources" [level=2] [ref=e885]
+          - list [ref=e886]:
+            - listitem [ref=e887]:
+              - link "Career Aptitude Test" [ref=e888] [cursor=pointer]:
+                - /url: https://www.coursera.org/resources/career-quiz
+            - listitem [ref=e889]:
+              - link "CAPM Certification Requirements" [ref=e890] [cursor=pointer]:
+                - /url: https://www.coursera.org/articles/capm-certification-guide
+            - listitem [ref=e891]:
+              - link "CompTIA A+ Certification Requirements" [ref=e892] [cursor=pointer]:
+                - /url: https://www.coursera.org/articles/what-is-the-comptia-a-certification-what-to-know
+            - listitem [ref=e893]:
+              - link "CompTIA Security+ Certification Requirements" [ref=e894] [cursor=pointer]:
+                - /url: https://www.coursera.org/articles/what-is-the-comptia-security-plus-certification
+            - listitem [ref=e895]:
+              - link "Essential IT Certifications" [ref=e896] [cursor=pointer]:
+                - /url: https://www.coursera.org/articles/essential-it-certifications-entry-level-and-beginner
+            - listitem [ref=e897]:
+              - link "Free IT Certifications and Courses" [ref=e898] [cursor=pointer]:
+                - /url: https://www.coursera.org/articles/free-it-certifications
+            - listitem [ref=e899]:
+              - link "High-Income Skills to Learn" [ref=e900] [cursor=pointer]:
+                - /url: https://www.coursera.org/articles/high-income-skills
+            - listitem [ref=e901]:
+              - link "How to Learn Artificial Intelligence" [ref=e902] [cursor=pointer]:
+                - /url: https://www.coursera.org/articles/how-to-learn-artificial-intelligence
+            - listitem [ref=e903]:
+              - link "PMP Certification Requirements" [ref=e904] [cursor=pointer]:
+                - /url: https://www.coursera.org/articles/the-pmp-certification-a-guide-to-getting-started
+            - listitem [ref=e905]:
+              - link "Popular Cybersecurity Certifications" [ref=e906] [cursor=pointer]:
+                - /url: https://www.coursera.org/articles/popular-cybersecurity-certifications
+        - generic [ref=e907]:
+          - heading "Coursera" [level=2] [ref=e908]
+          - list [ref=e909]:
+            - listitem [ref=e910]:
+              - link "About" [ref=e911] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e912]:
+              - link "What We Offer" [ref=e913] [cursor=pointer]:
+                - /url: /about/how-coursera-works/
+            - listitem [ref=e914]:
+              - link "Leadership" [ref=e915] [cursor=pointer]:
+                - /url: https://www.coursera.org/about/leadership
+            - listitem [ref=e916]:
+              - link "Careers" [ref=e917] [cursor=pointer]:
+                - /url: https://careers.coursera.com/
+            - listitem [ref=e918]:
+              - link "Catalog" [ref=e919] [cursor=pointer]:
+                - /url: /browse
+            - listitem [ref=e920]:
+              - link "Coursera Plus" [ref=e921] [cursor=pointer]:
+                - /url: /courseraplus
+            - listitem [ref=e922]:
+              - link "Professional Certificates" [ref=e923] [cursor=pointer]:
+                - /url: /professional-certificates
+            - listitem [ref=e924]:
+              - link "MasterTrack® Certificates" [ref=e925] [cursor=pointer]:
+                - /url: /mastertrack
+            - listitem [ref=e926]:
+              - link "Degrees" [ref=e927] [cursor=pointer]:
+                - /url: /degrees
+            - listitem [ref=e928]:
+              - link "For Enterprise" [ref=e929] [cursor=pointer]:
+                - /url: /business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise
+            - listitem [ref=e930]:
+              - link "For Government" [ref=e931] [cursor=pointer]:
+                - /url: /government?utm_campaign=website&utm_content=corp-to-home-footer-for-government&utm_medium=coursera&utm_source=enterprise
+            - listitem [ref=e932]:
+              - link "For Campus" [ref=e933] [cursor=pointer]:
+                - /url: /campus?utm_campaign=website&utm_content=corp-to-home-footer-for-campus&utm_medium=coursera&utm_source=enterprise
+            - listitem [ref=e934]:
+              - link "Become a Partner" [ref=e935] [cursor=pointer]:
+                - /url: https://partnerships.coursera.org/?utm_medium=coursera&utm_source=partnerships&utm_campaign=website&utm_content=corp-to-home-footer-become-a-partner
+            - listitem [ref=e936]:
+              - link "Social Impact" [ref=e937] [cursor=pointer]:
+                - /url: /social-impact
+            - listitem [ref=e938]:
+              - link "Free Courses" [ref=e939] [cursor=pointer]:
+                - /url: https://www.coursera.org/courses?query=free
+            - listitem [ref=e940]:
+              - link "Share your Coursera learning story" [ref=e941] [cursor=pointer]:
+                - /url: https://airtable.com/appxSsG2Dz9CjSpF8/pagCDDP2Uinw59CNP/form?prefill_utm_source=product&prefill_utm_campaign=seo_footer&prefill_utm_medium=written
+        - generic [ref=e942]:
+          - heading "Community" [level=2] [ref=e943]
+          - list [ref=e944]:
+            - listitem [ref=e945]:
+              - link "Learners" [ref=e946] [cursor=pointer]:
+                - /url: https://www.coursera.community
+            - listitem [ref=e947]:
+              - link "Partners" [ref=e948] [cursor=pointer]:
+                - /url: https://www.coursera.org/partners
+            - listitem [ref=e949]:
+              - link "Beta Testers" [ref=e950] [cursor=pointer]:
+                - /url: https://www.coursera.support/s/article/360000152926-Become-a-Coursera-beta-tester
+            - listitem [ref=e951]:
+              - link "Blog" [ref=e952] [cursor=pointer]:
+                - /url: https://blog.coursera.org
+            - listitem [ref=e953]:
+              - link "The Coursera Podcast" [ref=e954] [cursor=pointer]:
+                - /url: https://open.spotify.com/show/58M36bneU7REOofdPZxe6A
+            - listitem [ref=e955]:
+              - link "Tech Blog" [ref=e956] [cursor=pointer]:
+                - /url: https://medium.com/coursera-engineering
+        - generic [ref=e957]:
+          - heading "More" [level=2] [ref=e958]
+          - list [ref=e959]:
+            - listitem [ref=e960]:
+              - link "Press" [ref=e961] [cursor=pointer]:
+                - /url: https://www.coursera.org/about/press
+            - listitem [ref=e962]:
+              - link "Investors" [ref=e963] [cursor=pointer]:
+                - /url: https://investor.coursera.com
+            - listitem [ref=e964]:
+              - link "Terms" [ref=e965] [cursor=pointer]:
+                - /url: https://www.coursera.org/about/terms
+            - listitem [ref=e966]:
+              - link "Privacy" [ref=e967] [cursor=pointer]:
+                - /url: https://www.coursera.org/about/privacy
+            - listitem [ref=e968]:
+              - link "Help" [ref=e969] [cursor=pointer]:
+                - /url: https://learner.coursera.help/hc
+            - listitem [ref=e970]:
+              - link "Accessibility" [ref=e971] [cursor=pointer]:
+                - /url: https://learner.coursera.help/hc/articles/360050668591-Accessibility-Statement
+            - listitem [ref=e972]:
+              - link "Contact" [ref=e973] [cursor=pointer]:
+                - /url: https://www.coursera.org/about/contact
+            - listitem [ref=e974]:
+              - link "Articles" [ref=e975] [cursor=pointer]:
+                - /url: https://www.coursera.org/articles
+            - listitem [ref=e976]:
+              - link "Directory" [ref=e977] [cursor=pointer]:
+                - /url: /directory
+            - listitem [ref=e978]:
+              - link "Affiliates" [ref=e979] [cursor=pointer]:
+                - /url: /about/affiliates
+            - listitem [ref=e980]:
+              - link "Modern Slavery Statement" [ref=e981] [cursor=pointer]:
+                - /url: https://coursera_assets.s3.amazonaws.com/footer/Modern+Slavery+Statement+(approved+March+26%2C+2025).pdf
+            - listitem [ref=e982]:
+              - link "Cookies Preference Center" [ref=e983] [cursor=pointer]:
+                - /url: /about/cookies-manage
+        - generic [ref=e984]:
+          - generic [ref=e985]:
+            - link "Download on the App Store" [ref=e986] [cursor=pointer]:
+              - /url: https://itunes.apple.com/app/apple-store/id736535961?pt=2334150&ct=Coursera%20Web%20Promo%20Banner&mt=8
+              - img "Download on the App Store" [ref=e989]
+            - link "Get it on Google Play" [ref=e990] [cursor=pointer]:
+              - /url: http://play.google.com/store/apps/details?id=org.coursera.android
+              - img "Get it on Google Play" [ref=e993]
+          - img "Logo of Certified B Corporation" [ref=e997]
+        - generic [ref=e999]:
+          - generic [ref=e1001]: © 2026 Coursera Inc. All rights reserved.
+          - list [ref=e1003]:
+            - listitem [ref=e1004]:
+              - link "Coursera Facebook" [ref=e1005] [cursor=pointer]:
+                - /url: https://www.facebook.com/Coursera
+                - img "Coursera Facebook" [ref=e1008]
+            - listitem [ref=e1009]:
+              - link "Coursera Linkedin" [ref=e1010] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/coursera
+                - img "Coursera Linkedin" [ref=e1013]
+            - listitem [ref=e1014]:
+              - link "Coursera Twitter" [ref=e1015] [cursor=pointer]:
+                - /url: https://twitter.com/coursera
+                - img "Coursera Twitter" [ref=e1018]
+            - listitem [ref=e1019]:
+              - link "Coursera YouTube" [ref=e1020] [cursor=pointer]:
+                - /url: https://www.youtube.com/user/coursera
+                - img "Coursera YouTube" [ref=e1023]
+            - listitem [ref=e1024]:
+              - link "Coursera Instagram" [ref=e1025] [cursor=pointer]:
+                - /url: https://www.instagram.com/coursera/
+                - img "Coursera Instagram" [ref=e1028]
+            - listitem [ref=e1029]:
+              - link "Coursera TikTok" [ref=e1030] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@coursera
+                - img "Coursera TikTok" [ref=e1033]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | import { HomePage } from "../Pages/HomePage";
+  3  | import { SearchResultsPage } from "../Pages/SearchResultsPage";
+  4  | import { CampusFormPage } from "../Pages/CampusFormPage";
+  5  | 
+  6  | test.describe("Coursera Platform Tests", () => {
+  7  |   let home: HomePage, searchResults: SearchResultsPage, campusForm: CampusFormPage;
+  8  | 
+  9  |   test.beforeEach(async ({ page }) => {
+  10 |     home = new HomePage(page);
+  11 |     searchResults = new SearchResultsPage(page);
+  12 |     campusForm = new CampusFormPage(page);
+  13 |     await home.goto();
+  14 |   });
+  15 | 
+  16 |   /**
+  17 |    * SMOKE TEST: High-level health check. 
+  18 |    * Ensures the core search functionality isn't broken.
+  19 |    */
+  20 |   test("Verify basic search functionality @smoke", async ({ page }) => {
+  21 |     await home.searchCourse("Web Development");
+  22 |     const count = await searchResults.filterByLanguage("English");
+> 23 |     expect(count).toBeGreaterThan(0);
+     |                   ^ Error: expect(received).toBeGreaterThan(expected)
+  24 |   });
+  25 | 
+  26 |   /**
+  27 |    * REGRESSION TEST: Detailed validation.
+  28 |    * Ensures that filters, navigation, and forms work as expected after updates.
+  29 |    */
+  30 |   test("Verify advanced filters and enterprise navigation @regression", async ({ page }) => {
+  31 |     // 1. Filter Validation
+  32 |     await home.searchCourse("Web Development");
+  33 |     const englishCount = await searchResults.filterByLanguage("English");
+  34 |     const beginnerCount = await searchResults.filterByLevel("Beginner");
+  35 |     
+  36 |     expect(englishCount).not.toBeNull();
+  37 |     expect(beginnerCount).not.toBeNull();
+  38 | 
+  39 |     // 2. Navigation & Form Validation
+  40 |     await home.clickForEnterprise();
+  41 |     expect(page.url()).toContain("enterprise");
+  42 | 
+  43 |     await home.clickForCampus();
+  44 |     await campusForm.fillForm();
+  45 |     // Add an assertion here for form success (e.g., success message visibility)
+  46 |   });
+  47 | });
+```

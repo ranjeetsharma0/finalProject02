@@ -5,8 +5,8 @@ export class CampusFormPage {
   readonly page: Page;
 
   // ✅ Updated arrays matching actual DOM selectors from screenshots
-  institutionTypeArray: { value: string; text: string }[] = [];  // was organizationTypeArray (#rentalField9 ❌)
-  titleArray: { value: string; text: string }[] = [];            // was companySizeArray (#Employee_Range__c ❌)
+  institutionTypeArray: { value: string; text: string }[] = [];  // was organizationTypeArray 
+  titleArray: { value: string; text: string }[] = [];            // was companySizeArray 
   departmentArray: { value: string; text: string }[] = [];
   countryArray: { value: string; text: string }[] = [];
 

@@ -1,0 +1,1228 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: coursera.spec.ts >> Coursera Platform Tests >> Verify basic search functionality @smoke
+- Location: tests\coursera.spec.ts:20:7
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 40000ms exceeded.
+Call log:
+  - waiting for getByTestId('filter-dropdown-language')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - log
+    - log
+  - generic [ref=e4]:
+    - navigation [ref=e8]:
+      - navigation [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link [ref=e17] [cursor=pointer]:
+              - /url: https://www.coursera.org/
+              - generic [ref=e18]: For Individuals
+          - listitem [ref=e19]:
+            - link [ref=e20] [cursor=pointer]:
+              - /url: https://www.coursera.org/business?utm_content=corp-to-home-for-enterprise&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out
+              - generic [ref=e21]: For Businesses
+          - listitem [ref=e22]:
+            - link [ref=e23] [cursor=pointer]:
+              - /url: https://www.coursera.org/campus?utm_content=corp-to-landing-for-campus&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out
+              - generic [ref=e24]: For Universities
+          - listitem [ref=e25]:
+            - link [ref=e26] [cursor=pointer]:
+              - /url: https://www.coursera.org/government?utm_content=corp-to-landing-for-government&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out
+              - generic [ref=e27]: For Governments
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - link [ref=e34] [cursor=pointer]:
+            - /url: /
+            - img [ref=e37]
+          - button [ref=e42] [cursor=pointer]:
+            - generic [ref=e43]:
+              - text: Explore
+              - img [ref=e45]
+          - button [ref=e48] [cursor=pointer]:
+            - generic [ref=e49]: Degrees
+        - search [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e58]:
+              - combobox "Search catalog" [expanded] [ref=e59]: Web Development
+              - button [ref=e62] [cursor=pointer]:
+                - img [ref=e63]
+              - group
+            - generic [ref=e65]:
+              - status [ref=e66]: 9 options available
+              - listbox [ref=e67]:
+                - group [ref=e68]:
+                  - option [ref=e69] [cursor=pointer]:
+                    - img [ref=e73]
+                    - generic [ref=e74]:
+                      - generic [ref=e78]:
+                        - text: "Web Design for Everybody: Basics of"
+                        - strong [ref=e79]: Web Development
+                        - text: "& Coding"
+                      - generic [ref=e80]: University of Michigan • Specialization • Beginner
+                - separator [ref=e81]
+                - group [ref=e82]:
+                  - option [ref=e83] [cursor=pointer]:
+                    - img [ref=e86]
+                    - strong [ref=e93]: web development
+                  - option [ref=e94] [cursor=pointer]:
+                    - img [ref=e97]
+                    - generic [ref=e103]:
+                      - strong [ref=e104]: web development
+                      - text: free
+                  - option [ref=e105] [cursor=pointer]:
+                    - img [ref=e108]
+                    - generic [ref=e114]:
+                      - strong [ref=e115]: web development
+                      - text: in python
+                  - option [ref=e116] [cursor=pointer]:
+                    - img [ref=e119]
+                    - generic [ref=e125]:
+                      - strong [ref=e126]: web development
+                      - text: courses
+                  - option [ref=e127] [cursor=pointer]:
+                    - img [ref=e130]
+                    - generic [ref=e136]:
+                      - strong [ref=e137]: web development
+                      - text: for beginners
+                  - option [ref=e138] [cursor=pointer]:
+                    - img [ref=e141]
+                    - generic [ref=e147]:
+                      - strong [ref=e148]: web development
+                      - text: fundamentals
+                  - option [ref=e149] [cursor=pointer]:
+                    - img [ref=e152]
+                    - generic [ref=e158]:
+                      - strong [ref=e159]: web development
+                      - text: "in react.js: build a web app"
+                - separator [ref=e160]
+                - group [ref=e161]:
+                  - option [ref=e162] [cursor=pointer]:
+                    - generic [ref=e167]:
+                      - generic [ref=e168]: Not sure where to start?
+                      - generic [ref=e169]:
+                        - text: Take a short quiz
+                        - img [ref=e170]
+        - generic [ref=e172]:
+          - button [ref=e174] [cursor=pointer]:
+            - generic [ref=e175]: Log In
+          - button [ref=e177] [cursor=pointer]:
+            - generic [ref=e178]: Join for Free
+    - main [ref=e180]:
+      - generic [ref=e181]:
+        - generic [ref=e182]:
+          - heading [level=1] [ref=e183]: Learn without limits
+          - generic [ref=e189]:
+            - list [ref=e191]:
+              - listitem [ref=e192]:
+                - generic [ref=e195]:
+                  - heading [level=2] [ref=e196]: Start, switch, or advance your career.
+                  - paragraph [ref=e197]: Grow with courses from top organizations
+                  - button [ref=e199] [cursor=pointer]:
+                    - generic [ref=e200]:
+                      - text: Join for Free
+                      - img [ref=e202]
+              - listitem [ref=e206]:
+                - generic [ref=e208]:
+                  - generic [ref=e209]:
+                    - heading [level=2] [ref=e210]: Drive your business forward and empower your talent
+                    - paragraph [ref=e211]: Train your team with industry-leading experts
+                    - link [ref=e213] [cursor=pointer]:
+                      - /url: https://www.coursera.org/business?utm_campaign=website&utm_content=banner-from-B2C-home-try-business&utm_medium=coursera&utm_source=enterprise&utm_term=treatment
+                      - generic [ref=e214]:
+                        - text: Try Coursera for Business
+                        - img [ref=e216]
+                  - img [ref=e220]
+              - listitem [ref=e221]:
+                - generic [ref=e224]:
+                  - heading [level=2] [ref=e225]: Find where you fit in the business world
+                  - paragraph [ref=e226]: Gain business knowledge that gets you noticed and takes you where you want to go in your career.
+                  - link [ref=e228] [cursor=pointer]:
+                    - /url: https://www.coursera.org/explore/business-skills?utm_medium=coursera&utm_source=lohpherobento&utm_campaign=global
+                    - generic [ref=e229]:
+                      - text: Start learning skills
+                      - img [ref=e231]
+            - button [ref=e235] [cursor=pointer]:
+              - img [ref=e236]
+              - generic [ref=e238]: Next
+            - toolbar [ref=e239]:
+              - button [ref=e241] [cursor=pointer]:
+                - generic [ref=e242]: Go to item 1
+              - button [ref=e244] [cursor=pointer]:
+                - generic [ref=e245]: Go to item 2
+              - button [ref=e247] [cursor=pointer]:
+                - generic [ref=e248]: Go to item 3
+            - generic [ref=e250]: "Displaying item #1, out of a total of 3 items."
+        - list [ref=e257]:
+          - listitem [ref=e258]:
+            - link [ref=e260] [cursor=pointer]:
+              - /url: /career-academy
+              - generic [ref=e261]: Launch a new career
+              - heading [level=2] [ref=e262]: Launch a new career
+          - listitem [ref=e263]:
+            - link [ref=e265] [cursor=pointer]:
+              - /url: https://www.coursera.org/business?utm_campaign=website&utm_content=bucket-from-B2C-home-try-business&utm_medium=coursera&utm_source=enterprise
+              - generic [ref=e266]: Try Coursera for Business
+              - heading [level=2] [ref=e267]: Try Coursera for Business
+          - listitem [ref=e268]:
+            - link [ref=e270] [cursor=pointer]:
+              - /url: /degrees
+              - generic [ref=e271]: Earn a degree
+              - heading [level=2] [ref=e272]: Earn a degree
+        - generic [ref=e276]:
+          - heading [level=2] [ref=e277]: Learn from 350+ leading universities and companies
+          - generic [ref=e279]:
+            - list [ref=e281]:
+              - listitem [ref=e282]:
+                - link [ref=e284] [cursor=pointer]:
+                  - /url: /google-career-certificates
+                  - generic [ref=e285]: Google
+              - listitem [ref=e286]:
+                - link [ref=e288] [cursor=pointer]:
+                  - /url: /explore/ibm-online-courses
+                  - generic [ref=e289]: IBM
+              - listitem [ref=e290]:
+                - link [ref=e292] [cursor=pointer]:
+                  - /url: /explore/microsoft-certificates
+                  - generic [ref=e293]: Microsoft
+              - listitem [ref=e294]:
+                - link [ref=e296] [cursor=pointer]:
+                  - /url: https://www.coursera.org/partners/illinois
+                  - generic [ref=e297]: University of Illinois
+              - listitem [ref=e298]:
+                - link [ref=e300] [cursor=pointer]:
+                  - /url: https://www.coursera.org/partners/openai
+                  - generic [ref=e301]: OpenAI
+              - listitem [ref=e302]:
+                - link [ref=e304] [cursor=pointer]:
+                  - /url: https://www.coursera.org/partners/anthropic
+                  - generic [ref=e305]: Anthropic
+              - listitem [ref=e306]:
+                - link [ref=e308] [cursor=pointer]:
+                  - /url: /explore/deep-learning-ai-online-courses
+                  - generic [ref=e309]: DeepLearning.AI
+              - listitem [ref=e310]:
+                - link [ref=e312] [cursor=pointer]:
+                  - /url: /explore/stanford-online-courses
+                  - generic [ref=e313]: Stanford University
+              - listitem [ref=e314]:
+                - link [ref=e316] [cursor=pointer]:
+                  - /url: /explore/university-of-pennsylvania-online-courses
+                  - generic [ref=e317]: University of Pennsylvania
+              - listitem [ref=e318]:
+                - link [ref=e320] [cursor=pointer]:
+                  - /url: /explore/university-of-michigan-online-courses
+                  - generic [ref=e321]: University of Michigan
+            - button [ref=e322] [cursor=pointer]:
+              - img [ref=e323]
+              - generic [ref=e325]: Next
+            - generic [ref=e327]: "Displaying items #1 to #8, out of a total of 10 items."
+        - generic [ref=e331]:
+          - heading [level=2] [ref=e332]: New and popular
+          - list [ref=e335]:
+            - listitem [ref=e336]:
+              - generic [ref=e337]:
+                - link [ref=e338] [cursor=pointer]:
+                  - /url: /explore/most-popular-courses
+                  - text: Most popular
+                  - img [ref=e340]
+                - generic [ref=e342]:
+                  - generic [ref=e350]:
+                    - generic [ref=e351]:
+                      - paragraph [ref=e357]: Google
+                      - link [ref=e358] [cursor=pointer]:
+                        - /url: /professional-certificates/google-data-analytics
+                        - heading [level=3] [ref=e359]: Google Data Analytics
+                    - generic [ref=e361]:
+                      - paragraph [ref=e363]: Professional Certificate
+                      - generic [ref=e364]: ·
+                      - img [ref=e365]:
+                        - img [ref=e366]
+                        - generic [ref=e368]: "4.8"
+                  - generic [ref=e376]:
+                    - generic [ref=e377]:
+                      - paragraph [ref=e383]: Google
+                      - link [ref=e384] [cursor=pointer]:
+                        - /url: /learn/foundations-data
+                        - heading [level=3] [ref=e385]: "Foundations: Data, Data, Everywhere"
+                    - generic [ref=e387]:
+                      - paragraph [ref=e389]: Course
+                      - generic [ref=e390]: ·
+                      - img [ref=e391]:
+                        - img [ref=e392]
+                        - generic [ref=e394]: "4.8"
+                  - generic [ref=e402]:
+                    - generic [ref=e403]:
+                      - paragraph [ref=e409]: University of Michigan
+                      - link [ref=e410] [cursor=pointer]:
+                        - /url: /specializations/python
+                        - heading [level=3] [ref=e411]: Python for Everybody
+                    - generic [ref=e413]:
+                      - paragraph [ref=e415]: Specialization
+                      - generic [ref=e416]: ·
+                      - img [ref=e417]:
+                        - img [ref=e418]
+                        - generic [ref=e420]: "4.8"
+            - listitem [ref=e421]:
+              - generic [ref=e422]:
+                - link [ref=e423] [cursor=pointer]:
+                  - /url: /explore/new-on-coursera
+                  - text: Hot new releases
+                  - img [ref=e425]
+                - generic [ref=e427]:
+                  - generic [ref=e435]:
+                    - generic [ref=e436]:
+                      - paragraph [ref=e442]: Johns Hopkins University
+                      - link [ref=e443] [cursor=pointer]:
+                        - /url: /specializations/project-management-and-planning
+                        - heading [level=3] [ref=e444]: Project Management and Planning
+                    - generic [ref=e446]:
+                      - paragraph [ref=e448]: Specialization
+                      - generic [ref=e449]: ·
+                      - img [ref=e450]:
+                        - img [ref=e451]
+                        - generic [ref=e453]: "4.7"
+                  - generic [ref=e461]:
+                    - generic [ref=e462]:
+                      - paragraph [ref=e468]: Microsoft
+                      - link [ref=e469] [cursor=pointer]:
+                        - /url: /professional-certificates/microsoft-powerbi-developer-and-architect
+                        - heading [level=3] [ref=e470]: Microsoft Power BI Developer and Architect
+                    - paragraph [ref=e474]: Professional Certificate
+                  - generic [ref=e482]:
+                    - generic [ref=e483]:
+                      - paragraph [ref=e489]: American Council on Exercise
+                      - link [ref=e490] [cursor=pointer]:
+                        - /url: /professional-certificates/ace-health-coach
+                        - heading [level=3] [ref=e491]: ACE Health Coach
+                    - generic [ref=e493]:
+                      - paragraph [ref=e495]: Professional Certificate
+                      - generic [ref=e496]: ·
+                      - img [ref=e497]:
+                        - img [ref=e498]
+                        - generic [ref=e500]: "4.8"
+            - listitem [ref=e501]:
+              - generic [ref=e502]:
+                - link [ref=e503] [cursor=pointer]:
+                  - /url: /browse
+                  - text: Trending now
+                  - img [ref=e505]
+                - generic [ref=e507]:
+                  - generic [ref=e515]:
+                    - generic [ref=e516]:
+                      - paragraph [ref=e522]: Google
+                      - link [ref=e523] [cursor=pointer]:
+                        - /url: /professional-certificates/google-ai
+                        - heading [level=3] [ref=e524]: Google AI
+                    - generic [ref=e526]:
+                      - paragraph [ref=e528]: Professional Certificate
+                      - generic [ref=e529]: ·
+                      - img [ref=e530]:
+                        - img [ref=e531]
+                        - generic [ref=e533]: "4.8"
+                  - generic [ref=e541]:
+                    - generic [ref=e542]:
+                      - paragraph [ref=e548]: University of London
+                      - link [ref=e549] [cursor=pointer]:
+                        - /url: /specializations/authentic-communication-with-confidence-and-impact
+                        - heading [level=3] [ref=e550]: Authentic Communication With Confidence And Impact
+                    - generic [ref=e552]:
+                      - paragraph [ref=e554]: Specialization
+                      - generic [ref=e555]: ·
+                      - img [ref=e556]:
+                        - img [ref=e557]
+                        - generic [ref=e559]: "4.7"
+                  - generic [ref=e567]:
+                    - generic [ref=e568]:
+                      - paragraph [ref=e574]: Coursera
+                      - link [ref=e575] [cursor=pointer]:
+                        - /url: /specializations/digital-marketing-with-canva
+                        - heading [level=3] [ref=e576]: Digital Marketing with Canva
+                    - generic [ref=e578]:
+                      - paragraph [ref=e580]: Specialization
+                      - generic [ref=e581]: ·
+                      - img [ref=e582]:
+                        - img [ref=e583]
+                        - generic [ref=e585]: "4.5"
+        - generic [ref=e589]:
+          - heading [level=2] [ref=e590]: Explore categories
+          - list [ref=e593]:
+            - listitem [ref=e594]:
+              - link [ref=e595] [cursor=pointer]:
+                - /url: /browse/business
+                - img [ref=e596]
+                - text: Business
+            - listitem [ref=e598]:
+              - link [ref=e599] [cursor=pointer]:
+                - /url: /explore/generative-ai
+                - img [ref=e600]
+                - text: Artificial Intelligence
+            - listitem [ref=e602]:
+              - link [ref=e603] [cursor=pointer]:
+                - /url: /browse/data-science
+                - img [ref=e604]
+                - text: Data Science
+            - listitem [ref=e606]:
+              - link [ref=e607] [cursor=pointer]:
+                - /url: /browse/computer-science
+                - img [ref=e608]
+                - text: Computer Science
+            - listitem [ref=e610]:
+              - link [ref=e611] [cursor=pointer]:
+                - /url: /browse/information-technology
+                - img [ref=e612]
+                - text: Information Technology
+            - listitem [ref=e614]:
+              - link [ref=e615] [cursor=pointer]:
+                - /url: /browse/personal-development
+                - img [ref=e616]
+                - text: Personal Development
+            - listitem [ref=e618]:
+              - link [ref=e619] [cursor=pointer]:
+                - /url: /browse/health
+                - img [ref=e620]
+                - text: Healthcare
+            - listitem [ref=e622]:
+              - link [ref=e623] [cursor=pointer]:
+                - /url: /browse/language-learning
+                - img [ref=e624]
+                - text: Language Learning
+            - listitem [ref=e626]:
+              - link [ref=e627] [cursor=pointer]:
+                - /url: /browse/social-sciences
+                - img [ref=e628]
+                - text: Social Sciences
+            - listitem [ref=e630]:
+              - link [ref=e631] [cursor=pointer]:
+                - /url: /browse/arts-and-humanities
+                - img [ref=e632]
+                - text: Arts and Humanities
+            - listitem [ref=e634]:
+              - link [ref=e635] [cursor=pointer]:
+                - /url: /browse/physical-science-and-engineering
+                - img [ref=e636]
+                - text: Physical Science and Engineering
+            - listitem [ref=e638]:
+              - link [ref=e639] [cursor=pointer]:
+                - /url: /browse/math-and-logic
+                - img [ref=e640]
+                - text: Math and Logic
+        - generic [ref=e650]:
+          - link [ref=e654] [cursor=pointer]:
+            - /url: /explore/generative-ai
+            - text: AI bestsellers
+            - img [ref=e656]
+          - list [ref=e663]:
+            - listitem [ref=e664]:
+              - generic [ref=e671] [cursor=pointer]:
+                - generic [ref=e672]:
+                  - paragraph [ref=e678]: Microsoft
+                  - link [ref=e680]:
+                    - /url: /professional-certificates/microsoft-ai-product-manager
+                    - heading [level=3] [ref=e681]: Microsoft AI Product Manager
+                - generic [ref=e682]:
+                  - paragraph [ref=e684]: Professional Certificate
+                  - img [ref=e685]:
+                    - img [ref=e686]
+                    - generic [ref=e688]: "4.6"
+            - listitem [ref=e689]:
+              - generic [ref=e696] [cursor=pointer]:
+                - generic [ref=e697]:
+                  - paragraph [ref=e703]: Google
+                  - link [ref=e705]:
+                    - /url: /specializations/ai-essentials-google
+                    - heading [level=3] [ref=e706]: Google AI Essentials
+                - generic [ref=e707]:
+                  - paragraph [ref=e709]: Specialization
+                  - img [ref=e710]:
+                    - img [ref=e711]
+                    - generic [ref=e713]: "4.8"
+            - listitem [ref=e714]:
+              - generic [ref=e721] [cursor=pointer]:
+                - generic [ref=e722]:
+                  - paragraph [ref=e730]: Multiple educators
+                  - link [ref=e732]:
+                    - /url: /specializations/machine-learning-introduction
+                    - heading [level=3] [ref=e733]: Machine Learning
+                - generic [ref=e734]:
+                  - paragraph [ref=e736]: Specialization
+                  - img [ref=e737]:
+                    - img [ref=e738]
+                    - generic [ref=e740]: "4.9"
+            - listitem [ref=e741]:
+              - generic [ref=e748] [cursor=pointer]:
+                - generic [ref=e749]:
+                  - paragraph [ref=e755]: Vanderbilt University
+                  - link [ref=e757]:
+                    - /url: /specializations/prompt-engineering
+                    - heading [level=3] [ref=e758]: Prompt Engineering
+                - generic [ref=e759]:
+                  - paragraph [ref=e761]: Specialization
+                  - img [ref=e762]:
+                    - img [ref=e763]
+                    - generic [ref=e765]: "4.8"
+        - generic [ref=e769]:
+          - generic [ref=e770]:
+            - heading [level=2] [ref=e771]: Explore careers
+            - link [ref=e772] [cursor=pointer]:
+              - /url: /career-academy
+              - generic [ref=e774]:
+                - text: Explore all
+                - img [ref=e775]
+          - generic [ref=e777]:
+            - generic [ref=e785] [cursor=pointer]:
+              - link [ref=e787]:
+                - /url: https://www.coursera.org/career-academy/roles/data-scientist
+                - heading [level=3] [ref=e788]: Data Scientist
+              - generic [ref=e790]:
+                - generic [ref=e791]: "description:"
+                - paragraph [ref=e792]: A Data Scientist analyzes large datasets to uncover insights, using statistics, machine learning, and visualization to inform business strategies.
+                - generic [ref=e793]:
+                  - paragraph [ref=e794]:
+                    - generic [ref=e796]: This role has a ₹411,580 median salary ¹.
+                    - generic [ref=e798]:
+                      - strong [ref=e799]: ₹411,580
+                      - text: median salary ¹
+                  - paragraph [ref=e800]:
+                    - generic [ref=e802]: This role has approximately 26,813 jobs available ¹.
+                    - generic [ref=e804]:
+                      - strong [ref=e805]: 26,813
+                      - text: jobs available ¹
+            - generic [ref=e813] [cursor=pointer]:
+              - link [ref=e815]:
+                - /url: https://www.coursera.org/career-academy/roles/machine-learning-engineer
+                - heading [level=3] [ref=e816]: Machine Learning Engineer
+              - generic [ref=e818]:
+                - generic [ref=e819]: "description:"
+                - paragraph [ref=e820]: A Machine Learning Engineer builds and optimizes algorithms that enable computers to learn from data, using large datasets and neural networks.
+            - generic [ref=e828] [cursor=pointer]:
+              - link [ref=e830]:
+                - /url: https://www.coursera.org/career-academy/roles/data-analyst
+                - heading [level=3] [ref=e831]: Data Analyst
+              - generic [ref=e833]:
+                - generic [ref=e834]: "description:"
+                - paragraph [ref=e835]: A Data Analyst collects, cleans, and interprets data, using tools like Excel, SQL, and Tableau to analyze trends and provide insights for decisions.
+                - generic [ref=e836]:
+                  - paragraph [ref=e837]:
+                    - generic [ref=e839]: This role has a ₹301,415 median salary ¹.
+                    - generic [ref=e841]:
+                      - strong [ref=e842]: ₹301,415
+                      - text: median salary ¹
+                  - paragraph [ref=e843]:
+                    - generic [ref=e845]: This role has approximately 31,214 jobs available ¹.
+                    - generic [ref=e847]:
+                      - strong [ref=e848]: 31,214
+                      - text: jobs available ¹
+            - generic [ref=e856] [cursor=pointer]:
+              - link [ref=e858]:
+                - /url: https://www.coursera.org/career-academy/roles/content-creator
+                - heading [level=3] [ref=e859]: Content Creator
+              - generic [ref=e861]:
+                - generic [ref=e862]: "description:"
+                - paragraph [ref=e863]: A Content Creator produces a variety of content formats for digital platforms, including articles, videos, and social media posts.
+        - generic [ref=e869]:
+          - heading [level=2] [ref=e870]: What brings you to Coursera today?
+          - generic [ref=e871]:
+            - generic [ref=e872]:
+              - img [ref=e874]
+              - button [ref=e876] [cursor=pointer]
+              - paragraph [ref=e878]: Start my career
+            - generic [ref=e879]:
+              - img [ref=e881]
+              - button [ref=e883] [cursor=pointer]
+              - paragraph [ref=e885]: Change my career
+            - generic [ref=e886]:
+              - img [ref=e888]
+              - button [ref=e890] [cursor=pointer]
+              - paragraph [ref=e892]: Grow in my current role
+            - generic [ref=e893]:
+              - img [ref=e895]
+              - button [ref=e897] [cursor=pointer]
+              - paragraph [ref=e899]: Explore topics outside of work
+        - generic [ref=e908]:
+          - link [ref=e912] [cursor=pointer]:
+            - /url: /explore/certification-preparation-courses
+            - text: Prepare for an industry certification exam
+            - img [ref=e914]
+          - list [ref=e921]:
+            - listitem [ref=e922]:
+              - generic [ref=e929] [cursor=pointer]:
+                - generic [ref=e930]:
+                  - paragraph [ref=e936]: Pearson
+                  - link [ref=e938]:
+                    - /url: /specializations/pearson-pmp-certification
+                    - heading [level=3] [ref=e939]: PMP Certification
+                - generic [ref=e940]:
+                  - paragraph [ref=e942]: Specialization
+                  - img [ref=e943]:
+                    - img [ref=e944]
+                    - generic [ref=e946]: "4.7"
+            - listitem [ref=e947]:
+              - generic [ref=e954] [cursor=pointer]:
+                - generic [ref=e955]:
+                  - paragraph [ref=e961]: LearnKartS
+                  - link [ref=e963]:
+                    - /url: /specializations/comptia-security-plus-certification
+                    - heading [level=3] [ref=e964]: CompTIA Security+ Certification Preparation
+                - generic [ref=e965]:
+                  - paragraph [ref=e967]: Specialization
+                  - img [ref=e968]:
+                    - img [ref=e969]
+                    - generic [ref=e971]: "4.6"
+            - listitem [ref=e972]:
+              - generic [ref=e979] [cursor=pointer]:
+                - generic [ref=e980]:
+                  - paragraph [ref=e986]: Packt
+                  - link [ref=e988]:
+                    - /url: /specializations/packt-cissp-certified-information-systems-security-professional-2024
+                    - heading [level=3] [ref=e989]: CISSP Certified Information Systems Security Professional
+                - generic [ref=e990]:
+                  - paragraph [ref=e992]: Specialization
+                  - img [ref=e993]:
+                    - img [ref=e994]
+                    - generic [ref=e996]: "4.8"
+            - listitem [ref=e997]:
+              - generic [ref=e1004] [cursor=pointer]:
+                - generic [ref=e1005]:
+                  - paragraph [ref=e1011]: Amazon Web Services
+                  - link [ref=e1013]:
+                    - /url: /professional-certificates/aws-cloud-solutions-architect
+                    - heading [level=3] [ref=e1014]: AWS Cloud Solutions Architect
+                - generic [ref=e1015]:
+                  - paragraph [ref=e1017]: Professional Certificate
+                  - img [ref=e1018]:
+                    - img [ref=e1019]
+                    - generic [ref=e1021]: "4.8"
+        - generic [ref=e1025]:
+          - heading [level=2] [ref=e1026]: Prepare for an in-demand career
+          - list [ref=e1029]:
+            - listitem [ref=e1030]:
+              - generic [ref=e1031]:
+                - link [ref=e1032] [cursor=pointer]:
+                  - /url: "/career-academy?category=business "
+                  - text: Business Roles
+                  - img [ref=e1034]
+                - generic [ref=e1036]:
+                  - generic [ref=e1044]:
+                    - generic [ref=e1045]:
+                      - paragraph [ref=e1051]: Intuit
+                      - link [ref=e1052] [cursor=pointer]:
+                        - /url: /professional-certificates/intuit-bookkeeping
+                        - heading [level=3] [ref=e1053]: Intuit Academy Bookkeeping
+                    - generic [ref=e1055]:
+                      - paragraph [ref=e1057]: Professional Certificate
+                      - generic [ref=e1058]: ·
+                      - img [ref=e1059]:
+                        - img [ref=e1060]
+                        - generic [ref=e1062]: "4.6"
+                  - generic [ref=e1070]:
+                    - generic [ref=e1071]:
+                      - paragraph [ref=e1077]: Meta
+                      - link [ref=e1078] [cursor=pointer]:
+                        - /url: /professional-certificates/facebook-social-media-marketing
+                        - heading [level=3] [ref=e1079]: Meta Social Media Marketing
+                    - generic [ref=e1081]:
+                      - paragraph [ref=e1083]: Professional Certificate
+                      - generic [ref=e1084]: ·
+                      - img [ref=e1085]:
+                        - img [ref=e1086]
+                        - generic [ref=e1088]: "4.8"
+                  - generic [ref=e1096]:
+                    - generic [ref=e1097]:
+                      - paragraph [ref=e1103]: HRCI
+                      - link [ref=e1104] [cursor=pointer]:
+                        - /url: /professional-certificates/hrci-human-resource-associate
+                        - heading [level=3] [ref=e1105]: HRCI Human Resource Associate
+                    - generic [ref=e1107]:
+                      - paragraph [ref=e1109]: Professional Certificate
+                      - generic [ref=e1110]: ·
+                      - img [ref=e1111]:
+                        - img [ref=e1112]
+                        - generic [ref=e1114]: "4.8"
+            - listitem [ref=e1115]:
+              - generic [ref=e1116]:
+                - link [ref=e1117] [cursor=pointer]:
+                  - /url: "/career-academy?category=data_and_analytics "
+                  - text: Data Roles
+                  - img [ref=e1119]
+                - generic [ref=e1121]:
+                  - generic [ref=e1129]:
+                    - generic [ref=e1130]:
+                      - paragraph [ref=e1136]: Microsoft
+                      - link [ref=e1137] [cursor=pointer]:
+                        - /url: /professional-certificates/microsoft-power-bi-data-analyst
+                        - heading [level=3] [ref=e1138]: Microsoft Power BI Data Analyst
+                    - generic [ref=e1140]:
+                      - paragraph [ref=e1142]: Professional Certificate
+                      - generic [ref=e1143]: ·
+                      - img [ref=e1144]:
+                        - img [ref=e1145]
+                        - generic [ref=e1147]: "4.6"
+                  - generic [ref=e1155]:
+                    - generic [ref=e1156]:
+                      - paragraph [ref=e1162]: IBM
+                      - link [ref=e1163] [cursor=pointer]:
+                        - /url: /professional-certificates/ibm-data-analyst
+                        - heading [level=3] [ref=e1164]: IBM Data Analyst
+                    - generic [ref=e1166]:
+                      - paragraph [ref=e1168]: Professional Certificate
+                      - generic [ref=e1169]: ·
+                      - img [ref=e1170]:
+                        - img [ref=e1171]
+                        - generic [ref=e1173]: "4.6"
+                  - generic [ref=e1181]:
+                    - generic [ref=e1182]:
+                      - paragraph [ref=e1188]: Google
+                      - link [ref=e1189] [cursor=pointer]:
+                        - /url: /professional-certificates/google-data-analytics
+                        - heading [level=3] [ref=e1190]: Google Data Analytics
+                    - generic [ref=e1192]:
+                      - paragraph [ref=e1194]: Professional Certificate
+                      - generic [ref=e1195]: ·
+                      - img [ref=e1196]:
+                        - img [ref=e1197]
+                        - generic [ref=e1199]: "4.8"
+            - listitem [ref=e1200]:
+              - generic [ref=e1201]:
+                - link [ref=e1202] [cursor=pointer]:
+                  - /url: "/career-academy?category=software_and_it "
+                  - text: Tech Roles
+                  - img [ref=e1204]
+                - generic [ref=e1206]:
+                  - generic [ref=e1214]:
+                    - generic [ref=e1215]:
+                      - paragraph [ref=e1221]: Microsoft
+                      - link [ref=e1222] [cursor=pointer]:
+                        - /url: /professional-certificates/microsoft-back-end-developer
+                        - heading [level=3] [ref=e1223]: Microsoft Back-End Developer
+                    - generic [ref=e1225]:
+                      - paragraph [ref=e1227]: Professional Certificate
+                      - generic [ref=e1228]: ·
+                      - img [ref=e1229]:
+                        - img [ref=e1230]
+                        - generic [ref=e1232]: "4.6"
+                  - generic [ref=e1240]:
+                    - generic [ref=e1241]:
+                      - paragraph [ref=e1247]: Google
+                      - link [ref=e1248] [cursor=pointer]:
+                        - /url: /professional-certificates/google-cybersecurity
+                        - heading [level=3] [ref=e1249]: Google Cybersecurity
+                    - generic [ref=e1251]:
+                      - paragraph [ref=e1253]: Professional Certificate
+                      - generic [ref=e1254]: ·
+                      - img [ref=e1255]:
+                        - img [ref=e1256]
+                        - generic [ref=e1258]: "4.8"
+                  - generic [ref=e1266]:
+                    - generic [ref=e1267]:
+                      - paragraph [ref=e1273]: Meta
+                      - link [ref=e1274] [cursor=pointer]:
+                        - /url: /professional-certificates/meta-front-end-developer
+                        - heading [level=3] [ref=e1275]: Meta Front-End Developer
+                    - generic [ref=e1277]:
+                      - paragraph [ref=e1279]: Professional Certificate
+                      - generic [ref=e1280]: ·
+                      - img [ref=e1281]:
+                        - img [ref=e1282]
+                        - generic [ref=e1284]: "4.7"
+        - list [ref=e1293]:
+          - listitem [ref=e1294]:
+            - generic [ref=e1297]:
+              - generic [ref=e1298]:
+                - heading [level=3] [ref=e1299]:
+                  - link [ref=e1301] [cursor=pointer]:
+                    - /url: https://www.coursera.org/explore/learner-outcomes
+                    - text: 91% of learners achieved a positive career outcome
+                - generic [ref=e1302]: They reported new job opportunities, increased knowledge, and improved work performance.
+              - button [ref=e1304] [cursor=pointer]:
+                - generic [ref=e1305]:
+                  - text: Learn more
+                  - img [ref=e1307]
+        - list [ref=e1321]:
+          - listitem [ref=e1322]:
+            - generic [ref=e1325]:
+              - heading [level=3] [ref=e1329]:
+                - link [ref=e1331] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/microsoft-powerbi-developer-and-architect
+                  - text: Learn to build enterprise-grade Power BI solutions with Microsoft experts
+              - button [ref=e1333] [cursor=pointer]:
+                - generic [ref=e1334]:
+                  - text: Enroll now
+                  - img [ref=e1336]
+          - listitem [ref=e1338]:
+            - generic [ref=e1341]:
+              - heading [level=3] [ref=e1345]:
+                - link [ref=e1347] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/sales-excellence?utm_medium=coursera&utm_source=herobento&utm_campaign=2026Q1Holi
+                  - text: Design and scale sales processes using AI-powered insights.
+              - button [ref=e1349] [cursor=pointer]:
+                - generic [ref=e1350]:
+                  - text: Included with Coursera Plus
+                  - img [ref=e1352]
+        - generic [ref=e1357]:
+          - heading [level=2] [ref=e1358]: Why people choose Coursera
+          - list [ref=e1361]:
+            - listitem [ref=e1362]:
+              - generic [ref=e1363]:
+                - heading [level=3] [ref=e1366]: Sarah W.
+                - generic [ref=e1367]: "\"Coursera's reputation for high-quality content, paired with its flexible structure, made it possible for me to dive into data analytics while managing family, health, and everyday life. \""
+            - listitem [ref=e1368]:
+              - generic [ref=e1369]:
+                - heading [level=3] [ref=e1372]: Noeris B.
+                - generic [ref=e1373]: "\"Coursera rebuilt my confidence and showed me I could dream bigger. It wasn't just about gaining knowledge—it was about believing in my potential again.\""
+            - listitem [ref=e1374]:
+              - generic [ref=e1375]:
+                - heading [level=3] [ref=e1378]: Abdullahi M.
+                - generic [ref=e1379]: "\"I now feel more prepared to take on leadership roles and have already started mentoring some of my colleagues.\""
+            - listitem [ref=e1380]:
+              - generic [ref=e1381]:
+                - heading [level=3] [ref=e1384]: Anas A.
+                - generic [ref=e1385]: "\"Learning with Coursera has expanded my professional expertise by giving me access to cutting-edge research, practical tools, and global perspectives.\""
+        - generic [ref=e1391]:
+          - heading [level=2] [ref=e1393]: Frequently asked questions
+          - list [ref=e1400]:
+            - listitem [ref=e1401]:
+              - heading [level=3] [ref=e1406]:
+                - button [ref=e1407] [cursor=pointer]:
+                  - img [ref=e1408]
+                  - generic [ref=e1412]: Is Coursera accredited, and are Coursera certificates recognized by employers?
+            - listitem [ref=e1413]:
+              - heading [level=3] [ref=e1418]:
+                - button [ref=e1419] [cursor=pointer]:
+                  - img [ref=e1420]
+                  - generic [ref=e1424]: Is a Coursera certificate worth it?
+            - listitem [ref=e1425]:
+              - heading [level=3] [ref=e1430]:
+                - button [ref=e1431] [cursor=pointer]:
+                  - img [ref=e1432]
+                  - generic [ref=e1436]: What is Coursera Plus, and is it worth it?
+            - listitem [ref=e1437]:
+              - heading [level=3] [ref=e1442]:
+                - button [ref=e1443] [cursor=pointer]:
+                  - img [ref=e1444]
+                  - generic [ref=e1448]: Does Coursera offer free online courses?
+            - listitem [ref=e1449]:
+              - heading [level=3] [ref=e1454]:
+                - button [ref=e1455] [cursor=pointer]:
+                  - img [ref=e1456]
+                  - generic [ref=e1460]: What are the most popular courses on Coursera?
+            - listitem [ref=e1461]:
+              - heading [level=3] [ref=e1466]:
+                - button [ref=e1467] [cursor=pointer]:
+                  - img [ref=e1468]
+                  - generic [ref=e1472]: How can Coursera help me get a job or advance my career?
+            - listitem [ref=e1473]:
+              - heading [level=3] [ref=e1478]:
+                - button [ref=e1479] [cursor=pointer]:
+                  - img [ref=e1480]
+                  - generic [ref=e1484]: What is Coursera for Business, and how much does it cost?
+        - paragraph [ref=e1493]: ¹ Median salary and job opening data are sourced from Lightcast™ Job Postings Report. Content Creator, Machine Learning Engineer and Salesforce Development Representative (1/1/2024 - 12/31/2024) All other job roles (4/1/2025 - 4/1/2026)
+    - contentinfo [ref=e1494]:
+      - contentinfo [ref=e1495]:
+        - paragraph [ref=e1497]: Coursera Footer
+        - generic [ref=e1500]:
+          - generic [ref=e1501]:
+            - heading [level=2] [ref=e1502]: Skills
+            - list [ref=e1503]:
+              - listitem [ref=e1504]:
+                - link [ref=e1505] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=accounting
+                  - text: Accounting
+              - listitem [ref=e1506]:
+                - link [ref=e1507] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=artificial%20intelligence
+                  - text: Artificial Intelligence (AI)
+              - listitem [ref=e1508]:
+                - link [ref=e1509] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=cybersecurity
+                  - text: Cybersecurity
+              - listitem [ref=e1510]:
+                - link [ref=e1511] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=data%20analytics
+                  - text: Data Analytics
+              - listitem [ref=e1512]:
+                - link [ref=e1513] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=digital%20marketing
+                  - text: Digital Marketing
+              - listitem [ref=e1514]:
+                - link [ref=e1515] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=hr
+                  - text: Human Resources (HR)
+              - listitem [ref=e1516]:
+                - link [ref=e1517] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=microsoft%20excel
+                  - text: Microsoft Excel
+              - listitem [ref=e1518]:
+                - link [ref=e1519] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=project%20management
+                  - text: Project Management
+              - listitem [ref=e1520]:
+                - link [ref=e1521] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=python
+                  - text: Python
+              - listitem [ref=e1522]:
+                - link [ref=e1523] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=sql
+                  - text: SQL
+          - generic [ref=e1524]:
+            - heading [level=2] [ref=e1525]: Professional Certificates
+            - list [ref=e1526]:
+              - listitem [ref=e1527]:
+                - link [ref=e1528] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-ai
+                  - text: Google AI Certificate
+              - listitem [ref=e1529]:
+                - link [ref=e1530] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-cybersecurity
+                  - text: Google Cybersecurity Certificate
+              - listitem [ref=e1531]:
+                - link [ref=e1532] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-data-analytics
+                  - text: Google Data Analytics Certificate
+              - listitem [ref=e1533]:
+                - link [ref=e1534] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-it-support
+                  - text: Google IT Support Certificate
+              - listitem [ref=e1535]:
+                - link [ref=e1536] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-project-management
+                  - text: Google Project Management Certificate
+              - listitem [ref=e1537]:
+                - link [ref=e1538] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-ux-design
+                  - text: Google UX Design Certificate
+              - listitem [ref=e1539]:
+                - link [ref=e1540] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/ai-engineer
+                  - text: IBM AI Engineering Certificate
+              - listitem [ref=e1541]:
+                - link [ref=e1542] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/ibm-ai-product-manager
+                  - text: IBM AI Product Manager Certificate
+              - listitem [ref=e1543]:
+                - link [ref=e1544] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/ibm-data-science
+                  - text: IBM Data Science Certificate
+              - listitem [ref=e1545]:
+                - link [ref=e1546] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/intuit-bookkeeping
+                  - text: Intuit Academy Bookkeeping Certificate
+          - generic [ref=e1547]:
+            - heading [level=2] [ref=e1548]: Courses & Specializations
+            - list [ref=e1549]:
+              - listitem [ref=e1550]:
+                - link [ref=e1551] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/ai-essentials-google
+                  - text: AI Essentials Specialization
+              - listitem [ref=e1552]:
+                - link [ref=e1553] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/ai-for-business-wharton
+                  - text: AI For Business Specialization
+              - listitem [ref=e1554]:
+                - link [ref=e1555] [cursor=pointer]:
+                  - /url: https://www.coursera.org/learn/ai-for-everyone
+                  - text: AI For Everyone Course
+              - listitem [ref=e1556]:
+                - link [ref=e1557] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/ai-healthcare
+                  - text: AI in Healthcare Specialization
+              - listitem [ref=e1558]:
+                - link [ref=e1559] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/deep-learning
+                  - text: Deep Learning Specialization
+              - listitem [ref=e1560]:
+                - link [ref=e1561] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/excel
+                  - text: Excel Skills for Business Specialization
+              - listitem [ref=e1562]:
+                - link [ref=e1563] [cursor=pointer]:
+                  - /url: https://www.coursera.org/learn/financial-markets-global
+                  - text: Financial Markets Course
+              - listitem [ref=e1564]:
+                - link [ref=e1565] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/machine-learning-introduction
+                  - text: Machine Learning Specialization
+              - listitem [ref=e1566]:
+                - link [ref=e1567] [cursor=pointer]:
+                  - /url: https://www.coursera.org/learn/prompt-engineering
+                  - text: Prompt Engineering for ChatGPT Course
+              - listitem [ref=e1568]:
+                - link [ref=e1569] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/python
+                  - text: Python for Everybody Specialization
+          - generic [ref=e1570]:
+            - heading [level=2] [ref=e1571]: Career Resources
+            - list [ref=e1572]:
+              - listitem [ref=e1573]:
+                - link [ref=e1574] [cursor=pointer]:
+                  - /url: https://www.coursera.org/resources/career-quiz
+                  - text: Career Aptitude Test
+              - listitem [ref=e1575]:
+                - link [ref=e1576] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/capm-certification-guide
+                  - text: CAPM Certification Requirements
+              - listitem [ref=e1577]:
+                - link [ref=e1578] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/what-is-the-comptia-a-certification-what-to-know
+                  - text: CompTIA A+ Certification Requirements
+              - listitem [ref=e1579]:
+                - link [ref=e1580] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/what-is-the-comptia-security-plus-certification
+                  - text: CompTIA Security+ Certification Requirements
+              - listitem [ref=e1581]:
+                - link [ref=e1582] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/essential-it-certifications-entry-level-and-beginner
+                  - text: Essential IT Certifications
+              - listitem [ref=e1583]:
+                - link [ref=e1584] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/free-it-certifications
+                  - text: Free IT Certifications and Courses
+              - listitem [ref=e1585]:
+                - link [ref=e1586] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/high-income-skills
+                  - text: High-Income Skills to Learn
+              - listitem [ref=e1587]:
+                - link [ref=e1588] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/how-to-learn-artificial-intelligence
+                  - text: How to Learn Artificial Intelligence
+              - listitem [ref=e1589]:
+                - link [ref=e1590] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/the-pmp-certification-a-guide-to-getting-started
+                  - text: PMP Certification Requirements
+              - listitem [ref=e1591]:
+                - link [ref=e1592] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/popular-cybersecurity-certifications
+                  - text: Popular Cybersecurity Certifications
+          - generic [ref=e1593]:
+            - heading [level=2] [ref=e1594]: Coursera
+            - list [ref=e1595]:
+              - listitem [ref=e1596]:
+                - link [ref=e1597] [cursor=pointer]:
+                  - /url: /about
+                  - text: About
+              - listitem [ref=e1598]:
+                - link [ref=e1599] [cursor=pointer]:
+                  - /url: /about/how-coursera-works/
+                  - text: What We Offer
+              - listitem [ref=e1600]:
+                - link [ref=e1601] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/leadership
+                  - text: Leadership
+              - listitem [ref=e1602]:
+                - link [ref=e1603] [cursor=pointer]:
+                  - /url: https://careers.coursera.com/
+                  - text: Careers
+              - listitem [ref=e1604]:
+                - link [ref=e1605] [cursor=pointer]:
+                  - /url: /browse
+                  - text: Catalog
+              - listitem [ref=e1606]:
+                - link [ref=e1607] [cursor=pointer]:
+                  - /url: /courseraplus
+                  - text: Coursera Plus
+              - listitem [ref=e1608]:
+                - link [ref=e1609] [cursor=pointer]:
+                  - /url: /professional-certificates
+                  - text: Professional Certificates
+              - listitem [ref=e1610]:
+                - link [ref=e1611] [cursor=pointer]:
+                  - /url: /mastertrack
+                  - text: MasterTrack® Certificates
+              - listitem [ref=e1612]:
+                - link [ref=e1613] [cursor=pointer]:
+                  - /url: /degrees
+                  - text: Degrees
+              - listitem [ref=e1614]:
+                - link [ref=e1615] [cursor=pointer]:
+                  - /url: /business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise
+                  - text: For Enterprise
+              - listitem [ref=e1616]:
+                - link [ref=e1617] [cursor=pointer]:
+                  - /url: /government?utm_campaign=website&utm_content=corp-to-home-footer-for-government&utm_medium=coursera&utm_source=enterprise
+                  - text: For Government
+              - listitem [ref=e1618]:
+                - link [ref=e1619] [cursor=pointer]:
+                  - /url: /campus?utm_campaign=website&utm_content=corp-to-home-footer-for-campus&utm_medium=coursera&utm_source=enterprise
+                  - text: For Campus
+              - listitem [ref=e1620]:
+                - link [ref=e1621] [cursor=pointer]:
+                  - /url: https://partnerships.coursera.org/?utm_medium=coursera&utm_source=partnerships&utm_campaign=website&utm_content=corp-to-home-footer-become-a-partner
+                  - text: Become a Partner
+              - listitem [ref=e1622]:
+                - link [ref=e1623] [cursor=pointer]:
+                  - /url: /social-impact
+                  - text: Social Impact
+              - listitem [ref=e1624]:
+                - link [ref=e1625] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=free
+                  - text: Free Courses
+              - listitem [ref=e1626]:
+                - link [ref=e1627] [cursor=pointer]:
+                  - /url: https://airtable.com/appxSsG2Dz9CjSpF8/pagCDDP2Uinw59CNP/form?prefill_utm_source=product&prefill_utm_campaign=seo_footer&prefill_utm_medium=written
+                  - text: Share your Coursera learning story
+          - generic [ref=e1628]:
+            - heading [level=2] [ref=e1629]: Community
+            - list [ref=e1630]:
+              - listitem [ref=e1631]:
+                - link [ref=e1632] [cursor=pointer]:
+                  - /url: https://www.coursera.community
+                  - text: Learners
+              - listitem [ref=e1633]:
+                - link [ref=e1634] [cursor=pointer]:
+                  - /url: https://www.coursera.org/partners
+                  - text: Partners
+              - listitem [ref=e1635]:
+                - link [ref=e1636] [cursor=pointer]:
+                  - /url: https://www.coursera.support/s/article/360000152926-Become-a-Coursera-beta-tester
+                  - text: Beta Testers
+              - listitem [ref=e1637]:
+                - link [ref=e1638] [cursor=pointer]:
+                  - /url: https://blog.coursera.org
+                  - text: Blog
+              - listitem [ref=e1639]:
+                - link [ref=e1640] [cursor=pointer]:
+                  - /url: https://open.spotify.com/show/58M36bneU7REOofdPZxe6A
+                  - text: The Coursera Podcast
+              - listitem [ref=e1641]:
+                - link [ref=e1642] [cursor=pointer]:
+                  - /url: https://medium.com/coursera-engineering
+                  - text: Tech Blog
+          - generic [ref=e1643]:
+            - heading [level=2] [ref=e1644]: More
+            - list [ref=e1645]:
+              - listitem [ref=e1646]:
+                - link [ref=e1647] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/press
+                  - text: Press
+              - listitem [ref=e1648]:
+                - link [ref=e1649] [cursor=pointer]:
+                  - /url: https://investor.coursera.com
+                  - text: Investors
+              - listitem [ref=e1650]:
+                - link [ref=e1651] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/terms
+                  - text: Terms
+              - listitem [ref=e1652]:
+                - link [ref=e1653] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/privacy
+                  - text: Privacy
+              - listitem [ref=e1654]:
+                - link [ref=e1655] [cursor=pointer]:
+                  - /url: https://learner.coursera.help/hc
+                  - text: Help
+              - listitem [ref=e1656]:
+                - link [ref=e1657] [cursor=pointer]:
+                  - /url: https://learner.coursera.help/hc/articles/360050668591-Accessibility-Statement
+                  - text: Accessibility
+              - listitem [ref=e1658]:
+                - link [ref=e1659] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/contact
+                  - text: Contact
+              - listitem [ref=e1660]:
+                - link [ref=e1661] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles
+                  - text: Articles
+              - listitem [ref=e1662]:
+                - link [ref=e1663] [cursor=pointer]:
+                  - /url: /directory
+                  - text: Directory
+              - listitem [ref=e1664]:
+                - link [ref=e1665] [cursor=pointer]:
+                  - /url: /about/affiliates
+                  - text: Affiliates
+              - listitem [ref=e1666]:
+                - link [ref=e1667] [cursor=pointer]:
+                  - /url: https://coursera_assets.s3.amazonaws.com/footer/Modern+Slavery+Statement+(approved+March+26%2C+2025).pdf
+                  - text: Modern Slavery Statement
+              - listitem [ref=e1668]:
+                - link [ref=e1669] [cursor=pointer]:
+                  - /url: /about/cookies-manage
+                  - text: Cookies Preference Center
+          - generic [ref=e1670]:
+            - generic [ref=e1671]:
+              - link [ref=e1672] [cursor=pointer]:
+                - /url: https://itunes.apple.com/app/apple-store/id736535961?pt=2334150&ct=Coursera%20Web%20Promo%20Banner&mt=8
+                - img [ref=e1674]
+              - link [ref=e1675] [cursor=pointer]:
+                - /url: http://play.google.com/store/apps/details?id=org.coursera.android
+                - img [ref=e1677]
+            - img [ref=e1680]
+          - generic [ref=e1684]: © 2026 Coursera Inc. All rights reserved.
+  - iframe [active] [ref=e1686]:
+    - dialog "Sign in with Google" [ref=f6e4]:
+      - generic [ref=f6e5]:
+        - generic [ref=f6e6]:
+          - img [ref=f6e8]
+          - heading "Sign in with Google" [level=1] [ref=f6e14]
+        - button "Close" [ref=f6e15]:
+          - img [ref=f6e16]
+      - generic [ref=f6e19]:
+        - generic [ref=f6e20]:
+          - paragraph [ref=f6e21]: Use your Google Account to sign in to Coursera
+          - paragraph [ref=f6e22]: No more passwords to remember. Signing in is fast, simple and secure.
+          - img [ref=f6e24]
+        - button "Continue" [ref=f6e56] [cursor=pointer]:
+          - generic [ref=f6e58]: Continue
+```
+
+# Test source
+
+```ts
+  1  | import { Page } from "@playwright/test";
+  2  |  
+  3  | export class SearchResultsPage {
+  4  |   readonly page: Page;
+  5  |  
+  6  |   constructor(page: Page) {
+  7  |     this.page = page;
+  8  |   }
+  9  |  
+  10 |   async filterByLanguage(language: string) {
+> 11 |     await this.page.getByTestId("filter-dropdown-language").click();
+     |                                                             ^ TimeoutError: locator.click: Timeout 40000ms exceeded.
+  12 |     await this.page.getByRole("checkbox", { name: language }).click();
+  13 |     await this.page.waitForSelector("[data-testid='search-filter-group-Language']");
+  14 |     const countRaw = await this.page.locator(`[data-testid='language:${language}-true'] span.css-s63saa`).textContent();
+  15 |     await this.page.getByTestId("filter-view-button").click();
+  16 |     return countRaw?.replace(/[()]/g, "").trim();
+  17 |   }
+  18 |  
+  19 |   async filterByLevel(level: string) {
+  20 |     await this.page.getByTestId("filter-dropdown-productDifficultyLevel").click();
+  21 |     await this.page.getByRole("checkbox", { name: level }).click();
+  22 |     await this.page.waitForSelector("[data-testid='search-filter-group-Level']");
+  23 |     const countRaw = await this.page.locator(`[data-testid='productDifficultyLevel:${level}-true'] span.css-s63saa`).textContent();
+  24 |     await this.page.getByTestId("filter-view-button").click();
+  25 |     return countRaw?.replace(/[()]/g, "").trim();
+  26 |   }
+  27 |  
+  28 |   async getCardDetails(limit: number = 2) {
+  29 |     await this.page.waitForSelector("[data-testid='product-card-cds']");
+  30 |     const titles = await this.page.locator("h3.cds-CommonCard-title").allTextContents();
+  31 |     const ratings = await this.page.locator(".cds-RatingStat-sizeLabel .css-4s48ix").allTextContents();
+  32 |     const metadata = await this.page.locator(".cds-CommonCard-metadata p.css-vac8rf").allTextContents();
+  33 |  
+  34 |     for (let i = 0; i < limit; i++) {
+  35 |       console.log(`Card ${i + 1} title: ${titles[i]}`);
+  36 |       console.log(`Card ${i + 1} rating: ${ratings[i]}`);
+  37 |       console.log(`Card ${i + 1} level/duration: ${metadata[i]}`);
+  38 |       console.log("-----");
+  39 |     }
+  40 |   }
+  41 | }
+```
