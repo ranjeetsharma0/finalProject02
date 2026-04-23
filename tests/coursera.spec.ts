@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { HomePage } from "../Pages/HomePage";
 import { SearchResultsPage } from "../Pages/SearchResultsPage";
 import { CampusFormPage } from "../Pages/CampusFormPage";
+import formData from "../test-data/campusFormData.json";
 
 test.describe("Coursera Platform Tests", () => {
   let home: HomePage, searchResults: SearchResultsPage, campusForm: CampusFormPage;
@@ -45,12 +46,23 @@ test.describe("Coursera Platform Tests", () => {
     expect(englishCount).not.toBeNull();
     expect(beginnerCount).not.toBeNull();
 
-    // 2. Navigation & Form Validation
+    // 2. Navigation & Form Validation with first test data
     await home.clickForEnterprise();
     expect(page.url()).toContain("enterprise");
 
     await home.clickForCampus();
-    await campusForm.fillForm();
-    // Add an assertion here for form success (e.g., success message visibility)
+    await campusForm.fillForm(formData.testData1);
+  });
+
+  /**
+   * FORM TEST: Campus form submission with second test data set.
+   * Verifies that the form accepts different data sets.
+   */
+  test("Verify campus form with second test data set @regression", async ({ page }) => {
+    await home.clickForEnterprise();
+    expect(page.url()).toContain("enterprise");
+
+    await home.clickForCampus();
+    await campusForm.fillForm(formData.testData2);
   });
 });

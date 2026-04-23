@@ -1,0 +1,1343 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: coursera.spec.ts >> Coursera Platform Tests >> Verify basic search functionality @smoke
+- Location: tests\coursera.spec.ts:20:7
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 40000ms exceeded.
+Call log:
+  - waiting for getByTestId('filter-dropdown-language')
+    - locator resolved to <button type="button" class="css-1f1sqzk" data-testid="filter-dropdown-language">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - performing click action
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: "#main"
+        - generic [ref=e8]: Skip to main content
+      - navigation [ref=e9]:
+        - navigation [ref=e15]:
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - link [ref=e18] [cursor=pointer]:
+                - /url: https://www.coursera.org/
+                - generic [ref=e19]: For Individuals
+            - listitem [ref=e20]:
+              - link [ref=e21] [cursor=pointer]:
+                - /url: https://www.coursera.org/business?utm_content=corp-to-home-for-enterprise&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out
+                - generic [ref=e22]: For Businesses
+            - listitem [ref=e23]:
+              - link [ref=e24] [cursor=pointer]:
+                - /url: https://www.coursera.org/campus?utm_content=corp-to-landing-for-campus&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out
+                - generic [ref=e25]: For Universities
+            - listitem [ref=e26]:
+              - link [ref=e27] [cursor=pointer]:
+                - /url: https://www.coursera.org/government?utm_content=corp-to-landing-for-government&utm_campaign=website&utm_medium=coursera&utm_source=header&utm_term=b-out
+                - generic [ref=e28]: For Governments
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - link [ref=e35] [cursor=pointer]:
+              - /url: /
+              - img [ref=e38]
+            - button [ref=e43] [cursor=pointer]:
+              - generic [ref=e44]:
+                - text: Explore
+                - img [ref=e46]
+            - button [ref=e49] [cursor=pointer]:
+              - generic [ref=e50]: Degrees
+          - search [ref=e54]:
+            - generic [ref=e58]:
+              - combobox [ref=e59]: Web Development
+              - button [ref=e62] [cursor=pointer]:
+                - img [ref=e63]
+              - group
+          - generic [ref=e65]:
+            - button [ref=e67] [cursor=pointer]:
+              - generic [ref=e68]: Log In
+            - button [ref=e70] [cursor=pointer]:
+              - generic [ref=e71]: Join for Free
+    - main [ref=e72]:
+      - region [ref=e79]:
+        - generic [ref=e82]:
+          - complementary [ref=e84]:
+            - status [ref=e86]: AI summary is now available. Navigate to the AI Overview section to read it.
+            - generic [ref=e87]:
+              - generic [ref=e90]:
+                - generic [ref=e92]:
+                  - generic [ref=e93]:
+                    - img [ref=e95]
+                    - generic [ref=e98]: AI Overview
+                  - button [ref=e99] [cursor=pointer]:
+                    - generic [ref=e101]:
+                      - paragraph [ref=e102]:
+                        - strong [ref=e103]: Understanding web development fundamentals and choosing a learning path
+                      - paragraph [ref=e104]:
+                        - text: To start with web development, focus on
+                        - strong [ref=e105]: core skills like HTML, CSS, and JavaScript
+                        - text: for front-end basics. Decide if you want to specialize in front-end, back-end, or full-stack development. Consider your
+                        - strong [ref=e106]: time availability and experience level
+                        - text: to pick beginner-friendly courses or longer specializations. Building projects and practicing responsive design will solidify your skills. If you aim for a career in web development, look for courses that include version control, testing frameworks, and deployment techniques.
+                  - button [ref=e107] [cursor=pointer]:
+                    - generic [ref=e108]: Show more
+                  - generic [ref=e109]:
+                    - paragraph [ref=e110]: "Top courses to get started:"
+                    - generic [ref=e111]:
+                      - link [ref=e113] [cursor=pointer]:
+                        - /url: https://www.coursera.org/learn/introduction-html-css-javascript
+                        - img [ref=e114]
+                        - generic [ref=e115]:
+                          - generic [ref=e116]:
+                            - img [ref=e117]
+                            - generic [ref=e118]: IBM
+                          - paragraph [ref=e119]: Introduction to HTML, CSS, & JavaScript
+                          - paragraph [ref=e122]:
+                            - strong [ref=e123]: "Best for:"
+                            - text: learners with 1-4 weeks availability, beginners in web development, and those seeking foundational front-end skills
+                      - link [ref=e125] [cursor=pointer]:
+                        - /url: https://www.coursera.org/specializations/meta-full-stack-developer
+                        - img [ref=e126]
+                        - generic [ref=e127]:
+                          - generic [ref=e128]:
+                            - img [ref=e129]
+                            - generic [ref=e130]: Meta
+                          - paragraph [ref=e131]: "Meta Full Stack Developer: Front-End & Back-End from Scratch"
+                          - paragraph [ref=e134]:
+                            - strong [ref=e135]: "Best for:"
+                            - text: beginners ready for a 3-6 month commitment, learners interested in full-stack development, and those preferring specialization programs
+                      - link [ref=e137] [cursor=pointer]:
+                        - /url: https://www.coursera.org/learn/introduction-to-front-end-development
+                        - img [ref=e138]
+                        - generic [ref=e139]:
+                          - generic [ref=e140]:
+                            - img [ref=e141]
+                            - generic [ref=e142]: Meta
+                          - paragraph [ref=e143]: Introduction to Front-End Development
+                          - paragraph [ref=e146]:
+                            - strong [ref=e147]: "Best for:"
+                            - text: learners with short-term availability, beginners focusing on front-end frameworks, and those wanting practical responsive design skills
+                      - link [ref=e149] [cursor=pointer]:
+                        - /url: https://www.coursera.org/professional-certificates/meta-front-end-developer
+                        - img [ref=e150]
+                        - generic [ref=e151]:
+                          - generic [ref=e152]:
+                            - img [ref=e153]
+                            - generic [ref=e154]: Meta
+                          - paragraph [ref=e155]: Meta Front-End Developer
+                          - paragraph [ref=e158]:
+                            - strong [ref=e159]: "Best for:"
+                            - text: beginners with 3-6 months to invest, learners interested in user experience design, and those seeking professional certification from Meta
+                - generic [ref=e161]:
+                  - paragraph [ref=e162]: You might follow up with...
+                  - generic [ref=e164]:
+                    - button [ref=e166] [cursor=pointer]:
+                      - generic [ref=e167]: web design and development
+                    - button [ref=e169] [cursor=pointer]:
+                      - generic [ref=e170]: website development
+                    - button [ref=e172] [cursor=pointer]:
+                      - generic [ref=e173]: complete web development
+                    - button [ref=e175] [cursor=pointer]:
+                      - generic [ref=e176]: javascript for web development
+                    - button [ref=e178] [cursor=pointer]:
+                      - generic [ref=e179]: web development full stack
+                    - button [ref=e181] [cursor=pointer]:
+                      - generic [ref=e182]: html, css, and javascript for web developers
+                    - button [ref=e184] [cursor=pointer]:
+                      - generic [ref=e185]: python web development
+                    - button [ref=e187] [cursor=pointer]:
+                      - generic [ref=e188]: google web development
+                    - button [ref=e190] [cursor=pointer]:
+                      - generic [ref=e191]: introduction to web development
+                    - button [ref=e193] [cursor=pointer]:
+                      - generic [ref=e194]: modern web development with typescript
+              - separator [ref=e195]
+          - generic [ref=e198]:
+            - heading [level=2] [ref=e203]:
+              - generic [ref=e204]: All Results
+            - generic [ref=e209]:
+              - button [ref=e210] [cursor=pointer]:
+                - img [ref=e212]
+                - generic [ref=e214]: Filter & Sort
+              - separator [ref=e215]
+              - generic [ref=e216]:
+                - button [ref=e218] [cursor=pointer]:
+                  - generic [ref=e219]: Topic
+                  - img [ref=e221]
+                - button [ref=e224] [cursor=pointer]:
+                  - generic [ref=e225]: Duration
+                  - img [ref=e227]
+                - button [ref=e230] [cursor=pointer]:
+                  - generic [ref=e231]: Learning Product
+                  - img [ref=e233]
+                - button [ref=e236] [cursor=pointer]:
+                  - generic [ref=e237]: Language
+                  - img [ref=e239]
+                - button [ref=e242] [cursor=pointer]:
+                  - generic [ref=e243]: Level
+                  - img [ref=e245]
+                - generic [ref=e247]:
+                  - button [ref=e248] [cursor=pointer]:
+                    - img [ref=e251]
+                    - generic [ref=e254]: Core Web Development Skills
+                    - img [ref=e256]
+                  - button [ref=e258] [cursor=pointer]:
+                    - img [ref=e261]
+                    - generic [ref=e264]: Front-End Frameworks and Libraries
+                    - img [ref=e266]
+            - region [ref=e268]:
+              - generic [ref=e270]:
+                - list [ref=e271]:
+                  - listitem [ref=e272]:
+                    - generic [ref=e282] [cursor=pointer]:
+                      - generic [ref=e283]:
+                        - paragraph [ref=e289]: IBM
+                        - link [ref=e291]:
+                          - /url: /learn/introduction-html-css-javascript
+                          - heading [level=3] [ref=e292]: Introduction to HTML, CSS, & JavaScript
+                      - paragraph [ref=e295]:
+                        - generic [ref=e296]: "Skills you'll gain:"
+                        - text: Responsive Web Design, Cascading Style Sheets (CSS), Web Development, Javascript, Bootstrap (Front-End Framework), Scripting, Browser Compatibility, Application Programming Interface (API), Back-End Web Development
+                      - generic [ref=e297]:
+                        - paragraph [ref=e301]: ★ 4.4 (830) · Beginner · Course · 1 - 4 Weeks
+                        - generic [ref=e303]:
+                          - generic [ref=e304]:
+                            - generic [ref=e305]: "Status: Free Trial"
+                            - generic [ref=e306]: Free Trial
+                          - generic [ref=e307]:
+                            - generic [ref=e308]: "Category: Credit offered"
+                            - generic [ref=e309]: Credit offered
+                  - listitem [ref=e310]:
+                    - generic [ref=e318] [cursor=pointer]:
+                      - generic [ref=e319]:
+                        - paragraph [ref=e325]: Meta
+                        - link [ref=e327]:
+                          - /url: /specializations/meta-full-stack-developer
+                          - heading [level=3] [ref=e328]: "Meta Full Stack Developer: Front-End & Back-End from Scratch"
+                      - paragraph [ref=e331]:
+                        - generic [ref=e332]: "Skills you'll gain:"
+                        - text: Jest (JavaScript Testing Framework), Django (Web Framework), Version Control, Restful API, Responsive Web Design, Cascading Style Sheets (CSS), Unix Commands, HTML and CSS, Git (Version Control System), API Testing, GitHub, Relational Databases, Database Management Systems, Bootstrap (Front-End Framework), React.js, Mobile Development, SQL, Database Design, API Design, Python Programming
+                      - generic [ref=e333]:
+                        - paragraph [ref=e337]: ★ 4.7 (25K) · Beginner · Specialization · 3 - 6 Months
+                        - generic [ref=e339]:
+                          - generic [ref=e340]:
+                            - generic [ref=e341]: "Status: Free Trial"
+                            - generic [ref=e342]: Free Trial
+                          - generic [ref=e343]:
+                            - generic [ref=e344]: "Category: Credit offered"
+                            - generic [ref=e345]: Credit offered
+                  - listitem [ref=e346]:
+                    - generic [ref=e354] [cursor=pointer]:
+                      - generic [ref=e355]:
+                        - paragraph [ref=e361]: Meta
+                        - link [ref=e363]:
+                          - /url: /learn/introduction-to-front-end-development
+                          - heading [level=3] [ref=e364]: Introduction to Front-End Development
+                      - paragraph [ref=e367]:
+                        - generic [ref=e368]: "Skills you'll gain:"
+                        - text: HTML and CSS, Bootstrap (Front-End Framework), Responsive Web Design, Front-End Web Development, User Interface (UI), JavaScript Frameworks, Web Design and Development, Web Applications, Web Development Tools, React.js, General Networking
+                      - generic [ref=e369]:
+                        - paragraph [ref=e373]: ★ 4.8 (14K) · Beginner · Course · 1 - 4 Weeks
+                        - generic [ref=e375]:
+                          - generic [ref=e376]:
+                            - generic [ref=e377]: "Status: Free Trial"
+                            - generic [ref=e378]: Free Trial
+                          - generic [ref=e379]:
+                            - generic [ref=e380]: "Category: Credit offered"
+                            - generic [ref=e381]: Credit offered
+                  - listitem [ref=e382]:
+                    - generic [ref=e390] [cursor=pointer]:
+                      - generic [ref=e391]:
+                        - paragraph [ref=e397]: Meta
+                        - link [ref=e399]:
+                          - /url: /professional-certificates/meta-front-end-developer
+                          - heading [level=3] [ref=e400]: Meta Front-End Developer
+                      - paragraph [ref=e403]:
+                        - generic [ref=e404]: "Skills you'll gain:"
+                        - text: User Research, Cascading Style Sheets (CSS), User Experience Design, User Experience, Design Research, Linux Commands, Usability, Debugging, User Interface (UI), Software Versioning, Software Visualization, Web Content Accessibility Guidelines, Pseudocode, JavaScript Frameworks, User Interface and User Experience (UI/UX) Design, Javascript, Web Applications, Event-Driven Programming, Unit Testing, Application Programming Interface (API)
+                      - generic [ref=e405]:
+                        - paragraph [ref=e409]: ★ 4.7 (24K) · Beginner · Professional Certificate · 3 - 6 Months
+                        - generic [ref=e411]:
+                          - generic [ref=e412]:
+                            - generic [ref=e413]: "Status: Free Trial"
+                            - generic [ref=e414]: Free Trial
+                          - generic [ref=e415]:
+                            - generic [ref=e416]: "Category: Build toward a degree"
+                            - generic [ref=e417]: Build toward a degree
+                  - listitem [ref=e418]:
+                    - generic [ref=e426] [cursor=pointer]:
+                      - generic [ref=e427]:
+                        - paragraph [ref=e433]: Amazon
+                        - link [ref=e435]:
+                          - /url: /learn/fullstack-web-development
+                          - heading [level=3] [ref=e436]: Full Stack Web Development
+                      - paragraph [ref=e439]:
+                        - generic [ref=e440]: "Skills you'll gain:"
+                        - text: Full-Stack Web Development, Restful API, Cloud Deployment, Front-End Web Development, HTML and CSS, Data Persistence, Application Programming Interface (API), Server Side, Java Platform Enterprise Edition (J2EE), Web Applications, Secure Coding, Amazon Elastic Compute Cloud, Back-End Web Development, Spring Boot, Model View Controller, Responsive Web Design, Javascript
+                      - generic [ref=e441]:
+                        - paragraph [ref=e445]: ★ 4.1 (51) · Beginner · Course · 1 - 4 Weeks
+                        - generic [ref=e447]:
+                          - generic [ref=e448]:
+                            - generic [ref=e449]: "Status: Free Trial"
+                            - generic [ref=e450]: Free Trial
+                          - generic [ref=e451]:
+                            - generic [ref=e452]: "Category: Credit offered"
+                            - generic [ref=e453]: Credit offered
+                  - listitem [ref=e454]:
+                    - generic [ref=e462] [cursor=pointer]:
+                      - generic [ref=e463]:
+                        - paragraph [ref=e469]: IBM
+                        - link [ref=e471]:
+                          - /url: /learn/python-for-applied-data-science-ai
+                          - heading [level=3] [ref=e472]: Python for Data Science, AI & Development
+                      - paragraph [ref=e475]:
+                        - generic [ref=e476]: "Skills you'll gain:"
+                        - text: Data Import/Export, Programming Principles, Web Scraping, File I/O, Python Programming, Jupyter, Data Structures, Pandas (Python Package), Data Manipulation, JSON, Computer Programming, Restful API, NumPy, Object Oriented Programming (OOP), Application Programming Interface (API), Automation, Data Analysis
+                      - generic [ref=e477]:
+                        - paragraph [ref=e481]: ★ 4.6 (43K) · Beginner · Course · 1 - 3 Months
+                        - generic [ref=e483]:
+                          - generic [ref=e484]:
+                            - generic [ref=e485]: "Status: Free Trial"
+                            - generic [ref=e486]: Free Trial
+                          - generic [ref=e487]:
+                            - generic [ref=e488]: "Category: Credit offered"
+                            - generic [ref=e489]: Credit offered
+                - generic [ref=e493]:
+                  - heading [level=2] [ref=e494]: What brings you to Coursera today?
+                  - generic [ref=e495]:
+                    - generic [ref=e496]:
+                      - img [ref=e498]
+                      - button [ref=e500] [cursor=pointer]
+                      - paragraph [ref=e502]: Start my career
+                    - generic [ref=e503]:
+                      - img [ref=e505]
+                      - button [ref=e507] [cursor=pointer]
+                      - paragraph [ref=e509]: Change my career
+                    - generic [ref=e510]:
+                      - img [ref=e512]
+                      - button [ref=e514] [cursor=pointer]
+                      - paragraph [ref=e516]: Grow in my current role
+                    - generic [ref=e517]:
+                      - img [ref=e519]
+                      - button [ref=e521] [cursor=pointer]
+                      - paragraph [ref=e523]: Explore topics outside of work
+                - list [ref=e524]:
+                  - listitem [ref=e525]:
+                    - generic [ref=e535] [cursor=pointer]:
+                      - generic [ref=e536]:
+                        - paragraph [ref=e542]: IBM
+                        - link [ref=e544]:
+                          - /url: /professional-certificates/ibm-full-stack-cloud-developer
+                          - heading [level=3] [ref=e545]: IBM Full Stack Software Developer
+                      - paragraph [ref=e548]:
+                        - generic [ref=e549]: "Skills you'll gain:"
+                        - text: Cloud Deployment, Software Development Life Cycle, CI/CD, Cloud-Native Computing, Istio, Software Architecture, Node.JS, React Redux, Cloud Computing Architecture, Application Deployment, Kubernetes, Restful API, Responsive Web Design, Django (Web Framework), HTML and CSS, Server Side, Cloud Computing, Data Ethics, Data Import/Export, Engineering Software
+                      - generic [ref=e550]:
+                        - paragraph [ref=e554]: ★ 4.6 (60K) · Beginner · Professional Certificate · 3 - 6 Months
+                        - generic [ref=e556]:
+                          - generic [ref=e557]:
+                            - generic [ref=e558]: "Status: Free Trial"
+                            - generic [ref=e559]: Free Trial
+                          - generic [ref=e560]:
+                            - img [ref=e561]
+                            - generic [ref=e563]: "Category: AI skills"
+                            - generic [ref=e564]: AI skills
+                          - generic [ref=e565]:
+                            - generic [ref=e566]: "Category: Build toward a degree"
+                            - generic [ref=e567]: Build toward a degree
+                  - listitem [ref=e568]:
+                    - generic [ref=e578] [cursor=pointer]:
+                      - generic [ref=e579]:
+                        - paragraph [ref=e585]: Microsoft
+                        - link [ref=e587]:
+                          - /url: /learn/introduction-to-web-development
+                          - heading [level=3] [ref=e588]: Introduction to Web Development
+                      - paragraph [ref=e591]:
+                        - generic [ref=e592]: "Skills you'll gain:"
+                        - text: Cascading Style Sheets (CSS), GitHub, HTML and CSS, Git (Version Control System), Microsoft Copilot, Web Development, Web Content Accessibility Guidelines, Responsive Web Design, Hypertext Markup Language (HTML), Javascript, Web Design, Front-End Web Development, JSON, Semantic Web
+                      - generic [ref=e593]:
+                        - paragraph [ref=e597]: ★ 4.1 (40) · Beginner · Course · 1 - 3 Months
+                        - generic [ref=e599]:
+                          - generic [ref=e600]:
+                            - generic [ref=e601]: "Status: Free Trial"
+                            - generic [ref=e602]: Free Trial
+                          - generic [ref=e603]:
+                            - generic [ref=e604]: "Category: Credit offered"
+                            - generic [ref=e605]: Credit offered
+                  - listitem [ref=e606]:
+                    - generic [ref=e616] [cursor=pointer]:
+                      - generic [ref=e617]:
+                        - paragraph [ref=e623]: University of Michigan
+                        - link [ref=e625]:
+                          - /url: /specializations/web-design
+                          - heading [level=3] [ref=e626]: "Web Design for Everybody: Basics of Web Development & Coding"
+                      - paragraph [ref=e629]:
+                        - generic [ref=e630]: "Skills you'll gain:"
+                        - text: Wireframing, Responsive Web Design, HTML and CSS, Web Content Accessibility Guidelines, Cascading Style Sheets (CSS), Web Design, Browser Compatibility, Javascript, Bootstrap (Front-End Framework), Web Design and Development, Debugging, Front-End Web Development, User Interface (UI), Verification And Validation, Web Development, Interactive Design, Event-Driven Programming, Usability, User Interface (UI) Design, Mobile Development Tools
+                      - generic [ref=e631]:
+                        - paragraph [ref=e635]: ★ 4.7 (35K) · Beginner · Specialization · 3 - 6 Months
+                        - generic [ref=e637]:
+                          - generic [ref=e638]:
+                            - generic [ref=e639]: "Status: Free Trial"
+                            - generic [ref=e640]: Free Trial
+                          - generic [ref=e641]:
+                            - generic [ref=e642]: "Category: Credit offered"
+                            - generic [ref=e643]: Credit offered
+                  - listitem [ref=e644]:
+                    - generic [ref=e654] [cursor=pointer]:
+                      - generic [ref=e655]:
+                        - paragraph [ref=e661]: University of London
+                        - link [ref=e663]:
+                          - /url: /specializations/full-stack-web-development
+                          - heading [level=3] [ref=e664]: Full-Stack Web Development
+                      - paragraph [ref=e667]:
+                        - generic [ref=e668]: "Skills you'll gain:"
+                        - text: Responsive Web Design, Cascading Style Sheets (CSS), JSON, HTML and CSS, Ajax, Web Content Accessibility Guidelines, Javascript, Web Design, Semantic Web, Usability, Web Applications, Web Development, Web Content, Usability Testing, Interactive Design, Data Structures, Application Frameworks, Network Protocols, Data Ethics, Animations
+                      - generic [ref=e669]:
+                        - paragraph [ref=e671]: Beginner · Specialization · 1 - 3 Months
+                        - generic [ref=e673]:
+                          - generic [ref=e674]:
+                            - generic [ref=e675]: "Category: New"
+                            - generic [ref=e676]: New
+                          - generic [ref=e677]:
+                            - generic [ref=e678]: "Status: Free Trial"
+                            - generic [ref=e679]: Free Trial
+                          - generic [ref=e680]:
+                            - generic [ref=e681]: "Category: Build toward a degree"
+                            - generic [ref=e682]: Build toward a degree
+                  - listitem [ref=e683]:
+                    - generic [ref=e693] [cursor=pointer]:
+                      - generic [ref=e694]:
+                        - paragraph [ref=e700]: Johns Hopkins University
+                        - link [ref=e702]:
+                          - /url: /specializations/html-css-javascript-for-web-developers
+                          - heading [level=3] [ref=e703]: HTML, CSS, and Javascript for Web Developers
+                      - paragraph [ref=e706]:
+                        - generic [ref=e707]: "Skills you'll gain:"
+                        - text: HTML and CSS, Cascading Style Sheets (CSS), Ajax, Javascript, Responsive Web Design, Front-End Web Development, Web Design, Bootstrap (Front-End Framework), Web Development, Development Environment, Web Development Tools, Web Design and Development, JSON, Web Applications, Web Content Accessibility Guidelines, Scripting, Browser Compatibility, Hypertext Markup Language (HTML), Object Oriented Programming (OOP), Event-Driven Programming
+                      - generic [ref=e708]:
+                        - paragraph [ref=e712]: ★ 4.7 (17K) · Beginner · Specialization · 1 - 3 Months
+                        - generic [ref=e714]:
+                          - generic [ref=e715]:
+                            - generic [ref=e716]: "Status: Free Trial"
+                            - generic [ref=e717]: Free Trial
+                          - generic [ref=e718]:
+                            - generic [ref=e719]: "Category: Credit offered"
+                            - generic [ref=e720]: Credit offered
+                  - listitem [ref=e721]:
+                    - generic [ref=e731] [cursor=pointer]:
+                      - generic [ref=e732]:
+                        - paragraph [ref=e738]: Microsoft
+                        - link [ref=e740]:
+                          - /url: /professional-certificates/microsoft-full-stack-developer
+                          - heading [level=3] [ref=e741]: Microsoft Full-Stack Developer
+                      - paragraph [ref=e744]:
+                        - generic [ref=e745]: "Skills you'll gain:"
+                        - text: Microsoft Copilot, CI/CD, Cascading Style Sheets (CSS), GitHub, C# (Programming Language), HTML and CSS, Azure DevOps, Load Balancing, Continuous Integration, Git (Version Control System), Role-Based Access Control (RBAC), Scalability, Object Oriented Programming (OOP), Authentications, ASP.NET, Full-Stack Web Development, Web Development, SQL, .NET Framework, Graph Theory
+                      - generic [ref=e746]:
+                        - paragraph [ref=e750]: ★ 4.6 (441) · Beginner · Professional Certificate · 3 - 6 Months
+                        - generic [ref=e752]:
+                          - generic [ref=e753]:
+                            - generic [ref=e754]: "Status: Free Trial"
+                            - generic [ref=e755]: Free Trial
+                          - generic [ref=e756]:
+                            - generic [ref=e757]: "Category: Credit offered"
+                            - generic [ref=e758]: Credit offered
+    - contentinfo [ref=e759]:
+      - contentinfo [ref=e760]:
+        - paragraph [ref=e762]: Coursera Footer
+        - generic [ref=e765]:
+          - generic [ref=e766]:
+            - heading [level=2] [ref=e767]: Skills
+            - list [ref=e768]:
+              - listitem [ref=e769]:
+                - link [ref=e770] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=accounting
+                  - text: Accounting
+              - listitem [ref=e771]:
+                - link [ref=e772] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=artificial%20intelligence
+                  - text: Artificial Intelligence (AI)
+              - listitem [ref=e773]:
+                - link [ref=e774] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=cybersecurity
+                  - text: Cybersecurity
+              - listitem [ref=e775]:
+                - link [ref=e776] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=data%20analytics
+                  - text: Data Analytics
+              - listitem [ref=e777]:
+                - link [ref=e778] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=digital%20marketing
+                  - text: Digital Marketing
+              - listitem [ref=e779]:
+                - link [ref=e780] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=hr
+                  - text: Human Resources (HR)
+              - listitem [ref=e781]:
+                - link [ref=e782] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=microsoft%20excel
+                  - text: Microsoft Excel
+              - listitem [ref=e783]:
+                - link [ref=e784] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=project%20management
+                  - text: Project Management
+              - listitem [ref=e785]:
+                - link [ref=e786] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=python
+                  - text: Python
+              - listitem [ref=e787]:
+                - link [ref=e788] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=sql
+                  - text: SQL
+          - generic [ref=e789]:
+            - heading [level=2] [ref=e790]: Professional Certificates
+            - list [ref=e791]:
+              - listitem [ref=e792]:
+                - link [ref=e793] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-ai
+                  - text: Google AI Certificate
+              - listitem [ref=e794]:
+                - link [ref=e795] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-cybersecurity
+                  - text: Google Cybersecurity Certificate
+              - listitem [ref=e796]:
+                - link [ref=e797] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-data-analytics
+                  - text: Google Data Analytics Certificate
+              - listitem [ref=e798]:
+                - link [ref=e799] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-it-support
+                  - text: Google IT Support Certificate
+              - listitem [ref=e800]:
+                - link [ref=e801] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-project-management
+                  - text: Google Project Management Certificate
+              - listitem [ref=e802]:
+                - link [ref=e803] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/google-ux-design
+                  - text: Google UX Design Certificate
+              - listitem [ref=e804]:
+                - link [ref=e805] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/ai-engineer
+                  - text: IBM AI Engineering Certificate
+              - listitem [ref=e806]:
+                - link [ref=e807] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/ibm-ai-product-manager
+                  - text: IBM AI Product Manager Certificate
+              - listitem [ref=e808]:
+                - link [ref=e809] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/ibm-data-science
+                  - text: IBM Data Science Certificate
+              - listitem [ref=e810]:
+                - link [ref=e811] [cursor=pointer]:
+                  - /url: https://www.coursera.org/professional-certificates/intuit-bookkeeping
+                  - text: Intuit Academy Bookkeeping Certificate
+          - generic [ref=e812]:
+            - heading [level=2] [ref=e813]: Courses & Specializations
+            - list [ref=e814]:
+              - listitem [ref=e815]:
+                - link [ref=e816] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/ai-essentials-google
+                  - text: AI Essentials Specialization
+              - listitem [ref=e817]:
+                - link [ref=e818] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/ai-for-business-wharton
+                  - text: AI For Business Specialization
+              - listitem [ref=e819]:
+                - link [ref=e820] [cursor=pointer]:
+                  - /url: https://www.coursera.org/learn/ai-for-everyone
+                  - text: AI For Everyone Course
+              - listitem [ref=e821]:
+                - link [ref=e822] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/ai-healthcare
+                  - text: AI in Healthcare Specialization
+              - listitem [ref=e823]:
+                - link [ref=e824] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/deep-learning
+                  - text: Deep Learning Specialization
+              - listitem [ref=e825]:
+                - link [ref=e826] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/excel
+                  - text: Excel Skills for Business Specialization
+              - listitem [ref=e827]:
+                - link [ref=e828] [cursor=pointer]:
+                  - /url: https://www.coursera.org/learn/financial-markets-global
+                  - text: Financial Markets Course
+              - listitem [ref=e829]:
+                - link [ref=e830] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/machine-learning-introduction
+                  - text: Machine Learning Specialization
+              - listitem [ref=e831]:
+                - link [ref=e832] [cursor=pointer]:
+                  - /url: https://www.coursera.org/learn/prompt-engineering
+                  - text: Prompt Engineering for ChatGPT Course
+              - listitem [ref=e833]:
+                - link [ref=e834] [cursor=pointer]:
+                  - /url: https://www.coursera.org/specializations/python
+                  - text: Python for Everybody Specialization
+          - generic [ref=e835]:
+            - heading [level=2] [ref=e836]: Career Resources
+            - list [ref=e837]:
+              - listitem [ref=e838]:
+                - link [ref=e839] [cursor=pointer]:
+                  - /url: https://www.coursera.org/resources/career-quiz
+                  - text: Career Aptitude Test
+              - listitem [ref=e840]:
+                - link [ref=e841] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/capm-certification-guide
+                  - text: CAPM Certification Requirements
+              - listitem [ref=e842]:
+                - link [ref=e843] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/what-is-the-comptia-a-certification-what-to-know
+                  - text: CompTIA A+ Certification Requirements
+              - listitem [ref=e844]:
+                - link [ref=e845] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/what-is-the-comptia-security-plus-certification
+                  - text: CompTIA Security+ Certification Requirements
+              - listitem [ref=e846]:
+                - link [ref=e847] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/essential-it-certifications-entry-level-and-beginner
+                  - text: Essential IT Certifications
+              - listitem [ref=e848]:
+                - link [ref=e849] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/free-it-certifications
+                  - text: Free IT Certifications and Courses
+              - listitem [ref=e850]:
+                - link [ref=e851] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/high-income-skills
+                  - text: High-Income Skills to Learn
+              - listitem [ref=e852]:
+                - link [ref=e853] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/how-to-learn-artificial-intelligence
+                  - text: How to Learn Artificial Intelligence
+              - listitem [ref=e854]:
+                - link [ref=e855] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/the-pmp-certification-a-guide-to-getting-started
+                  - text: PMP Certification Requirements
+              - listitem [ref=e856]:
+                - link [ref=e857] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles/popular-cybersecurity-certifications
+                  - text: Popular Cybersecurity Certifications
+          - generic [ref=e858]:
+            - heading [level=2] [ref=e859]: Coursera
+            - list [ref=e860]:
+              - listitem [ref=e861]:
+                - link [ref=e862] [cursor=pointer]:
+                  - /url: /about
+                  - text: About
+              - listitem [ref=e863]:
+                - link [ref=e864] [cursor=pointer]:
+                  - /url: /about/how-coursera-works/
+                  - text: What We Offer
+              - listitem [ref=e865]:
+                - link [ref=e866] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/leadership
+                  - text: Leadership
+              - listitem [ref=e867]:
+                - link [ref=e868] [cursor=pointer]:
+                  - /url: https://careers.coursera.com/
+                  - text: Careers
+              - listitem [ref=e869]:
+                - link [ref=e870] [cursor=pointer]:
+                  - /url: /browse
+                  - text: Catalog
+              - listitem [ref=e871]:
+                - link [ref=e872] [cursor=pointer]:
+                  - /url: /courseraplus
+                  - text: Coursera Plus
+              - listitem [ref=e873]:
+                - link [ref=e874] [cursor=pointer]:
+                  - /url: /professional-certificates
+                  - text: Professional Certificates
+              - listitem [ref=e875]:
+                - link [ref=e876] [cursor=pointer]:
+                  - /url: /mastertrack
+                  - text: MasterTrack® Certificates
+              - listitem [ref=e877]:
+                - link [ref=e878] [cursor=pointer]:
+                  - /url: /degrees
+                  - text: Degrees
+              - listitem [ref=e879]:
+                - link [ref=e880] [cursor=pointer]:
+                  - /url: /business?utm_campaign=website&utm_content=corp-to-home-footer-for-enterprise&utm_medium=coursera&utm_source=enterprise
+                  - text: For Enterprise
+              - listitem [ref=e881]:
+                - link [ref=e882] [cursor=pointer]:
+                  - /url: /government?utm_campaign=website&utm_content=corp-to-home-footer-for-government&utm_medium=coursera&utm_source=enterprise
+                  - text: For Government
+              - listitem [ref=e883]:
+                - link [ref=e884] [cursor=pointer]:
+                  - /url: /campus?utm_campaign=website&utm_content=corp-to-home-footer-for-campus&utm_medium=coursera&utm_source=enterprise
+                  - text: For Campus
+              - listitem [ref=e885]:
+                - link [ref=e886] [cursor=pointer]:
+                  - /url: https://partnerships.coursera.org/?utm_medium=coursera&utm_source=partnerships&utm_campaign=website&utm_content=corp-to-home-footer-become-a-partner
+                  - text: Become a Partner
+              - listitem [ref=e887]:
+                - link [ref=e888] [cursor=pointer]:
+                  - /url: /social-impact
+                  - text: Social Impact
+              - listitem [ref=e889]:
+                - link [ref=e890] [cursor=pointer]:
+                  - /url: https://www.coursera.org/courses?query=free
+                  - text: Free Courses
+              - listitem [ref=e891]:
+                - link [ref=e892] [cursor=pointer]:
+                  - /url: https://airtable.com/appxSsG2Dz9CjSpF8/pagCDDP2Uinw59CNP/form?prefill_utm_source=product&prefill_utm_campaign=seo_footer&prefill_utm_medium=written
+                  - text: Share your Coursera learning story
+          - generic [ref=e893]:
+            - heading [level=2] [ref=e894]: Community
+            - list [ref=e895]:
+              - listitem [ref=e896]:
+                - link [ref=e897] [cursor=pointer]:
+                  - /url: https://www.coursera.community
+                  - text: Learners
+              - listitem [ref=e898]:
+                - link [ref=e899] [cursor=pointer]:
+                  - /url: https://www.coursera.org/partners
+                  - text: Partners
+              - listitem [ref=e900]:
+                - link [ref=e901] [cursor=pointer]:
+                  - /url: https://www.coursera.support/s/article/360000152926-Become-a-Coursera-beta-tester
+                  - text: Beta Testers
+              - listitem [ref=e902]:
+                - link [ref=e903] [cursor=pointer]:
+                  - /url: https://blog.coursera.org
+                  - text: Blog
+              - listitem [ref=e904]:
+                - link [ref=e905] [cursor=pointer]:
+                  - /url: https://open.spotify.com/show/58M36bneU7REOofdPZxe6A
+                  - text: The Coursera Podcast
+              - listitem [ref=e906]:
+                - link [ref=e907] [cursor=pointer]:
+                  - /url: https://medium.com/coursera-engineering
+                  - text: Tech Blog
+          - generic [ref=e908]:
+            - heading [level=2] [ref=e909]: More
+            - list [ref=e910]:
+              - listitem [ref=e911]:
+                - link [ref=e912] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/press
+                  - text: Press
+              - listitem [ref=e913]:
+                - link [ref=e914] [cursor=pointer]:
+                  - /url: https://investor.coursera.com
+                  - text: Investors
+              - listitem [ref=e915]:
+                - link [ref=e916] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/terms
+                  - text: Terms
+              - listitem [ref=e917]:
+                - link [ref=e918] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/privacy
+                  - text: Privacy
+              - listitem [ref=e919]:
+                - link [ref=e920] [cursor=pointer]:
+                  - /url: https://learner.coursera.help/hc
+                  - text: Help
+              - listitem [ref=e921]:
+                - link [ref=e922] [cursor=pointer]:
+                  - /url: https://learner.coursera.help/hc/articles/360050668591-Accessibility-Statement
+                  - text: Accessibility
+              - listitem [ref=e923]:
+                - link [ref=e924] [cursor=pointer]:
+                  - /url: https://www.coursera.org/about/contact
+                  - text: Contact
+              - listitem [ref=e925]:
+                - link [ref=e926] [cursor=pointer]:
+                  - /url: https://www.coursera.org/articles
+                  - text: Articles
+              - listitem [ref=e927]:
+                - link [ref=e928] [cursor=pointer]:
+                  - /url: /directory
+                  - text: Directory
+              - listitem [ref=e929]:
+                - link [ref=e930] [cursor=pointer]:
+                  - /url: /about/affiliates
+                  - text: Affiliates
+              - listitem [ref=e931]:
+                - link [ref=e932] [cursor=pointer]:
+                  - /url: https://coursera_assets.s3.amazonaws.com/footer/Modern+Slavery+Statement+(approved+March+26%2C+2025).pdf
+                  - text: Modern Slavery Statement
+              - listitem [ref=e933]:
+                - link [ref=e934] [cursor=pointer]:
+                  - /url: /about/cookies-manage
+                  - text: Cookies Preference Center
+          - generic [ref=e935]:
+            - generic [ref=e936]:
+              - link [ref=e937] [cursor=pointer]:
+                - /url: https://itunes.apple.com/app/apple-store/id736535961?pt=2334150&ct=Coursera%20Web%20Promo%20Banner&mt=8
+                - img [ref=e940]
+              - link [ref=e941] [cursor=pointer]:
+                - /url: http://play.google.com/store/apps/details?id=org.coursera.android
+                - img [ref=e944]
+            - img [ref=e948]
+          - generic [ref=e950]:
+            - generic [ref=e952]: © 2026 Coursera Inc. All rights reserved.
+            - list [ref=e954]:
+              - listitem [ref=e955]:
+                - link [ref=e956] [cursor=pointer]:
+                  - /url: https://www.facebook.com/Coursera
+                  - img [ref=e959]
+              - listitem [ref=e960]:
+                - link [ref=e961] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/coursera
+                  - img [ref=e964]
+              - listitem [ref=e965]:
+                - link [ref=e966] [cursor=pointer]:
+                  - /url: https://twitter.com/coursera
+                  - img [ref=e969]
+              - listitem [ref=e970]:
+                - link [ref=e971] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/coursera
+                  - img [ref=e974]
+              - listitem [ref=e975]:
+                - link [ref=e976] [cursor=pointer]:
+                  - /url: https://www.instagram.com/coursera/
+                  - img [ref=e979]
+              - listitem [ref=e980]:
+                - link [ref=e981] [cursor=pointer]:
+                  - /url: https://www.tiktok.com/@coursera
+                  - img [ref=e984]
+  - generic [ref=e988]:
+    - heading "Language" [level=3] [ref=e990]
+    - group "Filter by Language, Required" [ref=e994]:
+      - generic [ref=e995]:
+        - generic [ref=e998]:
+          - img [ref=e1000]
+          - searchbox "Search by keyword" [ref=e1002]
+          - group
+        - generic [ref=e1006] [cursor=pointer]:
+          - generic [ref=e1008]:
+            - checkbox "English (10,237)" [ref=e1009]
+            - img [ref=e1010]
+          - generic [ref=e1014]:
+            - text: English
+            - generic [ref=e1015]: (10,237)
+        - generic [ref=e1017] [cursor=pointer]:
+          - generic [ref=e1019]:
+            - checkbox "Spanish (4,620)" [ref=e1020]
+            - img [ref=e1021]
+          - generic [ref=e1025]:
+            - text: Spanish
+            - generic [ref=e1026]: (4,620)
+        - generic [ref=e1028] [cursor=pointer]:
+          - generic [ref=e1030]:
+            - checkbox "Kazakh (4,515)" [ref=e1031]
+            - img [ref=e1032]
+          - generic [ref=e1036]:
+            - text: Kazakh
+            - generic [ref=e1037]: (4,515)
+        - generic [ref=e1039] [cursor=pointer]:
+          - generic [ref=e1041]:
+            - checkbox "French (4,227)" [ref=e1042]
+            - img [ref=e1043]
+          - generic [ref=e1047]:
+            - text: French
+            - generic [ref=e1048]: (4,227)
+        - generic [ref=e1050] [cursor=pointer]:
+          - generic [ref=e1052]:
+            - checkbox "Arabic (4,131)" [ref=e1053]
+            - img [ref=e1054]
+          - generic [ref=e1058]:
+            - text: Arabic
+            - generic [ref=e1059]: (4,131)
+        - generic [ref=e1061] [cursor=pointer]:
+          - generic [ref=e1063]:
+            - checkbox "German (4,020)" [ref=e1064]
+            - img [ref=e1065]
+          - generic [ref=e1069]:
+            - text: German
+            - generic [ref=e1070]: (4,020)
+        - generic [ref=e1072] [cursor=pointer]:
+          - generic [ref=e1074]:
+            - checkbox "Portuguese (3,154)" [ref=e1075]
+            - img [ref=e1076]
+          - generic [ref=e1080]:
+            - text: Portuguese
+            - generic [ref=e1081]: (3,154)
+        - generic [ref=e1083] [cursor=pointer]:
+          - generic [ref=e1085]:
+            - checkbox "Indonesian (2,987)" [ref=e1086]
+            - img [ref=e1087]
+          - generic [ref=e1091]:
+            - text: Indonesian
+            - generic [ref=e1092]: (2,987)
+        - generic [ref=e1094] [cursor=pointer]:
+          - generic [ref=e1096]:
+            - checkbox "Chinese (2,831)" [ref=e1097]
+            - img [ref=e1098]
+          - generic [ref=e1102]:
+            - text: Chinese
+            - generic [ref=e1103]: (2,831)
+        - generic [ref=e1105] [cursor=pointer]:
+          - generic [ref=e1107]:
+            - checkbox "Japanese (2,714)" [ref=e1108]
+            - img [ref=e1109]
+          - generic [ref=e1113]:
+            - text: Japanese
+            - generic [ref=e1114]: (2,714)
+        - generic [ref=e1116] [cursor=pointer]:
+          - generic [ref=e1118]:
+            - checkbox "Korean (2,669)" [ref=e1119]
+            - img [ref=e1120]
+          - generic [ref=e1124]:
+            - text: Korean
+            - generic [ref=e1125]: (2,669)
+        - generic [ref=e1127] [cursor=pointer]:
+          - generic [ref=e1129]:
+            - checkbox "Russian (2,667)" [ref=e1130]
+            - img [ref=e1131]
+          - generic [ref=e1135]:
+            - text: Russian
+            - generic [ref=e1136]: (2,667)
+        - generic [ref=e1138] [cursor=pointer]:
+          - generic [ref=e1140]:
+            - checkbox "Italian (2,581)" [ref=e1141]
+            - img [ref=e1142]
+          - generic [ref=e1146]:
+            - text: Italian
+            - generic [ref=e1147]: (2,581)
+        - generic [ref=e1149] [cursor=pointer]:
+          - generic [ref=e1151]:
+            - checkbox "Hindi (2,571)" [ref=e1152]
+            - img [ref=e1153]
+          - generic [ref=e1157]:
+            - text: Hindi
+            - generic [ref=e1158]: (2,571)
+        - generic [ref=e1160] [cursor=pointer]:
+          - generic [ref=e1162]:
+            - checkbox "Turkish (2,523)" [ref=e1163]
+            - img [ref=e1164]
+          - generic [ref=e1168]:
+            - text: Turkish
+            - generic [ref=e1169]: (2,523)
+        - generic [ref=e1171] [cursor=pointer]:
+          - generic [ref=e1173]:
+            - checkbox "Thai (2,510)" [ref=e1174]
+            - img [ref=e1175]
+          - generic [ref=e1179]:
+            - text: Thai
+            - generic [ref=e1180]: (2,510)
+        - generic [ref=e1182] [cursor=pointer]:
+          - generic [ref=e1184]:
+            - checkbox "Ukrainian (2,497)" [ref=e1185]
+            - img [ref=e1186]
+          - generic [ref=e1190]:
+            - text: Ukrainian
+            - generic [ref=e1191]: (2,497)
+        - generic [ref=e1193] [cursor=pointer]:
+          - generic [ref=e1195]:
+            - checkbox "Greek (2,482)" [ref=e1196]
+            - img [ref=e1197]
+          - generic [ref=e1201]:
+            - text: Greek
+            - generic [ref=e1202]: (2,482)
+        - generic [ref=e1204] [cursor=pointer]:
+          - generic [ref=e1206]:
+            - checkbox "Polish (2,470)" [ref=e1207]
+            - img [ref=e1208]
+          - generic [ref=e1212]:
+            - text: Polish
+            - generic [ref=e1213]: (2,470)
+        - generic [ref=e1215] [cursor=pointer]:
+          - generic [ref=e1217]:
+            - checkbox "Dutch (2,466)" [ref=e1218]
+            - img [ref=e1219]
+          - generic [ref=e1223]:
+            - text: Dutch
+            - generic [ref=e1224]: (2,466)
+        - generic [ref=e1226] [cursor=pointer]:
+          - generic [ref=e1228]:
+            - checkbox "Swedish (2,440)" [ref=e1229]
+            - img [ref=e1230]
+          - generic [ref=e1234]:
+            - text: Swedish
+            - generic [ref=e1235]: (2,440)
+        - generic [ref=e1237] [cursor=pointer]:
+          - generic [ref=e1239]:
+            - checkbox "Hungarian (2,201)" [ref=e1240]
+            - img [ref=e1241]
+          - generic [ref=e1245]:
+            - text: Hungarian
+            - generic [ref=e1246]: (2,201)
+        - generic [ref=e1248] [cursor=pointer]:
+          - generic [ref=e1250]:
+            - checkbox "Vietnamese (1,972)" [ref=e1251]
+            - img [ref=e1252]
+          - generic [ref=e1256]:
+            - text: Vietnamese
+            - generic [ref=e1257]: (1,972)
+        - generic [ref=e1259] [cursor=pointer]:
+          - generic [ref=e1261]:
+            - checkbox "Uzbek (1,941)" [ref=e1262]
+            - img [ref=e1263]
+          - generic [ref=e1267]:
+            - text: Uzbek
+            - generic [ref=e1268]: (1,941)
+        - generic [ref=e1270] [cursor=pointer]:
+          - generic [ref=e1272]:
+            - checkbox "Pushto (1,839)" [ref=e1273]
+            - img [ref=e1274]
+          - generic [ref=e1278]:
+            - text: Pushto
+            - generic [ref=e1279]: (1,839)
+        - generic [ref=e1281] [cursor=pointer]:
+          - generic [ref=e1283]:
+            - checkbox "Azerbaijani (1,566)" [ref=e1284]
+            - img [ref=e1285]
+          - generic [ref=e1289]:
+            - text: Azerbaijani
+            - generic [ref=e1290]: (1,566)
+        - generic [ref=e1292] [cursor=pointer]:
+          - generic [ref=e1294]:
+            - checkbox "Urdu (1,331)" [ref=e1295]
+            - img [ref=e1296]
+          - generic [ref=e1300]:
+            - text: Urdu
+            - generic [ref=e1301]: (1,331)
+        - generic [ref=e1303] [cursor=pointer]:
+          - generic [ref=e1305]:
+            - checkbox "Bengali (1,323)" [ref=e1306]
+            - img [ref=e1307]
+          - generic [ref=e1311]:
+            - text: Bengali
+            - generic [ref=e1312]: (1,323)
+        - generic [ref=e1314] [cursor=pointer]:
+          - generic [ref=e1316]:
+            - checkbox "Oriya (258)" [ref=e1317]
+            - img [ref=e1318]
+          - generic [ref=e1322]:
+            - text: Oriya
+            - generic [ref=e1323]: (258)
+        - generic [ref=e1325] [cursor=pointer]:
+          - generic [ref=e1327]:
+            - checkbox "Malay (166)" [ref=e1328]
+            - img [ref=e1329]
+          - generic [ref=e1333]:
+            - text: Malay
+            - generic [ref=e1334]: (166)
+        - generic [ref=e1336] [cursor=pointer]:
+          - generic [ref=e1338]:
+            - checkbox "Haitian (Haitian Creole) (139)" [ref=e1339]
+            - img [ref=e1340]
+          - generic [ref=e1344]:
+            - text: Haitian (Haitian Creole)
+            - generic [ref=e1345]: (139)
+        - generic [ref=e1347] [cursor=pointer]:
+          - generic [ref=e1349]:
+            - checkbox "Khmer (46)" [ref=e1350]
+            - img [ref=e1351]
+          - generic [ref=e1355]:
+            - text: Khmer
+            - generic [ref=e1356]: (46)
+        - generic [ref=e1358] [cursor=pointer]:
+          - generic [ref=e1360]:
+            - checkbox "Romanian (46)" [ref=e1361]
+            - img [ref=e1362]
+          - generic [ref=e1366]:
+            - text: Romanian
+            - generic [ref=e1367]: (46)
+        - generic [ref=e1369] [cursor=pointer]:
+          - generic [ref=e1371]:
+            - checkbox "Persian (40)" [ref=e1372]
+            - img [ref=e1373]
+          - generic [ref=e1377]:
+            - text: Persian
+            - generic [ref=e1378]: (40)
+        - generic [ref=e1380] [cursor=pointer]:
+          - generic [ref=e1382]:
+            - checkbox "Hebrew (21)" [ref=e1383]
+            - img [ref=e1384]
+          - generic [ref=e1388]:
+            - text: Hebrew
+            - generic [ref=e1389]: (21)
+        - generic [ref=e1391] [cursor=pointer]:
+          - generic [ref=e1393]:
+            - checkbox "Tamil (17)" [ref=e1394]
+            - img [ref=e1395]
+          - generic [ref=e1399]:
+            - text: Tamil
+            - generic [ref=e1400]: (17)
+        - generic [ref=e1402] [cursor=pointer]:
+          - generic [ref=e1404]:
+            - checkbox "Javanese (16)" [ref=e1405]
+            - img [ref=e1406]
+          - generic [ref=e1410]:
+            - text: Javanese
+            - generic [ref=e1411]: (16)
+        - generic [ref=e1413] [cursor=pointer]:
+          - generic [ref=e1415]:
+            - checkbox "Serbian (16)" [ref=e1416]
+            - img [ref=e1417]
+          - generic [ref=e1421]:
+            - text: Serbian
+            - generic [ref=e1422]: (16)
+        - generic [ref=e1424] [cursor=pointer]:
+          - generic [ref=e1426]:
+            - checkbox "Czech (13)" [ref=e1427]
+            - img [ref=e1428]
+          - generic [ref=e1432]:
+            - text: Czech
+            - generic [ref=e1433]: (13)
+        - generic [ref=e1435] [cursor=pointer]:
+          - generic [ref=e1437]:
+            - checkbox "Slovak (10)" [ref=e1438]
+            - img [ref=e1439]
+          - generic [ref=e1443]:
+            - text: Slovak
+            - generic [ref=e1444]: (10)
+        - generic [ref=e1446] [cursor=pointer]:
+          - generic [ref=e1448]:
+            - checkbox "Danish (9)" [ref=e1449]
+            - img [ref=e1450]
+          - generic [ref=e1454]:
+            - text: Danish
+            - generic [ref=e1455]: (9)
+        - generic [ref=e1457] [cursor=pointer]:
+          - generic [ref=e1459]:
+            - checkbox "Estonian (9)" [ref=e1460]
+            - img [ref=e1461]
+          - generic [ref=e1465]:
+            - text: Estonian
+            - generic [ref=e1466]: (9)
+        - generic [ref=e1468] [cursor=pointer]:
+          - generic [ref=e1470]:
+            - checkbox "Telugu (9)" [ref=e1471]
+            - img [ref=e1472]
+          - generic [ref=e1476]:
+            - text: Telugu
+            - generic [ref=e1477]: (9)
+        - generic [ref=e1479] [cursor=pointer]:
+          - generic [ref=e1481]:
+            - checkbox "Croatian (8)" [ref=e1482]
+            - img [ref=e1483]
+          - generic [ref=e1487]:
+            - text: Croatian
+            - generic [ref=e1488]: (8)
+        - generic [ref=e1490] [cursor=pointer]:
+          - generic [ref=e1492]:
+            - checkbox "Latvian (8)" [ref=e1493]
+            - img [ref=e1494]
+          - generic [ref=e1498]:
+            - text: Latvian
+            - generic [ref=e1499]: (8)
+        - generic [ref=e1501] [cursor=pointer]:
+          - generic [ref=e1503]:
+            - checkbox "Malayalam (8)" [ref=e1504]
+            - img [ref=e1505]
+          - generic [ref=e1509]:
+            - text: Malayalam
+            - generic [ref=e1510]: (8)
+        - generic [ref=e1512] [cursor=pointer]:
+          - generic [ref=e1514]:
+            - checkbox "Afrikaans (7)" [ref=e1515]
+            - img [ref=e1516]
+          - generic [ref=e1520]:
+            - text: Afrikaans
+            - generic [ref=e1521]: (7)
+        - generic [ref=e1523] [cursor=pointer]:
+          - generic [ref=e1525]:
+            - checkbox "Bulgarian (7)" [ref=e1526]
+            - img [ref=e1527]
+          - generic [ref=e1531]:
+            - text: Bulgarian
+            - generic [ref=e1532]: (7)
+        - generic [ref=e1534] [cursor=pointer]:
+          - generic [ref=e1536]:
+            - checkbox "Mongolian (7)" [ref=e1537]
+            - img [ref=e1538]
+          - generic [ref=e1542]:
+            - text: Mongolian
+            - generic [ref=e1543]: (7)
+        - generic [ref=e1545] [cursor=pointer]:
+          - generic [ref=e1547]:
+            - checkbox "Catalan (5)" [ref=e1548]
+            - img [ref=e1549]
+          - generic [ref=e1553]:
+            - text: Catalan
+            - generic [ref=e1554]: (5)
+        - generic [ref=e1556] [cursor=pointer]:
+          - generic [ref=e1558]:
+            - checkbox "Finnish (5)" [ref=e1559]
+            - img [ref=e1560]
+          - generic [ref=e1564]:
+            - text: Finnish
+            - generic [ref=e1565]: (5)
+        - generic [ref=e1567] [cursor=pointer]:
+          - generic [ref=e1569]:
+            - checkbox "Lithuanian (5)" [ref=e1570]
+            - img [ref=e1571]
+          - generic [ref=e1575]:
+            - text: Lithuanian
+            - generic [ref=e1576]: (5)
+        - generic [ref=e1578] [cursor=pointer]:
+          - generic [ref=e1580]:
+            - checkbox "Nepali (5)" [ref=e1581]
+            - img [ref=e1582]
+          - generic [ref=e1586]:
+            - text: Nepali
+            - generic [ref=e1587]: (5)
+        - generic [ref=e1589] [cursor=pointer]:
+          - generic [ref=e1591]:
+            - checkbox "Albanian (4)" [ref=e1592]
+            - img [ref=e1593]
+          - generic [ref=e1597]:
+            - text: Albanian
+            - generic [ref=e1598]: (4)
+        - generic [ref=e1600] [cursor=pointer]:
+          - generic [ref=e1602]:
+            - checkbox "Amharic (4)" [ref=e1603]
+            - img [ref=e1604]
+          - generic [ref=e1608]:
+            - text: Amharic
+            - generic [ref=e1609]: (4)
+        - generic [ref=e1611] [cursor=pointer]:
+          - generic [ref=e1613]:
+            - checkbox "Burmese (4)" [ref=e1614]
+            - img [ref=e1615]
+          - generic [ref=e1619]:
+            - text: Burmese
+            - generic [ref=e1620]: (4)
+        - generic [ref=e1622] [cursor=pointer]:
+          - generic [ref=e1624]:
+            - checkbox "Somali (4)" [ref=e1625]
+            - img [ref=e1626]
+          - generic [ref=e1630]:
+            - text: Somali
+            - generic [ref=e1631]: (4)
+        - generic [ref=e1633] [cursor=pointer]:
+          - generic [ref=e1635]:
+            - checkbox "Swahili (3)" [ref=e1636]
+            - img [ref=e1637]
+          - generic [ref=e1641]:
+            - text: Swahili
+            - generic [ref=e1642]: (3)
+        - generic [ref=e1644] [cursor=pointer]:
+          - generic [ref=e1646]:
+            - checkbox "Georgian (2)" [ref=e1647]
+            - img [ref=e1648]
+          - generic [ref=e1652]:
+            - text: Georgian
+            - generic [ref=e1653]: (2)
+        - generic [ref=e1655] [cursor=pointer]:
+          - generic [ref=e1657]:
+            - checkbox "Marathi (2)" [ref=e1658]
+            - img [ref=e1659]
+          - generic [ref=e1663]:
+            - text: Marathi
+            - generic [ref=e1664]: (2)
+        - generic [ref=e1666] [cursor=pointer]:
+          - generic [ref=e1668]:
+            - checkbox "Kannada (1)" [ref=e1669]
+            - img [ref=e1670]
+          - generic [ref=e1674]:
+            - text: Kannada
+            - generic [ref=e1675]: (1)
+        - generic [ref=e1677] [cursor=pointer]:
+          - generic [ref=e1679]:
+            - checkbox "Kinyarwanda (1)" [ref=e1680]
+            - img [ref=e1681]
+          - generic [ref=e1685]:
+            - text: Kinyarwanda
+            - generic [ref=e1686]: (1)
+        - generic [ref=e1688] [cursor=pointer]:
+          - generic [ref=e1690]:
+            - checkbox "Macedonian (1)" [ref=e1691]
+            - img [ref=e1692]
+          - generic [ref=e1696]:
+            - text: Macedonian
+            - generic [ref=e1697]: (1)
+        - generic [ref=e1699] [cursor=pointer]:
+          - generic [ref=e1701]:
+            - checkbox "Nyanja (1)" [ref=e1702]
+            - img [ref=e1703]
+          - generic [ref=e1707]:
+            - text: Nyanja
+            - generic [ref=e1708]: (1)
+        - generic [ref=e1710] [cursor=pointer]:
+          - generic [ref=e1712]:
+            - checkbox "Slovenian (1)" [ref=e1713]
+            - img [ref=e1714]
+          - generic [ref=e1718]:
+            - text: Slovenian
+            - generic [ref=e1719]: (1)
+        - generic [ref=e1721] [cursor=pointer]:
+          - generic [ref=e1723]:
+            - checkbox "Tagalog (1)" [ref=e1724]
+            - img [ref=e1725]
+          - generic [ref=e1729]:
+            - text: Tagalog
+            - generic [ref=e1730]: (1)
+    - generic [ref=e1733]:
+      - button "View" [ref=e1735] [cursor=pointer]:
+        - generic [ref=e1736]: View
+      - generic [ref=e1737]:
+        - button "Clear All" [disabled]:
+          - generic: Clear All
+```
+
+# Test source
+
+```ts
+  1  | import { Page } from "@playwright/test";
+  2  |  
+  3  | export class SearchResultsPage {
+  4  |   readonly page: Page;
+  5  |  
+  6  |   constructor(page: Page) {
+  7  |     this.page = page;
+  8  |   }
+  9  |  
+  10 |   async filterByLanguage(language: string) {
+> 11 |     await this.page.getByTestId("filter-dropdown-language").click();
+     |                                                             ^ TimeoutError: locator.click: Timeout 40000ms exceeded.
+  12 |     await this.page.getByRole("checkbox", { name: language }).click();
+  13 |     await this.page.waitForSelector("[data-testid='search-filter-group-Language']");
+  14 |     const countRaw = await this.page.locator(`[data-testid='language:${language}-true'] span.css-s63saa`).textContent();
+  15 |     await this.page.getByTestId("filter-view-button").click();
+  16 |     return countRaw?.replace(/[()]/g, "").trim();
+  17 |   }
+  18 |  
+  19 |   async filterByLevel(level: string) {
+  20 |     await this.page.getByTestId("filter-dropdown-productDifficultyLevel").click();
+  21 |     await this.page.getByRole("checkbox", { name: level }).click();
+  22 |     await this.page.waitForSelector("[data-testid='search-filter-group-Level']");
+  23 |     const countRaw = await this.page.locator(`[data-testid='productDifficultyLevel:${level}-true'] span.css-s63saa`).textContent();
+  24 |     await this.page.getByTestId("filter-view-button").click();
+  25 |     return countRaw?.replace(/[()]/g, "").trim();
+  26 |   }
+  27 |  
+  28 |   async getCardDetails(limit: number = 2) {
+  29 |     await this.page.waitForSelector("[data-testid='product-card-cds']");
+  30 |     const titles = await this.page.locator("h3.cds-CommonCard-title").allTextContents();
+  31 |     const ratings = await this.page.locator(".cds-RatingStat-sizeLabel .css-4s48ix").allTextContents();
+  32 |     const metadata = await this.page.locator(".cds-CommonCard-metadata p.css-vac8rf").allTextContents();
+  33 |  
+  34 |     for (let i = 0; i < limit; i++) {
+  35 |       console.log(`Card ${i + 1} title: ${titles[i]}`);
+  36 |       console.log(`Card ${i + 1} rating: ${ratings[i]}`);
+  37 |       console.log(`Card ${i + 1} level/duration: ${metadata[i]}`);
+  38 |       console.log("-----");
+  39 |     }
+  40 |   }
+  41 | }
+```

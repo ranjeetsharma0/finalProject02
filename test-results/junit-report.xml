@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="173.706356">
-<testsuite name="coursera.spec.ts" timestamp="2026-04-21T10:03:46.323Z" hostname="chromium" tests="1" failures="0" skipped="0" time="16.212" errors="0">
-<testcase name="[chromium] Coursera Platform Tests › Verify basic search functionality @smoke" classname="coursera.spec.ts" time="16.212">
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="91.620849">
+<testsuite name="coursera.spec.ts" timestamp="2026-04-23T17:20:51.028Z" hostname="chromium" tests="3" failures="0" skipped="0" time="84.191" errors="0">
+<testcase name="[chromium] Coursera Platform Tests › Verify basic search functionality @smoke" classname="coursera.spec.ts" time="24.515">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|coursera-Coursera-Platform-e6703--search-functionality-smoke-chromium\test-finished-1.png]]
@@ -9,33 +9,24 @@
 ]]>
 </system-out>
 </testcase>
-</testsuite>
-<testsuite name="coursera.spec.ts" timestamp="2026-04-21T10:03:46.323Z" hostname="webkit" tests="1" failures="0" skipped="0" time="32.908" errors="0">
-<testcase name="[webkit] Coursera Platform Tests › Verify basic search functionality @smoke" classname="coursera.spec.ts" time="32.908">
+<testcase name="[chromium] Coursera Platform Tests › Verify advanced filters and enterprise navigation @regression" classname="coursera.spec.ts" time="36.778">
 <system-out>
-<![CDATA[
-[[ATTACHMENT|coursera-Coursera-Platform-e6703--search-functionality-smoke-webkit\test-finished-1.png]]
+<![CDATA[Please enter your work email address
 
-[[ATTACHMENT|coursera-Coursera-Platform-e6703--search-functionality-smoke-webkit\video.webm]]
+[[ATTACHMENT|coursera-Coursera-Platform-1a76e-prise-navigation-regression-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|coursera-Coursera-Platform-1a76e-prise-navigation-regression-chromium\video.webm]]
 ]]>
 </system-out>
 </testcase>
-</testsuite>
-<testsuite name="coursera.spec.ts" timestamp="2026-04-21T10:03:46.323Z" hostname="firefox" tests="1" failures="0" skipped="0" time="103.848" errors="0">
-<testcase name="[firefox] Coursera Platform Tests › Verify basic search functionality @smoke" classname="coursera.spec.ts" time="103.848">
+<testcase name="[chromium] Coursera Platform Tests › Verify campus form with second test data set @regression" classname="coursera.spec.ts" time="22.898">
 <system-out>
-<![CDATA[
-[[ATTACHMENT|coursera-Coursera-Platform-e6703--search-functionality-smoke-firefox\test-failed-1.png]]
+<![CDATA[Must be valid email.
+example@yourdomain.com
 
-[[ATTACHMENT|coursera-Coursera-Platform-e6703--search-functionality-smoke-firefox\video.webm]]
+[[ATTACHMENT|coursera-Coursera-Platform-cf3fc-nd-test-data-set-regression-chromium\test-finished-1.png]]
 
-[[ATTACHMENT|coursera-Coursera-Platform-e6703--search-functionality-smoke-firefox\error-context.md]]
-
-[[ATTACHMENT|coursera-Coursera-Platform-e6703--search-functionality-smoke-firefox\trace.zip]]
-
-[[ATTACHMENT|coursera-Coursera-Platform-e6703--search-functionality-smoke-firefox-retry1\test-finished-1.png]]
-
-[[ATTACHMENT|coursera-Coursera-Platform-e6703--search-functionality-smoke-firefox-retry1\video.webm]]
+[[ATTACHMENT|coursera-Coursera-Platform-cf3fc-nd-test-data-set-regression-chromium\video.webm]]
 ]]>
 </system-out>
 </testcase>
